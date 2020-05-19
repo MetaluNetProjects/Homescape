@@ -1,0 +1,13 @@
+#N canvas 1 73 450 300 10;
+#X obj 105 135 nbx 5 20 -1e+37 1e+37 0 0 empty empty f1 0 -8 0 12 -262130
+-1 -1 1 256;
+#X obj 181 135 nbx 5 20 -1e+37 1e+37 0 0 empty empty f2 0 -8 0 12 -204800
+-1 -1 -1 256;
+#X obj 35 37 apsubmaster \$0-localref \$1 \$2;
+#X obj 105 190 apf \$0-localref f1;
+#X obj 181 164 apf \$0-localref f2;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X coords 0 -1 1 1 150 60 1 100 100;

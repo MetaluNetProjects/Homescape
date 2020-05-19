@@ -1,0 +1,72 @@
+#N canvas 713 507 564 268 10;
+#X obj 276 47 namecanvas \$0-can;
+#X obj 276 26 s \$0-can;
+#X msg 276 5 donecanvasdialog 1 -1 0;
+#X msg 144 6 reduire;
+#X obj 1 1 cnv 15 120 52 empty empty cheby 2 6 1 8 -260818 -66577 0
+;
+#X obj 218 32 outlet~;
+#X obj 653 37 inlet;
+#X obj 653 58 s \$0-setap-snd;
+#N canvas 219 404 465 349 guts 0;
+#X obj 43 181 cheby~ 4;
+#X msg 26 142 coef 1 \$1;
+#X msg 105 143 coef 2 \$1;
+#X msg 177 142 coef 3 \$1;
+#X msg 263 143 coef 4 \$1;
+#X obj 25 100 pow 3;
+#X obj 25 80 r \$0-coef1-snd;
+#X obj 139 94 pow 3;
+#X obj 139 74 r \$0-coef2-snd;
+#X obj 192 117 pow 3;
+#X obj 299 117 pow 3;
+#X obj 192 97 r \$0-coef3-snd;
+#X obj 299 97 r \$0-coef4-snd;
+#X obj 42 26 inlet~;
+#X obj 43 255 outlet~;
+#X obj 115 175 r \$0-vol-snd;
+#X obj 114 201 pow 3;
+#X obj 43 230 mull~ 0 10;
+#X obj 237 179 apsubmaster \$1-\$3 \$1-\$2 \$3;
+#X obj 242 214 apf \$1-\$3 vol \$0-vol;
+#X obj 242 233 apf \$1-\$3 coef1 \$0-coef1;
+#X obj 240 250 apf \$1-\$3 coef2 \$0-coef2;
+#X obj 239 266 apf \$1-\$3 coef3 \$0-coef3;
+#X obj 238 284 apf \$1-\$3 coef4 \$0-coef4;
+#X obj 43 207 hip~ 10;
+#X connect 0 0 24 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 8 0 7 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 0;
+#X connect 11 0 9 0;
+#X connect 12 0 10 0;
+#X connect 13 0 0 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 1;
+#X connect 17 0 14 0;
+#X connect 24 0 17 0;
+#X restore 167 32 pd guts;
+#X obj 124 32 inlet~;
+#X obj 102 34 mknob 15 100 0 1 0 0 \$0-vol-snd \$0-vol-rcv vol -2 -6
+193 8 -258699 -1 -1 8996 1;
+#X obj 5 35 mknob 15 100 0 1 0 0 \$0-coef1-snd \$0-coef1-rcv c1 -2
+-6 193 8 -241291 -1 -1 0 1;
+#X obj 30 16 mknob 15 100 0 1 0 0 \$0-coef2-snd \$0-coef2-rcv c2 -2
+-6 193 8 -241291 -1 -1 6600 1;
+#X obj 55 35 mknob 15 100 0 1 0 0 \$0-coef3-snd \$0-coef3-rcv c3 -2
+-6 193 8 -241291 -1 -1 8967 1;
+#X obj 75 16 mknob 15 100 0 1 0 0 \$0-coef4-snd \$0-coef4-rcv c4 -2
+-6 193 8 -241291 -1 -1 233 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 6 0 7 0;
+#X connect 8 0 5 0;
+#X connect 9 0 8 0;
+#X coords 0 0 1 1 122 54 1 0 0;

@@ -1,0 +1,19 @@
+#N canvas 203 360 411 195 10;
+#X obj 177 39 apsubmaster \$1-\$2 \$1 \$2;
+#X obj 177 18 apf \$1-\$2 value \$0-value;
+#X obj 13 26 hsl 100 15 0 1 0 0 \$0-value-snd \$0-value-rcv slider1
+5 8 0 10 -16662 -262144 -162280 5000 1;
+#X obj 11 67 r \$0-value-snd;
+#X obj 11 88 outlet;
+#X obj 178 76 loadbang;
+#X obj 178 97 symbol \$2;
+#X msg 178 118 label \$1;
+#X obj 178 139 s \$0-value-rcv;
+#X obj 238 77 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 6 0;
+#X coords 0 -1 1 1 105 32 1 10 10;

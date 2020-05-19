@@ -1,0 +1,35 @@
+#N canvas 735 1192 523 320 10;
+#X obj 1 14 cnv 15 150 50 empty empty Tempo 5 7 0 14 -120449 -262144
+0;
+#X obj 385 38 hradio 15 1 0 8 \$0-mode-snd \$0-mode-rcv Mode: 0 -6
+0 10 -262144 -1 -257985 0;
+#X obj 108 14 bng 15 250 50 0 \$0-rec-snd \$0-rec-rcv rec 17 7 0 10
+-195568 -195568 -195568;
+#X msg 6 -25 0;
+#X symbolatom 422 105 16 0 0 0 nom #0-name-rcv #0-name-snd;
+#X obj 374 5 apsym \$0 name \$0-name;
+#X obj 419 84 s \$0-modename;
+#X obj 419 62 r \$0-name-snd;
+#X obj 275 91 tgl 15 0 \$0-loop-snd \$0-loop-rcv loop 17 7 0 10 -262144
+-1 -1 0 1;
+#X symbolatom 466 129 10 0 0 0 - - -;
+#X obj 163 7 block_common \$0 \$1 \$2 \$1 \$4 \$3;
+#X obj 6 39 hsl 140 15 5 240 0 0 \$0-bpm-snd \$0-bpm-rcv bpm:77.6978
+4 10 0 15 -129097 -262144 -241291 4300 1;
+#X obj 44 86 r \$0-bpm-snd;
+#X obj 44 156 s \$0-bpm-rcv;
+#X msg 44 133 label \$1;
+#X obj 44 110 makesymbol bpm:%s;
+#X msg 179 134 s1 bpm \$1;
+#X obj 179 157 s \$5-setap-snd;
+#X obj 164 53 apf \$0var bpm \$0-bpm;
+#X obj 158 208 s SYNCHRO-bpm-rcv;
+#X connect 7 0 6 0;
+#X connect 7 0 9 0;
+#X connect 12 0 15 0;
+#X connect 12 0 16 0;
+#X connect 12 0 19 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X coords 0 0 1 1 152 65 1 0 0;

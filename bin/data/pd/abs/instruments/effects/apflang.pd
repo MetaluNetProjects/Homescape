@@ -1,0 +1,89 @@
+#N canvas 870 132 380 264 10;
+#X declare -path utils;
+#X obj 1 16 cnv 15 112 35 empty empty flanger 2 6 1 8 -250685 -241291
+0;
+#X obj 58 35 mknob 15 100 0 1 0 0 \$0-feed-snd \$0-feed-rcv feed -2
+-6 1 8 -257472 -1 -1 0 1;
+#X obj 76 35 mknob 15 100 0 1 0 0 \$0-vol-snd \$0-vol-rcv vol -2 -6
+1 8 -258699 -1 -1 0 1;
+#X obj 22 35 mknob 15 100 0 1 0 0 \$0-filtre-snd \$0-filtre-rcv filtre
+-2 -6 1 8 -225280 -1 -1 0 1;
+#X obj 40 35 mknob 15 100 0 1 0 0 \$0-rate-snd \$0-rate-rcv rate 0
+-6 1 8 -128992 -1 -1 0 1;
+#X obj 2 35 mknob 15 100 0 1 0 0 \$0-deph-snd \$0-deph-rcv deph -2
+-6 1 8 -195568 -1 -1 0 1;
+#X obj 97 35 tgl 15 0 \$0-bypass-snd \$0-bypass-rcv bypass -8 -6 1
+8 -258699 -1 -1 0 1;
+#X obj 7 68 inlet~;
+#X obj 6 208 outlet~;
+#X obj 35 129 *~;
+#N canvas 627 305 359 521 allsound 0;
+#X obj 175 226 inlet~;
+#X obj 18 405 outlet~;
+#X obj 257 13 inlet;
+#X obj 239 71 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X obj 45 321 r \$0-vol-snd;
+#X obj 36 296 delwrite~ \$0-D 1000;
+#X obj 18 204 lop~ 100;
+#X obj 155 124 r \$0-filtre-snd;
+#X obj 155 143 * 130;
+#X obj 155 162 mtof;
+#X obj 64 223 r \$0-feed-snd;
+#X obj 18 67 osc~ 0.01;
+#X obj 18 24 r \$0-rate-snd;
+#X obj 109 44 * 10;
+#X obj 109 22 r \$0-deph-snd;
+#X obj 45 340 pow 3;
+#X obj 45 360 * 2;
+#X obj 36 269 *~ -1;
+#X obj 17 380 mull~ 0 10;
+#X obj 36 248 mull~ 0 10;
+#X obj 18 161 vd~ \$0-D 1000;
+#X obj 19 119 abs~;
+#X obj 19 98 *~;
+#X obj 257 39 switch~ 1;
+#X obj 19 140 +~ 2;
+#X connect 0 0 5 0;
+#X connect 2 0 3 0;
+#X connect 2 0 23 0;
+#X connect 4 0 15 0;
+#X connect 6 0 18 0;
+#X connect 6 0 19 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 1;
+#X connect 10 0 19 1;
+#X connect 11 0 22 0;
+#X connect 12 0 11 0;
+#X connect 13 0 22 1;
+#X connect 14 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 1;
+#X connect 17 0 5 0;
+#X connect 18 0 1 0;
+#X connect 19 0 17 0;
+#X connect 20 0 6 0;
+#X connect 21 0 24 0;
+#X connect 22 0 21 0;
+#X connect 24 0 20 0;
+#X restore 7 168 pd allsound;
+#X obj 69 130 != 1;
+#X obj 50 68 r \$0-bypass-snd;
+#X obj 167 190 declare -path utils;
+#X obj 166 147 apsubmaster \$1-\$2 \$1 \$2;
+#X obj 166 127 apf \$1-\$2 bypass \$0-bypass;
+#X obj 166 108 apf \$1-\$2 deph \$0-deph;
+#X obj 166 89 apf \$1-\$2 rate \$0-rate;
+#X obj 166 70 apf \$1-\$2 time \$0-time;
+#X obj 165 51 apf \$1-\$2 feed \$0-feed;
+#X obj 166 30 apf \$1-\$2 filtre \$0-filtre;
+#X obj 166 11 apf \$1-\$2 vol \$0-vol;
+#X connect 7 0 10 0;
+#X connect 7 0 9 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 1;
+#X connect 12 0 11 0;
+#X connect 12 0 9 1;
+#X coords 0 0 1 1 114 54 1 0 0;

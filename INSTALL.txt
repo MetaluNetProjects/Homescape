@@ -1,0 +1,5 @@
+make PLATFORM_OS=Android
+chmod a+x ./gradlew
+./gradlew assembleDebug && adb -d install -r ./build/outputs/apk/Homescape-debug.apk
+
+gradle clean build

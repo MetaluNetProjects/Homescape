@@ -1,0 +1,7 @@
+#N canvas 1634 892 233 168 10;
+#X obj 62 43 inlet vol_lin;
+#X obj 62 68 pow 3;
+#X obj 62 91 outlet to_mull;
+#X text 64 13 volume curve.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

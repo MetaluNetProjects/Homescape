@@ -1,0 +1,1095 @@
+#N struct 11514-symarray float x array symbols 11514-sym;
+#N struct 11514-sym symbol name float on;
+#N struct 11523-symarray float x array symbols 11523-sym;
+#N struct 11523-sym symbol name float on;
+#N struct 11581-symarray float x array symbols 11581-sym;
+#N struct 11581-sym symbol name float on;
+#N canvas 1157 1711 279 157 10;
+#X declare -path .;
+#X declare -path .;
+#N canvas 1625 349 680 697 m_chorddict 0;
+#X obj 186 374 u_makepoly 8 1 s_rhodey aasas;
+#X obj 186 243 makenote 20 1500;
+#X obj 186 271 pack 0 0;
+#X obj 186 216 + 60;
+#X msg 298 97 dump;
+#X msg 340 98 print;
+#X floatatom 260 59 5 0 0 2 by_number - -;
+#X obj 287 155 route list;
+#X symbolatom 354 176 10 0 0 0 - - -;
+#X obj 287 192 print dump;
+#X msg 135 56 +7;
+#X msg 169 55 7;
+#X obj 199 168 print notes;
+#X obj 186 131 m_chorddict;
+#X msg 201 55 -7;
+#N canvas 2533 513 732 608 progressions 0;
+#X obj 188 500 + 60;
+#X floatatom 298 477 5 0 0 0 - - -;
+#X obj 188 245 list prepend add;
+#X obj 188 274 list trim;
+#X obj 188 329 textfile;
+#X msg 340 301 print;
+#X obj 188 352 list split 1;
+#X obj 188 375 t b f;
+#X obj 188 401 list;
+#X msg 287 278 bang;
+#X msg 343 277 clear;
+#X obj 248 414 - 1;
+#X msg 95 65 1 maj \, 4 maj \, 7 o \, 3 - \, 6 - \, 2 - \, 5 maj \,
+1 maj;
+#X msg 325 95 2 -7 \, 5 maj7;
+#X symbolatom 88 418 10 0 0 0 - - -;
+#X obj 248 559 outlet;
+#X obj 61 191 metro 1000;
+#X obj 61 172 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 82 29 here's how to play some chord progressions;
+#X text 300 561 to some instrument;
+#X msg 432 95 1 maj \, 6 - \, 2 - \, 5 -7 \, 2 -;
+#X floatatom 39 418 5 0 0 0 - - -;
+#X text 278 415 m_majorscale is zero-based!;
+#X obj 284 351 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 138 352 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 131 97 2 m7 \, 5 maj7 \, 1 maj \, 1 maj;
+#X msg 257 329 rewind;
+#X obj 188 476 m_chorddict;
+#X text 291 531 add tonics here.;
+#X obj 303 505 - 24;
+#X msg 367 160 5 maj13 \, 6 sus9;
+#X msg 430 214 4 7b9 \, 3 11/13;
+#X msg 393 189 6 maj7inv2 \, 6 6inv3;
+#X msg 182 141 4 7b9;
+#X obj 248 443 m_majorscale 60;
+#X obj 20 123 r SYNCHRO-clock;
+#X obj 20 153 t b;
+#X msg 451 39 2 -7 \, 5 maj7 \, 4;
+#X connect 0 0 15 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 0 24 0;
+#X connect 4 1 26 0;
+#X connect 4 1 23 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 6 1 8 1;
+#X connect 7 0 8 0;
+#X connect 7 1 11 0;
+#X connect 8 0 14 0;
+#X connect 8 0 21 0;
+#X connect 8 0 27 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 34 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X connect 16 0 4 0;
+#X connect 17 0 16 0;
+#X connect 20 0 2 0;
+#X connect 25 0 2 0;
+#X connect 26 0 4 0;
+#X connect 27 0 0 0;
+#X connect 29 0 15 0;
+#X connect 30 0 2 0;
+#X connect 31 0 2 0;
+#X connect 32 0 2 0;
+#X connect 33 0 2 0;
+#X connect 34 0 1 0;
+#X connect 34 0 15 0;
+#X connect 34 0 29 0;
+#X connect 34 0 0 1;
+#X connect 35 0 36 0;
+#X connect 36 0 4 0;
+#X connect 37 0 2 0;
+#X restore 325 214 pd progressions;
+#X text 86 535 Chord names based on the "Dictionary of Intervals and
+Chords" by Benjamin K. Shisler online at: http://www.geocities.com/SoHo/Studios/9783/ci1.html
+(good ol' geocities.com ...);
+#X text 83 608 These names were used because they are all at least
+one character long and don't contain spaces nor special characters.
+;
+#N canvas 2988 120 438 801 chordnames 0;
+#X text 50 0 m2 - b 2;
+#X text 50 12 M2 - 2;
+#X text 50 24 m3 - b 3;
+#X text 50 36 M3 - 3;
+#X text 50 48 P4 - 4;
+#X text 50 60 T - b 5;
+#X text 50 72 P5 - 5;
+#X text 50 84 m6 - b 6;
+#X text 50 96 M6 - 6;
+#X text 50 108 m7 - b 7;
+#X text 50 120 M7 - 7;
+#X text 50 132 maj - - 3 - - 5;
+#X text 50 144 majinv1 - b 3 - b 6;
+#X text 50 156 majinv2 - - 4 - - 6;
+#X text 50 168 - - b 3 - - 5;
+#X text 50 180 -inv1 - - 3 - - 6;
+#X text 50 192 -inv2 - - 4 - b 6;
+#X text 50 204 o - b 3 - b 5;
+#X text 50 216 oinv1 - b 3 - - 6;
+#X text 50 228 oinv2 - b 5 - - 6;
+#X text 50 240 + - # 3 - # 5;
+#X text 50 252 sus4 - - 4 - - 5;
+#X text 50 264 sus2 - - 2 - - 5;
+#X text 50 276 susinv2 - b 4 - # 6;
+#X text 50 288 maj7 - - 3 - - 5 - - 7;
+#X text 50 300 maj7inv1 - b 3 - - 5 - b 6;
+#X text 50 312 maj7inv2 - - 3 - - 4 - - 6;
+#X text 50 324 maj7inv3 - b 2 - - 4 - b 6;
+#X text 50 336 7 - - 3 - - 5 - b 7;
+#X text 50 348 7inv1 - b 3 - b 5 - b 6;
+#X text 50 360 7inv2 - b 3 - - 4 - - 6;
+#X text 50 372 7inv3 - - 2 - b 5 - - 6;
+#X text 50 384 -7 - b 3 - - 5 - b 7;
+#X text 50 396 -7inv1 - - 3 - - 5 - - 6;
+#X text 50 408 -7inv2 - b 3 - - 4 - b 6;
+#X text 50 420 -7inv3 - - 2 - - 4 - - 6;
+#X text 50 432 7b5 - - 3 - b 5 - b 7;
+#X text 50 444 7b5inv1 - - 2 - b 5 - b 6;
+#X text 50 456 o7 - b 3 - b 5 - - 6;
+#X text 50 468 +7 - - 3 - b 6 - b 7;
+#X text 50 480 +7inv1 - - 3 - b 5 - b 6;
+#X text 50 492 +7inv2 - - 2 - - 3 - b 6;
+#X text 50 504 +7inv3 - - 2 - b 5 - b 7;
+#X text 50 516 sus7 - - 4 - - 5 - b 7;
+#X text 50 528 sus7inv1 - - 2 - - 4 - - 5;
+#X text 50 540 sus7inv2 - b 3 - - 4 - b 7;
+#X text 50 552 sus7inv3 - - 2 - - 5 - - 6;
+#X text 50 564 6 - - 3 - - 5 - - 6;
+#X text 50 576 6inv1 - b 3 - - 4 - b 6;
+#X text 50 588 6inv2 - - 2 - - 4 - - 6;
+#X text 50 600 6inv3 - b 3 - - 5 - b 7;
+#X text 50 612 -6 - b 3 - - 5 - - 6;
+#X text 50 624 maj9 - - 3 - - 5 - - 7 - - 9;
+#X text 50 636 9 - - 3 - - 5 - b 7 - - 9;
+#X text 50 648 -9 - b 3 - - 5 - b 7 - - 9;
+#X text 50 660 9b5 - - 3 - b 5 - b 7 - - 9;
+#X text 50 672 +9 - - 3 - # 5 - b 7 - - 9;
+#X text 50 684 sus9 - - 4 - - 5 - b 7 - - 9;
+#X text 50 696 6/9 - - 3 - - 5 - - 6 - - 9;
+#X text 50 708 -6/9 - b 3 - - 5 - - 6 - - 9;
+#X text 50 720 7b9 - - 3 - - 5 - b 7 - b 9;
+#X text 50 732 7#9 - - 3 - - 5 - b 7 - # 9;
+#X text 50 744 7b5#9 - - 3 - b 5 - b 7 - # 9;
+#X text 50 756 maj9+ - - 3 - # 5 - - 7 - - 9;
+#X text 50 768 -maj9 - b 3 - - 5 - - 7 - - 9;
+#X text 50 780 11 - - 5 - b 7 - - 9 - 11;
+#X text 50 792 -11 - b 3 - - 5 - b 7 - - 9 - 11;
+#X text 50 804 maj9#11 - - 3 - - 5 - - 7 - - 9 # 11;
+#X text 50 816 9#11 - - 3 - - 5 - b 7 - - 9 # 11;
+#X text 50 828 13 - - 3 - b 7 - - 9 - 13;
+#X text 50 840 -13 - b 3 - - 5 - b 7 - - 9 - 11 - 13;
+#X text 50 852 11/13 - - 5 - b 7 - - 9 - 11 - 13;
+#X text 50 864 maj13 - - 3 - - 5 - - 7 - - 9 - 13;
+#X text 50 876 maj13#11 - - 3 - - 5 - - 7 - - 9 - # 11 - 13;
+#X text 50 888 13#11 - - 3 - - 5 - b 7 - - 9 - # 11 - 13;
+#X text 50 900 -13#11 - b 3 - - 5 - b 7 - - 9 - # 11 - 13;
+#X text 50 912 13#11#9 - - 3 - - 5 - - 7 - # 9 - # 11 - 13;
+#X text 50 924 majadd9 - - 3 - - 5 - - 9;
+#X text 50 936 -add9 - b 3 - - 5 - - 9;
+#X restore 461 64 pd chordnames;
+#X text 94 -78 m_chorddict - converts chord symbols to intervals;
+#X obj 179 493 OUT 1;
+#X obj 238 492 OUT 2;
+#X obj 187 453 Vmull~;
+#X obj 341 490 ac;
+#X obj 482 135 switch~;
+#X obj 510 102 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 215 411 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 78 59 maj7inv1;
+#X msg 104 4 maj7;
+#X msg 281 17 63;
+#N canvas 1940 335 674 835 interactive-example 0;
+#X obj 312 284 hradio 15 1 0 12 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 312 307 m_majorscale 60;
+#X obj 393 376 t a;
+#X obj 312 351 list prepend;
+#X obj 158 643 s_rhodey;
+#X obj 143 577 makenote 50 250;
+#X obj 143 602 pack 0 0;
+#X obj 143 364 tgl 15 0 empty empty empty 17 7 0 10 -4034 -1 -1 0 1
+;
+#X floatatom 158 546 5 0 0 0 - - -;
+#N canvas 0 0 450 300 show 0;
+#X obj 41 39 inlet;
+#X obj 186 36 inlet;
+#X obj 41 124 outlet;
+#X msg 186 76 set;
+#X obj 41 59 list prepend set;
+#X obj 41 83 list trim;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X restore 327 376 pd show;
+#X msg 327 401 79 72 65;
+#N canvas 0 0 450 300 show 0;
+#X obj 41 39 inlet;
+#X obj 186 36 inlet;
+#X obj 41 124 outlet;
+#X msg 186 76 set;
+#X obj 41 59 list prepend set;
+#X obj 41 83 list trim;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X restore 252 496 pd show;
+#X msg 210 99 retrograde;
+#X msg 210 220 retro-inversion;
+#X msg 210 74 bang;
+#X floatatom 167 192 5 0 0 0 - - -;
+#X msg 210 195 transpose \$1;
+#X msg 210 124 inversion;
+#X msg 210 170 inversion \$1;
+#X floatatom 165 169 5 0 0 0 - - -;
+#X msg 210 285 rotate \$1;
+#X floatatom 164 282 5 0 0 0 - - -;
+#X msg 210 260 retro-inversion \$1;
+#X floatatom 164 260 5 0 0 0 - - -;
+#X obj 210 420 c_patternchange;
+#X obj 481 224 s \$0-reset;
+#X msg 481 199 bang;
+#X obj 408 351 r \$0-reset;
+#X obj 327 426 r \$0-reset;
+#X text 56 36 This is a little interactive example of changing patterns.
+;
+#X text 505 283 record pitches;
+#X obj 143 521 u_listloop;
+#X obj 352 647 s_drumelectro;
+#X obj 272 572 select 0;
+#X msg 358 623 bd 100;
+#X msg 252 521 79 72 65;
+#X obj 191 746 OUT 1;
+#X obj 250 745 OUT 2;
+#X obj 199 706 Vmull~;
+#X obj 261 704 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 143 389 metro 125;
+#X msg 123 279 60;
+#X msg 125 198 4;
+#X msg 122 248 70;
+#X msg 128 157 70;
+#N canvas 2516 699 912 300 juno 0;
+#N canvas 244 1333 1081 586 detailed_help 0;
+#X obj 719 26 declare -path .;
+#X msg 177 132 save;
+#X obj 575 9 r \$0-GUI;
+#X obj 21 132 m_majorscale 50;
+#X obj 21 54 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 21 211 pack;
+#N canvas 0 58 1013 367 midi-control 0;
+#X obj 37 214 m_symbolarray;
+#X obj 21 110 ctlin;
+#X obj 21 186 / 127;
+#X obj 125 65 loadbang;
+#X obj 21 297 s \$0-GUI;
+#X text 124 31 add your midi controller mappings here. Format: <ctl-num>
+<method name>;
+#X floatatom 47 144 5 0 0 0 - - -;
+#X floatatom 88 145 5 0 0 0 - - -;
+#X obj 21 260 list prepend;
+#X text 119 259 swap;
+#X msg 558 66 env1a \, env1d \, env1r \, env1s \, env2a \, env2d \,
+env2r \, env2s \, env3a \, env3d \, env3r \, env3s \, mod1a \, mod1b
+\, mod1c \, mod1d \, mod2a \, mod2b \, mod2c \, mod2d \, mod3a \, mod3b
+\, mod3c \, mod3d \, osc1a \, osc1b \, osc1c \, osc1d \, osc2a \, osc2b
+\, osc2c \, osc2d \, osc3a \, osc3b \, osc3c \, osc3d \,;
+#X msg 201 222 dump;
+#X symbolatom 37 241 10 0 0 0 - - -;
+#X obj 201 276 print;
+#X obj 201 244 u_dumpfile controls.txt cr;
+#X text 552 32 Control Template - These are the methods \, that s_czz_synth
+accepts. They all expect values in a range of 0-1.;
+#X text 241 220 You can also keep your settings in a file.;
+#X obj 201 336 declare -path .;
+#X text 317 339 let me find "controls.txt" here.;
+#X msg 125 91 74 osc1a \, 71 osc1b \, 81 osc1c;
+#X connect 0 0 8 1;
+#X connect 0 0 12 0;
+#X connect 1 0 6 0;
+#X connect 1 0 2 0;
+#X connect 1 1 7 0;
+#X connect 1 1 0 0;
+#X connect 2 0 8 0;
+#X connect 3 0 19 0;
+#X connect 8 0 4 0;
+#X connect 11 0 14 0;
+#X connect 14 0 0 1;
+#X connect 14 0 13 0;
+#X connect 19 0 0 1;
+#X restore 356 103 pd midi-control;
+#X obj 27 174 notein;
+#X text 346 84 Set controllers here:;
+#X obj 135 272 u_cocollect;
+#X obj 177 193 t a b;
+#X obj 177 59 bng 64 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+-1;
+#X obj 135 505 s \$0-GUI;
+#X obj 152 300 loadbang;
+#X obj 129 243 r \$0-control;
+#X obj 575 528 s \$0-control;
+#X symbolatom 350 271 20 0 0 0 - - -;
+#X obj 452 250 s \$0-GUI;
+#X obj 350 200 nbx 3 20 0 256 0 0 empty empty empty 0 -8 0 16 -260097
+-262144 -1 0 256;
+#X obj 350 177 pgmin 1;
+#X obj 21 154 makenote 127 300;
+#X floatatom 112 62 5 0 0 0 - - -;
+#X msg 135 319 mod3d 0.00787402 \, mod3c 0.015748 \, mod3b 0.401575
+\, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748 \, mod2b 0.0314961
+\, mod2a 0.0393701 \, mod1d 0.0787402 \, mod1c 0.110236 \, mod1b 0.322835
+\, mod1a 0.448819 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b 0.015748
+\, osc3a 0.167323 \, osc2d 0.0314961 \, osc2c 0 \, osc2b 0.645669 \,
+osc2a 0.750945 \, osc1d 0.574803 \, osc1c 0.181102 \, osc1b 0.0314961
+\, osc1a 0.472441 \, env3r 0.110236 \, env3s 0.0314961 \, env3d 0.606299
+\, env3a 0.307087 \, env2r 0.322835 \, env2s 0.377953 \, env2d 0.419921
+\, env2a 0.543307 \, env1r 0.0356693 \, env1s 0.472441 \, env1d 0.307087
+\, env1a 0.338583 \,;
+#X obj 575 55 g_synthcontrol;
+#N canvas 1 1192 1108 693 ejun_presets 0;
+#X obj 91 26 inlet;
+#X obj 83 653 outlet name;
+#X obj 83 630 symbol;
+#X obj 166 652 outlet parms;
+#X obj 83 582 route name;
+#X obj 675 75 loadbang;
+#X text 670 21 set up the interface to be human readable and show which
+controls are actually used;
+#X text 672 51 Requires modified [g-hsl];
+#X obj 90 52 sel 0 1 2 3 4 5 6 7 8 9 10;
+#X msg 671 104 env1a color 128 \, env1a label AMP-ATTACK \, env1d color
+128 \, env1d label AMP-DECAY \, env1r color 128 \, env1r label AMP-REL
+\, env1s color 128 \, env1s label AMP-SUS \, env2a color 128 \, env2a
+label FILT-ATTACK \, env2d color 128 \, env2d label FILT-DECAY \, env2r
+color 128 \, env2r label FILT-REL \, env2s color 128 \, env2s label
+FILT-SUS \, env3a color 128 \, env3a label MOD-ATTACK \, env3d color
+128 \, env3d label MOD-DECAY \, env3r color 128 \, env3r label MOD-REL
+\, env3s color 128 \, env3s label MOD-SUS \, mod1a color 128 \, mod1a
+label LFO-FREQ \, mod1b color 128 \, mod1b label VIB-AMT \, mod1c color
+128 \, mod1c label VIB-ONSET \, mod1d color 128 \, mod1d label LFO-PWM
+\, mod2a color 128 \, mod2a label CUTOFF \, mod2b color 128 \, mod2b
+label RESON \, mod2c color 128 \, mod2c label ENVAMT \, mod2d color
+128 \, mod2d label PWM-ENV-LFO \, mod3a color 128 \, mod3a label HIGHPASS
+\, mod3b color 128 \, mod3b label VOLUME \, mod3c color 2 \, mod3c
+label _ \, mod3d color 2 \, mod3d label _ \, osc1a color 128 \, osc1a
+label OSC1-COARSE \, osc1b color 128 \, osc1b label MIX12 \, osc1c
+color 2 \, osc1c label _ \, osc1d color 2 \, osc1d label _ \, osc2a
+color 128 \, osc2a label OSC2-COARSE \, osc2b color 128 \, osc2b label
+MIX23 osc2c color 128 \, osc2c label DETENV \, osc2d color 128 \, osc2d
+label PWNENV \, osc3a color 128 \, osc3a label OSC3-FREQ \, osc3b color
+2 \, osc3b label _ \, osc3c color 2 \, osc3c label _ \, osc3d color
+2 \, osc3d label _;
+#X msg 73 125 name raveybrass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.23622 \, mod3a 0.0393701 \, mod2d 0.102362 \, mod2c 0.19685
+\, mod2b 0.0130709 \, mod2a 0.0393701 \, mod1d 0.173228 \, mod1c 0
+\, mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.425354 \, osc2d 0.362205 \, osc2c 0.0866142
+\, osc2b 0.503937 \, osc2a 0.247008 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.464567 \, osc1a 0 \, env3r 0 \, env3s 0 \, env3d 0.0393701
+\, env3a 0 \, env2r 0.00787402 \, env2s 0.0629921 \, env2d 0.015748
+\, env2a 0.023622 \, env1r 0.00417323 \, env1s 0.401575 \, env1d 0.0708661
+\, env1a 0.012126 \,;
+#X msg 92 134 name shortbass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.220472 \, mod3a 0.0124409 \, mod2d 0.102362 \, mod2c 0.181102
+\, mod2b 0.107559 \, mod2a 0.00787402 \, mod1d 0.173228 \, mod1c 0
+\, mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0 \, osc2d 0.362205 \, osc2c 0.204724 \,
+osc2b 0.409449 \, osc2a 0.247008 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0 \, osc1a 0 \, env3r 0.00787402 \, env3s 0 \, env3d 0.023622
+\, env3a 0.000629921 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d
+0.0340945 \, env2a 0.00787402 \, env1r 0.00417323 \, env1s 0.401575
+\, env1d 0.0708661 \, env1a 0.000708661 \,;
+#X msg 117 158 name pwmchorus \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.11811 \, mod3a 0.0124409 \, mod2d 0 \, mod2c 0 \, mod2b
+0.107559 \, mod2a 0.377953 \, mod1d 0.472441 \, mod1c 0 \, mod1b 0
+\, mod1a 0.480315 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b 0.015748
+\, osc3a 0.425197 \, osc2d 0.362205 \, osc2c 0 \, osc2b 0.440945 \,
+osc2a 0.239134 \, osc1d 0.574803 \, osc1c 0.181102 \, osc1b 1 \, osc1a
+0 \, env3r 0.00787402 \, env3s 0.409449 \, env3d 0.0314961 \, env3a
+0.000629921 \, env2r 0.00787402 \, env2s 0.023622 \, env2d 0.0262205
+\, env2a 0 \, env1r 0.0011811 \, env1s 0.858268 \, env1d 0 \, env1a
+0.00173228 \,;
+#X msg 137 174 name screamerpad \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.141732 \, mod3a 0.11811 \, mod2d 0.291339 \, mod2c 0 \,
+mod2b 0.0314961 \, mod2a 0.322835 \, mod1d 0.0944882 \, mod1c 0.19685
+\, mod1b 0.606299 \, mod1a 0.622047 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.669291 \, osc2d 0.401575 \, osc2c 0.102362
+\, osc2b 0.330709 \, osc2a 0.501102 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.401575 \, osc1a 1 \, env3r 0.00787402 \, env3s 0.409449
+\, env3d 0.110236 \, env3a 0.000629921 \, env2r 0.00787402 \, env2s
+0.023622 \, env2d 0.0262205 \, env2a 0 \, env1r 0.0011811 \, env1s
+0.858268 \, env1d 0 \, env1a 0.00173228 \,;
+#X msg 157 184 name moogybass \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.606299 \, mod3a 0.00456693 \, mod2d 0.811024 \, mod2c 0.181102
+\, mod2b 0.54063 \, mod2a 0.0314961 \, mod1d 0.0787402 \, mod1c 0 \,
+mod1b 0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402 \,
+osc3b 0.015748 \, osc3a 0.00102362 \, osc2d 0.669291 \, osc2c 0.425197
+\, osc2b 0.409449 \, osc2a 0.239134 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0 \, osc1a 0 \, env3r 0.00787402 \, env3s 0 \, env3d 0.0393701
+\, env3a 0 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d 0.0498425
+\, env2a 0.00787402 \, env1r 0.00417323 \, env1s 0.401575 \, env1d
+0.354331 \, env1a 0.000708661 \,;
+#X msg 170 195 name drybass \, mod3d 0.00787402 \, mod3c 0.015748 \,
+mod3b 0.377953 \, mod3a 0.00787402 \, mod2d 0.370079 \, mod2c 0.181102
+\, mod2b 0 \, mod2a 0.00787402 \, mod1d 0.0551181 \, mod1c 0 \, mod1b
+0 \, mod1a 0.566929 \, osc3d 0.023622 \, osc3c 0.00787402 \, osc3b
+0.015748 \, osc3a 0.166378 \, osc2d 0.023622 \, osc2c 0.0472441 \,
+osc2b 0.551181 \, osc2a 0.396614 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.322835 \, osc1a 0 \, env3r 0 \, env3s 0.0314961 \, env3d
+0.606299 \, env3a 0 \, env2r 0.00787402 \, env2s 0.0472441 \, env2d
+0.0498425 \, env2a 0 \, env1r 0.00417323 \, env1s 0 \, env1d 0.125984
+\, env1a 0 \,;
+#X msg 179 200 name dullstring \, mod3d 0.00787402 \, mod3c 0.015748
+\, mod3b 0.401575 \, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748
+\, mod2b 0.0314961 \, mod2a 0.0393701 \, mod1d 0.0787402 \, mod1c 0.110236
+\, mod1b 0.322835 \, mod1a 0.448819 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.167323 \, osc2d 0.0314961 \, osc2c 0 \,
+osc2b 0.645669 \, osc2a 0.750945 \, osc1d 0.574803 \, osc1c 0.181102
+\, osc1b 0.0314961 \, osc1a 0.472441 \, env3r 0.110236 \, env3s 0.0314961
+\, env3d 0.606299 \, env3a 0.307087 \, env2r 0.322835 \, env2s 0.377953
+\, env2d 0.419921 \, env2a 0.543307 \, env1r 0.0356693 \, env1s 0.472441
+\, env1d 0.307087 \, env1a 0.338583 \,;
+#X msg 193 219 name orchy \, mod3d 0.00787402 \, mod3c 0.015748 \,
+mod3b 0.401575 \, mod3a 0.015748 \, mod2d 0.740157 \, mod2c 0.015748
+\, mod2b 0.0314961 \, mod2a 0.0393701 \, mod1d 0 \, mod1c 0.102362
+\, mod1b 0.322835 \, mod1a 0.496063 \, osc3d 0.023622 \, osc3c 0.00787402
+\, osc3b 0.015748 \, osc3a 0.238189 \, osc2d 0 \, osc2c 0 \, osc2b
+0.0866142 \, osc2a 0.747717 \, osc1d 0.574803 \, osc1c 0.181102 \,
+osc1b 0.80315 \, osc1a 0.913386 \, env3r 0.110236 \, env3s 0.0314961
+\, env3d 0.606299 \, env3a 0.307087 \, env2r 0.322835 \, env2s 0.692913
+\, env2d 0.278189 \, env2a 0.173228 \, env1r 0.0356693 \, env1s 0.472441
+\, env1d 0.23622 \, env1a 0.133858 \,;
+#X connect 0 0 8 0;
+#X connect 2 0 1 0;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X connect 5 0 9 0;
+#X connect 8 0 10 0;
+#X connect 8 1 11 0;
+#X connect 8 2 12 0;
+#X connect 8 3 13 0;
+#X connect 8 4 14 0;
+#X connect 8 5 15 0;
+#X connect 8 6 16 0;
+#X connect 8 7 17 0;
+#X connect 9 0 3 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 4 0;
+#X connect 15 0 4 0;
+#X connect 16 0 4 0;
+#X connect 17 0 4 0;
+#X restore 350 229 pd ejun_presets;
+#X obj 349 154 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 21 104 random 10;
+#X obj 21 243 s_ejun \$0-TAG;
+#X obj 21 78 metro 125;
+#X obj 119 18 inlet;
+#X obj 23 328 outlet~;
+#X connect 1 0 10 0;
+#X connect 2 0 23 0;
+#X connect 3 0 20 0;
+#X connect 4 0 28 0;
+#X connect 7 0 5 0;
+#X connect 7 1 5 1;
+#X connect 9 0 22 0;
+#X connect 10 0 27 1;
+#X connect 10 1 9 1;
+#X connect 11 0 1 0;
+#X connect 13 0 22 0;
+#X connect 14 0 27 1;
+#X connect 18 0 24 0;
+#X connect 19 0 18 0;
+#X connect 20 0 5 0;
+#X connect 20 1 5 1;
+#X connect 21 0 26 1;
+#X connect 22 0 12 0;
+#X connect 23 0 15 0;
+#X connect 24 0 16 0;
+#X connect 24 1 17 0;
+#X connect 25 0 18 0;
+#X connect 26 0 3 0;
+#X connect 27 0 30 0;
+#X connect 27 1 9 0;
+#X connect 28 0 26 0;
+#X connect 29 0 27 0;
+#X restore 578 186 pd detailed_help;
+#N canvas 175 22 827 680 REFERENCE 0;
+#X text 114 174 Argument 0: name for state saving (required);
+#X text 114 214 Inlet 0: pitch/velocity pairs.;
+#X text 114 357 Outlet 0: synth audio signal.;
+#X text 114 374 Outlet 1: will report internal settings when receiving
+"save" message to second inlet.;
+#X text 114 234 Inlet 1: control inlet to set parameters. See example
+help for details. Possible message are (in alphabetical order): env1a
+\, env1d \, env1r \, env1s \, env2a \, env2d \, env2r \, env2s \, env3a
+\, env3d \, env3r \, env3s \, mod1a \, mod1b \, mod1c \, mod1d \, mod2a
+\, mod2b \, mod2c \, mod2d \, mod3a \, mod3b \, mod3c \, mod3d \, osc1a
+\, osc1b \, osc1c \, osc1d \, osc2a \, osc2b \, osc2c \, osc2d \, osc3a
+\, osc3b \, osc3c \, osc3d. They all accept a float in the range 0-1
+;
+#X text 114 121 Name: s_ejun;
+#X text 113 140 Summary: a juno like instrument;
+#X text 112 411 Description: s_ejun is a juno or jupiter style instrument
+with two oscillators \, the first switchable between pwm and saw \,
+and a second detunable saw aocillator. The filter is 9dB oct with a
+highpass output stage. No chorus inside \, use an external chorus like
+[e_chorus] or [e_chorusr] in the rj library for proper juno sounds.
+ajf 2010;
+#X text 122 529 Tags: synthesizer \, juno \, jupiter \, analogue \,
+rave \, bass;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 14 58 pd REFERENCE;
+#X text 508 240 Please see inside for help and an example.;
+#X text 668 107 control inlet;
+#X text 667 153 preset outlet;
+#X text 17 24 s_ejun - a juno/jupiter type analogue sound;
+#X obj 639 44 notein;
+#X obj 580 128 s_ejun \$0-TAG;
+#X obj 600 14 inlet;
+#X obj 789 235 outlet~;
+#X connect 0 0 9 0;
+#X connect 8 0 0 0;
+#X restore 86 679 pd juno;
+#X obj 289 602 i;
+#X obj 330 601 ==;
+#X floatatom 291 637 5 0 0 0 - - -;
+#X obj 357 570 sel 0 1;
+#X msg 410 622 sn 100;
+#X msg 373 598 hh 100;
+#X msg 438 581 cp 100;
+#X obj 68 733 *~ 5;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 2 0;
+#X connect 3 0 9 0;
+#X connect 3 0 24 1;
+#X connect 4 0 38 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
+#X connect 6 0 45 0;
+#X connect 7 0 40 0;
+#X connect 9 0 10 0;
+#X connect 11 0 35 0;
+#X connect 12 0 24 0;
+#X connect 13 0 24 0;
+#X connect 14 0 24 0;
+#X connect 15 0 16 0;
+#X connect 16 0 24 0;
+#X connect 17 0 24 0;
+#X connect 18 0 24 0;
+#X connect 19 0 18 0;
+#X connect 20 0 24 0;
+#X connect 21 0 20 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 11 0;
+#X connect 24 0 31 1;
+#X connect 26 0 25 0;
+#X connect 27 0 3 1;
+#X connect 27 0 9 1;
+#X connect 28 0 24 1;
+#X connect 28 0 11 1;
+#X connect 28 0 31 1;
+#X connect 31 0 8 0;
+#X connect 31 0 5 0;
+#X connect 31 1 33 0;
+#X connect 32 0 38 0;
+#X connect 33 0 46 0;
+#X connect 34 0 32 0;
+#X connect 38 0 36 0;
+#X connect 38 0 37 0;
+#X connect 39 0 38 1;
+#X connect 40 0 31 0;
+#X connect 41 0 20 0;
+#X connect 42 0 16 0;
+#X connect 43 0 22 0;
+#X connect 44 0 18 0;
+#X connect 45 0 53 0;
+#X connect 46 0 47 0;
+#X connect 46 0 48 0;
+#X connect 46 0 49 0;
+#X connect 47 0 46 1;
+#X connect 49 0 34 0;
+#X connect 49 0 51 0;
+#X connect 49 1 50 0;
+#X connect 49 1 51 0;
+#X connect 50 0 32 0;
+#X connect 51 0 32 0;
+#X connect 52 0 32 0;
+#X connect 53 0 38 0;
+#X restore 449 507 pd interactive-example;
+#N canvas 2336 186 768 765 majorscale 0;
+#X floatatom 184 390 5 0 0 0 - - -;
+#X floatatom 176 302 5 0 0 0 - - -;
+#X obj 176 522 pack 0 0;
+#X text 59 35 m_majorscale - map numbers to a major scale;
+#X text 122 94 Translates nuumbers like this:;
+#X msg 267 120 0 2 4 5 7 9 11;
+#X msg 126 119 0 1 2 3 4 5 6;
+#X floatatom 204 211 5 0 0 0 - - -;
+#X floatatom 204 166 5 0 0 0 scale_step - -;
+#X obj 204 186 m_majorscale;
+#X text 231 121 ==>;
+#X floatatom 285 165 5 0 0 1 base_note - -;
+#X text 392 119 and so on for higher octaves;
+#X text 129 242 Arguments: <base note>;
+#X obj 176 367 m_majorscale 60;
+#X obj 176 543 u_makepoly 8 1 s_rhodey \$0-piano;
+#X obj 176 492 makenote 20 1000;
+#X obj 233 300 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 1852 692 592 507 play-a-little-song-for-me 0;
+#X msg 133 301 0 \, 2 \, 3 \, 5 \, 8 \, 9;
+#X msg 100 326 0 \, 2 \, 4 \, 6 \, 8;
+#X obj 238 223 random 7;
+#X obj 139 237 ==;
+#X obj 100 237 f;
+#X obj 100 266 select 0 1;
+#X obj 100 390 outlet;
+#X obj 206 52 inlet;
+#X obj 272 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 330 244 f;
+#X obj 364 244 + 1;
+#X obj 329 411 outlet;
+#X msg 329 384 60;
+#X msg 365 384 58;
+#X obj 330 363 select 0 1;
+#X obj 330 221 b;
+#X obj 330 336 f;
+#X obj 363 336 ==;
+#X floatatom 396 273 5 0 0 0 - - -;
+#X obj 203 171 t b b b;
+#X obj 330 305 select 0;
+#X obj 330 274 mod 16;
+#X obj 329 37 loadbang;
+#X msg 329 59 220 180;
+#X obj 206 149 select 0 2 4 5;
+#X msg 430 396 72;
+#X obj 206 86 c_multimetro 6 250;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 1;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 0 0;
+#X connect 7 0 26 0;
+#X connect 8 0 26 0;
+#X connect 9 0 18 0;
+#X connect 9 0 21 0;
+#X connect 10 0 9 1;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 14 0 12 0;
+#X connect 14 1 13 0;
+#X connect 15 0 9 0;
+#X connect 16 0 14 0;
+#X connect 16 0 17 0;
+#X connect 17 0 16 1;
+#X connect 19 0 4 0;
+#X connect 19 1 2 0;
+#X connect 19 2 15 0;
+#X connect 20 0 16 0;
+#X connect 21 0 10 0;
+#X connect 21 0 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 26 2;
+#X connect 24 0 19 0;
+#X connect 24 1 2 0;
+#X connect 24 2 2 0;
+#X connect 24 3 2 0;
+#X connect 25 0 11 0;
+#X connect 26 0 24 0;
+#X restore 233 318 pd play-a-little-song-for-me;
+#X floatatom 278 348 5 0 0 0 - - -;
+#X obj 162 645 OUT 1;
+#X obj 221 639 OUT 2;
+#X obj 177 612 Vmull~;
+#X obj 197 583 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 397 380 m_minorscale 60;
+#X msg 522 394 auto \$1;
+#X msg 525 304 mode harmonic;
+#X msg 518 279 mode natural;
+#X msg 527 329 mode melodic;
+#X obj 522 372 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 491 248 mode \$1;
+#X obj 491 229 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 176 439 demux 0 1;
+#X obj 305 427 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 1 0 14 0;
+#X connect 2 0 15 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 11 0 9 1;
+#X connect 14 0 0 0;
+#X connect 14 0 32 0;
+#X connect 15 0 22 0;
+#X connect 16 0 2 0;
+#X connect 16 1 2 1;
+#X connect 17 0 18 0;
+#X connect 18 0 14 0;
+#X connect 18 0 24 0;
+#X connect 18 1 19 0;
+#X connect 18 1 24 1;
+#X connect 19 0 14 1;
+#X connect 22 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 22 1;
+#X connect 24 0 32 1;
+#X connect 25 0 24 1;
+#X connect 26 0 24 1;
+#X connect 27 0 24 1;
+#X connect 28 0 24 1;
+#X connect 29 0 25 0;
+#X connect 30 0 24 1;
+#X connect 31 0 30 0;
+#X connect 32 0 16 0;
+#X connect 33 0 32 1;
+#X restore 488 535 pd majorscale;
+#N canvas 2395 446 953 614 minorscale 0;
+#N canvas 377 111 827 710 REFERENCE 0;
+#X text 114 121 Name: m_minorscale;
+#X text 114 141 Summary: map numbers to minor scales;
+#X text 114 164 Argument 0: base note;
+#X text 114 224 Inlet 0: scale steps;
+#X text 114 244 Inlet 1: float: set base note. mode natural/harmonic/melodic:
+choose minor scale type. auto 0/1: turn on auto mode where descending
+melodies are played with natural minor and ascending melodies with
+the scale selected the last "mode" command.;
+#X text 114 317 Outlet 0: midi pitches of the respective minor scale.
+;
+#X text 117 341 Description: m_minorscale lets you play one of three
+minor scales by sending scale steps. The base note of the scale can
+be set with an argument or with the second inlet. Minor scales come
+in three tastes: natural is just the diatonic major scale shifted 3
+steps down ("aeolian") \, harmonic minor is the same with a raised
+7th step and melodic minor additionally has the 6th scale step raised.
+Often the alternate minor types are only used for ascending melodies.
+You can turn on or off a special automatic mode with "auto 0/1" which
+will then compare the current step with the previous step and select
+the natural minor scale for descending intervals \, and the mode set
+with "mode" before for ascending intervals.;
+#X text 122 529 Tags: composition \, harmony \, melody \, minor scale
+\, pitch;
+#X text 115 183 Argument 1: minor scale type (optional \, default:
+natural);
+#X text 113 199 Argument 2: 0/1 for auto mode (optional \, default
+off);
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 15 87 pd REFERENCE;
+#X text 17 24 m_minorscale - map numbers to minor scales;
+#X obj 587 260 pack 0 0;
+#X floatatom 528 231 5 0 0 3 pitch - -;
+#X floatatom 689 211 5 0 0 0 - - -;
+#X floatatom 638 213 5 0 0 0 - - -;
+#X msg 799 180 auto \$1;
+#X msg 802 90 mode harmonic;
+#X msg 801 67 mode natural;
+#X msg 804 115 mode melodic;
+#X obj 799 158 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 689 49 5 0 0 2 base_note - -;
+#X floatatom 587 56 5 0 0 2 scale_step - -;
+#X obj 499 129 random 12;
+#X obj 499 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 587 334 u_makepoly 4 1 s_rhodey mypiano;
+#X obj 499 106 metro 250;
+#X obj 587 237 makenote 70 500;
+#X msg 798 45 mode \$1;
+#X obj 798 26 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 599 458 OUT 1;
+#X obj 658 457 OUT 2;
+#X obj 607 418 Vmull~;
+#X obj 635 376 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 588 163 m_minorscale 60 2 1;
+#X connect 2 0 15 0;
+#X connect 4 0 17 2;
+#X connect 5 0 17 1;
+#X connect 6 0 24 1;
+#X connect 7 0 24 1;
+#X connect 8 0 24 1;
+#X connect 9 0 24 1;
+#X connect 10 0 6 0;
+#X connect 11 0 24 1;
+#X connect 12 0 24 0;
+#X connect 13 0 24 0;
+#X connect 14 0 16 0;
+#X connect 15 0 22 0;
+#X connect 16 0 13 0;
+#X connect 17 0 2 0;
+#X connect 17 1 2 1;
+#X connect 18 0 24 1;
+#X connect 19 0 18 0;
+#X connect 22 0 20 0;
+#X connect 22 0 21 0;
+#X connect 23 0 22 1;
+#X connect 24 0 3 0;
+#X connect 24 0 17 0;
+#X restore 531 566 pd minorscale;
+#X obj 320 246 print progressions;
+#N canvas 2739 202 773 880 s_osc 0;
+#X msg 378 252 help;
+#X msg 480 540 pwmdepth \$1;
+#X msg 481 593 pwmfreq \$1;
+#X obj 102 678 s \$0-s_osc;
+#X obj 367 231 r \$0-s_osc;
+#X obj 454 622 s \$0-s_osc;
+#X obj 283 540 s \$0-s_osc;
+#X floatatom 283 490 5 -1 1 0 slope - -;
+#X floatatom 480 517 5 0 0 0 - - -;
+#X floatatom 481 571 5 0 0 0 - - -;
+#N canvas 0 0 738 528 waveform 0;
+#X obj 275 362 outlet;
+#X obj 109 56 inlet;
+#X obj 109 118 nbx 7 14 0 3 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 105 116 cnv 15 75 15 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X symbolatom 107 118 10 0 0 0 - - -;
+#X obj 213 144 select 0 1 2 3;
+#X obj 107 297 list;
+#X msg 361 198 1 0 0 0;
+#X msg 361 222 0 1 0 0;
+#X msg 362 243 0 0 1 0;
+#X msg 361 267 0 0 0 1;
+#X msg 181 254 tri;
+#X msg 181 232 square;
+#X msg 180 212 saw;
+#X msg 180 193 sine;
+#X msg 275 337 switch \$1 \$2 \$3 \$4;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 5 0 14 0;
+#X connect 5 0 7 0;
+#X connect 5 1 13 0;
+#X connect 5 1 8 0;
+#X connect 5 2 12 0;
+#X connect 5 2 9 0;
+#X connect 5 3 11 0;
+#X connect 5 3 10 0;
+#X connect 6 0 4 0;
+#X connect 7 0 15 0;
+#X connect 8 0 15 0;
+#X connect 9 0 15 0;
+#X connect 10 0 15 0;
+#X connect 11 0 6 0;
+#X connect 12 0 6 0;
+#X connect 13 0 6 0;
+#X connect 14 0 6 0;
+#X connect 15 0 0 0;
+#X coords 0 -1 1 1 85 35 1 100 100;
+#X restore 102 474 pd waveform;
+#X obj 102 450 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 448 493 Set square wave pwm;
+#X text 100 429 Select waveforms:;
+#X text 63 270 Arguments:;
+#X text 72 289 <NAME> <default waveform>;
+#X text 66 34 [s_osc];
+#X floatatom 273 249 5 0 0 0 freq - -;
+#X obj 273 223 mtof;
+#X floatatom 273 200 5 0 0 0 - - -;
+#X obj 273 270 sig~;
+#X text 123 61 Multi waveform oscillator. Supports sine wave (default)
+\, bandlimited saw \, bandlimited square and non-bandlimited triangle
+(between 0 and 1);
+#X obj 641 564 s \$0-s_osc;
+#X msg 641 542 phase \$1;
+#X msg 641 515 0;
+#X msg 283 517 trislope \$1;
+#X obj 361 359 tabwrite~ \$0-scope;
+#X obj 362 340 metro 100;
+#X obj 362 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-scope 441 float 2;
+#X coords 0 1 441 -1 200 140 1;
+#X restore 502 237 graph;
+#X obj 286 463 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 272 291 s_osc NAME saw;
+#X text 282 429 Set triangle wave slope: 0=tri \, -0.999 = phasor \,
+0.999 = phasor backwards;
+#X text 249 619 all off;
+#X msg 194 619 switch;
+#X msg 143 531 sine \$1;
+#X msg 144 551 saw \$1;
+#X msg 145 572 square \$1;
+#X msg 145 593 tri \$1;
+#X obj 117 533 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 117 552 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 117 573 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 117 593 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 189 666 "switch <sine> <saw> <square> <tri>";
+#X text 192 683 Use 1 and 0 to switch oscillators on and off.;
+#X text 636 494 Set the phase;
+#X msg 195 641 switch 0 0 1 0;
+#X text 121 111 The first inlet accepts an audio signal to set the
+oscillator's frequency \, so that you can modulate it at audio rate.
+;
+#X text 121 158 The second inlet accepts messages explained below.
+;
+#X obj 176 400 OUT 1;
+#X obj 235 399 OUT 2;
+#X obj 184 360 Vmull~;
+#X obj 212 318 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 31 1;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;
+#X connect 4 0 31 1;
+#X connect 7 0 25 0;
+#X connect 8 0 1 0;
+#X connect 9 0 2 0;
+#X connect 10 0 3 0;
+#X connect 11 0 10 0;
+#X connect 17 0 20 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X connect 20 0 31 0;
+#X connect 23 0 22 0;
+#X connect 24 0 23 0;
+#X connect 25 0 6 0;
+#X connect 27 0 26 0;
+#X connect 28 0 27 0;
+#X connect 30 0 7 0;
+#X connect 31 0 26 0;
+#X connect 31 0 51 0;
+#X connect 34 0 3 0;
+#X connect 35 0 3 0;
+#X connect 36 0 3 0;
+#X connect 37 0 3 0;
+#X connect 38 0 3 0;
+#X connect 39 0 35 0;
+#X connect 40 0 36 0;
+#X connect 41 0 37 0;
+#X connect 42 0 38 0;
+#X connect 46 0 3 0;
+#X connect 51 0 49 0;
+#X connect 51 0 50 0;
+#X connect 52 0 51 1;
+#X restore 520 657 pd s_osc;
+#X obj 206 315 hsl 128 15 0 1 0 0 empty empty tone_(0...1) 20 7 1 10
+-262144 -1 -1 0 1;
+#X msg 203 336 tone \$1;
+#X floatatom 349 273 5 0 0 0 - - -;
+#X msg 349 294 vib-freq \$1;
+#X floatatom 370 326 5 0 0 0 - - -;
+#X msg 370 347 vib-depth \$1;
+#X msg 384 271 3;
+#X msg 413 322 5;
+#X floatatom 477 250 5 0 0 0 - - -;
+#X msg 520 246 5;
+#X msg 477 271 mod \$1;
+#X floatatom 480 298 5 0 0 0 - - -;
+#X msg 523 294 5;
+#X msg 480 319 adsr24 \$1;
+#X floatatom 478 353 5 0 0 0 - - -;
+#X msg 521 349 5;
+#X msg 478 374 decay \$1;
+#X obj 159 -60 r SYNCHRO-clock;
+#X obj 525 5 t b;
+#X obj 154 21 sel 0 1 2 3;
+#X obj 159 -37 t f;
+#X obj 157 -9 mod 4;
+#X connect 0 0 22 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 13 1;
+#X connect 5 0 13 1;
+#X connect 6 0 13 1;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
+#X connect 10 0 13 0;
+#X connect 11 0 13 0;
+#X connect 13 0 3 0;
+#X connect 13 0 12 0;
+#X connect 13 1 7 0;
+#X connect 14 0 13 0;
+#X connect 15 0 1 0;
+#X connect 15 0 33 0;
+#X connect 22 0 20 0;
+#X connect 22 0 21 0;
+#X connect 22 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 22 1;
+#X connect 27 0 13 0;
+#X connect 28 0 13 0;
+#X connect 29 0 13 1;
+#X connect 35 0 36 0;
+#X connect 36 0 0 1;
+#X connect 37 0 38 0;
+#X connect 38 0 0 1;
+#X connect 39 0 40 0;
+#X connect 40 0 0 1;
+#X connect 41 0 38 0;
+#X connect 42 0 40 0;
+#X connect 43 0 45 0;
+#X connect 44 0 45 0;
+#X connect 45 0 0 1;
+#X connect 46 0 48 0;
+#X connect 47 0 48 0;
+#X connect 48 0 0 1;
+#X connect 49 0 51 0;
+#X connect 50 0 51 0;
+#X connect 51 0 0 1;
+#X connect 54 0 27 0;
+#X connect 54 1 10 0;
+#X connect 54 2 11 0;
+#X connect 54 3 14 0;
+#X connect 55 0 56 0;
+#X connect 56 0 54 0;
+#X restore 41 13 pd m_chorddict;
+#N canvas 1791 153 290 272 MODE 0;
+#X obj 34 211 MODEscale;
+#X msg 184 180 auto \$1;
+#X msg 187 90 mode harmonic;
+#X msg 180 65 mode natural;
+#X msg 189 115 mode melodic;
+#X obj 184 158 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 117 23 mode \$1;
+#X obj 117 4 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X msg 183 30 mode major;
+#X connect 1 0 0 1;
+#X connect 2 0 0 1;
+#X connect 3 0 0 1;
+#X connect 4 0 0 1;
+#X connect 5 0 1 0;
+#X connect 6 0 0 1;
+#X connect 7 0 6 0;
+#X connect 8 0 0 1;
+#X restore -15 11 pd MODE;
+#X coords 0 157 1 156 250 150 0;

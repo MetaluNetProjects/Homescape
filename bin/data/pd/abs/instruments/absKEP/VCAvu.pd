@@ -1,0 +1,32 @@
+#N canvas 2035 393 422 323 10;
+#X declare -lib libdir -lib ggee -stdpath ggee;
+#X declare -lib libdir -lib ggee -stdpath ggee;
+#X obj 13 32 sel 0 1;
+#X msg 13 59 color 13 13 10;
+#X msg 33 81 color 16 16 0;
+#X obj 151 183 tgl 18 0 on-VCA-\$1-snd on-VCA-\$1-rcv \$1 5 10 1 16
+-258699 -258699 -233017 0 1;
+#X obj 151 103 vsl 18 77 0 1 0 0 vol-VCA-\$1-snd vol-VCA-\$1-rcv empty
+0 -9 0 10 -261682 -1 -1 5266 1;
+#X obj 13 7 r on-VCA-\$1-snd;
+#X obj 13 105 s on-VCA-\$1-rcv;
+#X obj 19 125 r vol-VCA-\$1-snd;
+#X obj 30 153 r on-VCA-\$1-snd;
+#X obj 19 228 s VCA-\$1;
+#X obj 19 205 *;
+#X obj 30 176 t b f;
+#X obj 159 9 api MASTERS on-VCA-\$1 on-VCA-\$1 2;
+#X obj 152 35 apf MASTERS vol-VCA-\$1 vol-VCA-\$1 2;
+#X text 185 181 ------mute VCA;
+#X text 182 105 ------fader volume;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 5 0 0 0;
+#X connect 7 0 10 0;
+#X connect 8 0 11 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 11 1 10 1;
+#X coords 0 -1 1 1 20 102 2 150 100;

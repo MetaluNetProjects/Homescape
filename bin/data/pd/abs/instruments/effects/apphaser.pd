@@ -1,0 +1,30 @@
+#N canvas 836 145 417 261 10;
+#X declare -path utils -path ../rj;
+#X obj 1 16 cnv 15 112 35 empty empty phaser 2 6 1 8 -4160 -257985
+0;
+#X obj 63 36 mknob 15 100 0 1 0 0 \$0-rate-snd \$0-rate-rcv rate 0
+-6 1 8 -203904 -1 -260097 2300 1;
+#X obj 29 35 mknob 15 100 0 1 0 0 \$0-deph-snd \$0-deph-rcv deph -2
+-6 1 8 -203904 -1 -260097 1300 1;
+#X obj 7 68 inlet~;
+#X obj 6 218 outlet~;
+#X obj 195 89 apsubmaster \$1-\$2 \$1 \$2;
+#X obj 195 50 apf \$1-\$2 deph \$0-deph;
+#X obj 195 31 apf \$1-\$2 rate \$0-rate;
+#X obj 196 132 declare -path utils -path ../rj;
+#X obj 6 189 e_phaser;
+#X msg 76 127 freq \$1;
+#X msg 87 169 depth \$1;
+#X obj 76 61 r \$0-rate-snd;
+#X obj 87 149 r \$0-deph-snd;
+#X obj 76 105 * 8;
+#X obj 76 83 pow 2;
+#X connect 3 0 9 0;
+#X connect 9 0 4 0;
+#X connect 10 0 9 1;
+#X connect 11 0 9 1;
+#X connect 12 0 15 0;
+#X connect 13 0 11 0;
+#X connect 14 0 10 0;
+#X connect 15 0 14 0;
+#X coords 0 0 1 1 114 54 1 0 0;

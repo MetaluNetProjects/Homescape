@@ -1,0 +1,40 @@
+#N canvas 1611 419 550 221 10;
+#X obj 134 60 namecanvas \$0-can;
+#X obj 134 39 s \$0-can;
+#X msg 134 18 donecanvasdialog 1 -1 0;
+#X msg 134 -4 reduire;
+#X obj 1 1 cnv 15 120 52 empty empty disto 2 6 1 8 -260818 -66577 0
+;
+#X obj -4 111 outlet~;
+#N canvas 2183 591 499 308 guts 1;
+#X obj 37 12 inlet~;
+#X obj 38 223 outlet~;
+#X obj 68 56 r \$0-disto-snd;
+#X obj 38 197 mull~ 0 10;
+#X obj 99 156 r \$0-vol-snd;
+#X obj 68 77 pow 6;
+#X obj 66 98 * 100000;
+#X obj 37 120 mull~ 0 2;
+#X obj 37 150 dist~ 1;
+#X obj 173 108 apsubmaster \$1-\$3 \$1-\$2 \$3;
+#X obj 195 47 apf \$1-\$3 vol \$0-vol;
+#X obj 195 66 apf \$1-\$3 disto \$0-disto;
+#X connect 0 0 7 0;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X restore -5 88 pd guts;
+#X obj -4 64 inlet~;
+#X obj 89 25 mknob 15 100 0 1 0 0 \$0-vol-snd \$0-vol-rcv vol -2 -6
+193 8 -258699 -1 -1 9900 1;
+#X obj 31 26 mknob 15 100 0 1 0 0 \$0-disto-snd \$0-disto-rcv disto
+-2 -6 193 8 -241291 -1 -1 1564 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X coords 0 -1 1 1 122 54 2 0 0;

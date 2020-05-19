@@ -1,0 +1,18 @@
+#N canvas 574 1423 306 558 10;
+#X text 154 155 r4;
+#X text 152 203 r5;
+#X text 152 242 r6;
+#X text 153 290 b2;
+#X obj 36 4 DECrfid 1201 \$1 1;
+#X obj 36 89 DECrfid 1203 \$1 3;
+#X obj 35 144 DECrfid 1204 \$1 4;
+#X obj 35 186 DECrfid 1205 \$1 5;
+#X obj 35 228 DECrfid 1206 \$1 6;
+#X obj 35 270 DECrfid 1207 \$1 7;
+#X obj 35 312 DECrfid 1208 \$1 8;
+#X obj 35 354 DECrfid 1209 \$1 9;
+#X obj 35 396 DECrfid 1210 \$1 10;
+#X text 145 15 moire;
+#X text 146 56 fb;
+#X text 146 99 masters;
+#X obj 35 47 DECrfid 1202 \$1 2;

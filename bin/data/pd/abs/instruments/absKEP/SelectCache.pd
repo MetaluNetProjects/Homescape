@@ -1,0 +1,8 @@
+#N canvas 2394 617 450 300 10;
+#X obj 55 170 api \$2 \$1-SelectCache \$1-SelectCache;
+#X obj 101 119 hradio 10 1 0 25 \$0-DecoSelectCache-snd \$0-DecoSelectCache-rcv
+empty 0 -4 0 8 -257985 -262144 -1 0;
+#X obj 101 129 hradio 10 1 0 25 \$1-SelectCache-snd \$1-SelectCache-rcv
+0_1_2_3_4_5_6_7_8_9_101112131415161718192021222324 0 -4 0 8 -262144
+-1 -1 0;
+#X coords 0 -1 1 1 252 40 1 100 100;

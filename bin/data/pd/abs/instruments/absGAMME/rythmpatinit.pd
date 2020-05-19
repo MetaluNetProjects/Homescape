@@ -1,0 +1,7 @@
+#N canvas 406 193 287 183 10;
+#X obj 81 34 inlet;
+#X obj 83 128 outlet;
+#X obj 81 61 s rythminit;
+#X obj 83 106 r rythminit;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;

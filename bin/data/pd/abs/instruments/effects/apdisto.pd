@@ -1,0 +1,41 @@
+#N canvas 917 351 399 365 10;
+#X declare -path utils;
+#X obj 1 16 cnv 15 120 35 empty empty disto 2 6 1 8 -260818 -66577
+0;
+#X obj 89 31 mknob 15 100 0 1 0 0 \$0-vol-snd \$0-vol-rcv vol -2 -6
+1 8 -258699 -1 -1 0 1;
+#X obj 46 32 mknob 15 100 0 1 0 0 \$0-disto-snd \$0-disto-rcv disto
+-2 -6 1 8 -241291 -1 -1 0 1;
+#X obj 21 72 inlet~;
+#X obj 21 313 outlet~;
+#X obj 75 72 r \$0-disto-snd;
+#X obj 21 287 mull~ 0 10;
+#X obj 49 266 r \$0-vol-snd;
+#X obj 75 93 pow 6;
+#X obj 22 151 mull~ 0 2;
+#X obj 22 173 dist~ 1;
+#X obj 166 38 declare -path utils;
+#X obj 220 178 apsubmaster \$1-\$2 \$1 \$2;
+#X obj 221 154 apf \$1-\$2 disto \$0-disto;
+#X obj 221 135 apf \$1-\$2 vol \$0-vol;
+#X floatatom 149 112 8 0 0 0 - - -;
+#X obj 87 150 min 1;
+#X obj 87 171 * -1;
+#X obj 87 192 + 1;
+#X obj 37 233 mull~ 0 2;
+#X obj 75 114 * 5000;
+#X connect 3 0 9 0;
+#X connect 3 0 19 0;
+#X connect 5 0 8 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 1;
+#X connect 8 0 20 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 1;
+#X connect 19 0 6 0;
+#X connect 20 0 9 1;
+#X connect 20 0 16 0;
+#X coords 0 -1 1 1 122 54 1 0 0;

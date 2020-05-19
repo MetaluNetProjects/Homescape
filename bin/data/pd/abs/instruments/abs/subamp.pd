@@ -1,0 +1,25 @@
+#N canvas 436 328 550 300 10;
+#X obj 53 79 inlet~;
+#X msg 274 26 1;
+#X obj 90 166 pow 4;
+#X obj 61 243 outlet~;
+#X obj 101 71 inlet;
+#X obj 61 213 mull~ 0 5;
+#X obj 153 134 inlet;
+#X obj 90 189 m 1;
+#X obj 114 115 mknob 25 100 0 2 0 1 empty empty empty -2 -6 0 8 -258113
+-1 -1 4700 1;
+#X obj 92 28 l subdial red 0 2 1 1.24;
+#X obj 211 72 loadbang;
+#X msg 211 94 1;
+#X connect 0 0 5 0;
+#X connect 1 0 9 0;
+#X connect 2 0 7 0;
+#X connect 4 0 8 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 1;
+#X connect 7 0 5 1;
+#X connect 8 0 2 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X coords 0 -1 1 1 50 50 1 100 100;

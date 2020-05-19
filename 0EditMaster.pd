@@ -1,0 +1,56 @@
+#N canvas 66 648 1031 371 10;
+#X declare -lib pof;
+#X declare -path bin/data/pd -path bin/data/pd/abs;
+#X declare -lib abl_link~ -path abl_link~;
+#X declare -lib creb/fdn~ -lib creb/filterortho~ -lib creb/dist~;
+#X declare -lib moonlib/mknob -lib moonlib/tabenv -lib moonlib/f2s
+-lib moonlib/ndmetro;
+#X declare -lib cyclone/atan~ -lib cyclone/seq -lib cyclone/midiparse
+;
+#X declare -stdpath zexy -lib zexy;
+#X declare -lib iemlib/filter~;
+#X obj 24 53 declare -lib pof;
+#X obj 23 221 loadbang;
+#X msg 23 246 \; pd-pof_main.pd vis 1;
+#X obj 170 274 pofwin;
+#N canvas 749 411 307 150 bang_on_first_frame 0;
+#X obj 54 49 pofbang 1;
+#X obj 54 26 pofhead;
+#X msg 105 76 0;
+#X obj 143 76 outlet;
+#X connect 0 1 2 0;
+#X connect 0 1 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X restore 170 194 pd bang_on_first_frame;
+#X obj 24 74 declare -path bin/data/pd -path bin/data/pd/abs;
+#X obj 326 237 cputime;
+#X floatatom 328 269 5 0 0 0 - - -;
+#X obj 251 249 iemlib/dsp;
+#X floatatom 249 274 5 0 0 0 - - -;
+#X obj 22 190 pof_main;
+#X text 163 304 rien menu_song playing player_switched fx_none;
+#X text 63 324 portable_ant1 : 76 85 82 45 50;
+#X msg 170 216 window 800 550 0 \, framerate 25 \, background 0 0 0
+;
+#X obj 204 165 declare -lib abl_link~ -path abl_link~;
+#X obj 427 36 declare -lib creb/fdn~ -lib creb/filterortho~ -lib creb/dist~
+, f 61;
+#X obj 491 198 rem declare -path creb -lib creb;
+#X obj 492 218 rem declare -lib iemlib -path iemlib;
+#X obj 492 238 rem declare -lib libdir -lib ggee -stdpath ggee;
+#X obj 492 260 rem declare -lib else -path else;
+#X obj 486 288 rem declare -stdpath cyclone -lib cyclone;
+#X obj 427 55 declare -lib moonlib/mknob -lib moonlib/tabenv -lib moonlib/f2s
+-lib moonlib/ndmetro, f 85;
+#X obj 427 91 declare -lib cyclone/atan~ -lib cyclone/seq -lib cyclone/midiparse
+, f 67;
+#X obj 427 15 declare -stdpath zexy -lib zexy;
+#X text 645 15 for: z~ limiter~ [ NOT: lister(l) demux makesymbol envrms~]
+;
+#X obj 427 73 declare -lib iemlib/filter~;
+#X connect 1 0 2 0;
+#X connect 4 0 13 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 13 0 3 0;

@@ -1,0 +1,45 @@
+#N canvas 145 496 423 181 10;
+#X obj 1 33 cnv 15 160 18 empty CACHE-\$1-CACHEcan-rcv empty 38 38
+1 10 -260818 -262144 0;
+#X symbolatom 35 34 0 0 0 0 fruit CACHE-#1-fruit-rcv CACHE-#1-fruit-snd
+;
+#X obj 179 44 nbx 5 14 0 1 0 0 CACHE-\$1-b1-snd CACHE-\$1-b1-rcv Vitesse
+0 -8 0 10 -262144 -1 -1 0.484848 256;
+#X obj 182 93 nbx 5 14 0 1 0 0 CACHE-\$1-b2-snd CACHE-\$1-b2-rcv Phrases
+0 -8 0 10 -262144 -1 -1 0.417071 256;
+#X obj 226 67 nbx 5 14 0 1 0 0 CACHE-\$1-b3-snd CACHE-\$1-b3-rcv Effet
+0 -8 0 10 -262144 -1 -1 0.863232 256;
+#X obj 308 40 nbx 5 14 0 1 0 0 CACHE-\$1-b4-snd CACHE-\$1-b4-rcv Reverb
+0 -8 0 10 -262144 -1 -1 0.0134343 256;
+#X obj 307 90 nbx 5 14 0 1 0 0 CACHE-\$1-b5-snd CACHE-\$1-b5-rcv Volume
+0 -8 0 10 -262144 -1 -1 0.648355 256;
+#X obj 200 118 tgl 20 0 CACHE-\$1-t1-snd CACHE-\$1-t1-rcv 1/1 1 11
+1 10 -261682 -1 -1 1 1;
+#X obj 223 118 tgl 20 0 CACHE-\$1-t2-snd CACHE-\$1-t2-rcv 1/2 1 11
+1 10 -261682 -1 -1 1 1;
+#X obj 246 118 tgl 20 0 CACHE-\$1-t3-snd CACHE-\$1-t3-rcv 1/3 1 11
+1 10 -261682 -1 -1 1 1;
+#X obj 269 118 tgl 20 0 CACHE-\$1-t4-snd CACHE-\$1-t4-rcv 1/4 1 11
+1 10 -261682 -1 -1 1 1;
+#X obj 301 118 tgl 20 0 CACHE-\$1-tREC-snd CACHE-\$1-tREC-rcv Lock
+1 11 1 10 -261234 -1 -1 0 1;
+#X obj 206 108 tgl 8 0 CACHE-\$1-tl1-snd CACHE-\$1-tl1-rcv l1 17 7
+0 10 -261682 -258113 -1 1 1;
+#X obj 229 108 tgl 8 0 CACHE-\$1-tl2-snd CACHE-\$1-tl2-rcv l2 17 7
+0 10 -261682 -258113 -1 1 1;
+#X obj 252 108 tgl 8 0 CACHE-\$1-tl3-snd CACHE-\$1-tl3-rcv l3 17 7
+0 10 -261682 -258113 -1 1 1;
+#X obj 275 108 tgl 8 0 CACHE-\$1-tl4-snd CACHE-\$1-tl4-rcv l4 17 7
+0 10 -261682 -258113 -1 1 1;
+#X obj 307 108 tgl 8 0 CACHE-\$1-tlREC-snd CACHE-\$1-tlREC-rcv lR 17
+7 0 10 -261682 -258113 -1 0 1;
+#X obj 249 37 tgl 20 0 CACHE-\$1-tSHIFT-snd CACHE-\$1-tSHIFT-rcv empty
+1 11 1 10 -204786 -1 -1 0 1;
+#X obj 272 38 bng 8 250 50 0 CACHE-\$1-lvert-snd CACHE-\$1-lvert-rcv
+lv 17 7 0 10 -204786 -4034 -1;
+#X obj 272 46 bng 8 250 50 0 CACHE-\$1-lrouge-snd CACHE-\$1-lrouge-rcv
+lr 17 7 0 10 -261234 -258113 -1;
+#X text 5 3 CACHEnew 1234 Rythmic 1;
+#X text 167 3 \$1:id \$2:type_inst \$3:num;
+#X obj 1 121 _cache_common_new \$1 \$2\$3;
+#X coords 0 -1 1 1 170 32 1 0 20;

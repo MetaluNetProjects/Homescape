@@ -1,0 +1,30 @@
+#N canvas 73 163 499 195 10;
+#X declare -lib libdir -lib ggee;
+#X text 120 35 -if pat_no_all==1 \, doesn't receive "_all_" pattern
+commands store/load. If pat_no_all==2 \, no pattern for this.;
+#X text 79 78 Please signal array length change to \$3-len-snd.;
+#X text 26 13 usage : apsarray Ref Name SArrayName [SArrayLength [pat_no_all]]
+;
+#X text 25 -2 AutoPreset Sarray;
+#X text 26 -1 AutoPreset Sarray;
+#X text 141 -1 (for [moonlib/sarray]);
+#X text 78 64 Sarray is not included.;
+#X obj 27 118 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
+0;
+#N canvas 634 338 164 175 open 0;
+#X obj 29 16 inlet;
+#X obj 29 38 symbol;
+#X obj 29 103 pack s s;
+#X obj 56 80 getdir;
+#X obj 29 59 t s b;
+#X msg 29 124 \; pd open \$1 \$2;
+#X obj 18 166 declare -lib libdir -lib ggee;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X restore 31 158 pd open;
+#X msg 31 135 0autopreset-help.pd;
+#X connect 9 0 8 0;

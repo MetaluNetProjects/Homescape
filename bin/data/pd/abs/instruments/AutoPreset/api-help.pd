@@ -1,0 +1,31 @@
+#N canvas 182 93 449 216 10;
+#X declare -lib libdir -lib ggee;
+#X text 59 15 -if pat_no_all==1 \, doesn't receive "_all_" pattern
+commands store/load. If pat_no_all==2 \, no pattern for this.;
+#X text 58 45 -if dont-recall=1 \, saved value is not send when we
+load the preset.;
+#X text 13 -20 AutoPreset Float;
+#X text 12 -21 AutoPreset Float;
+#X text 14 -1 usage : api Ref Name [BusName [pat_no_all [dont-recall]]]
+;
+#X text 57 79 api is the same as apf exept it doesn't interpolate between
+patterns.;
+#X obj 22 121 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
+0;
+#N canvas 634 338 164 175 open 0;
+#X obj 29 16 inlet;
+#X obj 29 38 symbol;
+#X obj 29 103 pack s s;
+#X obj 56 80 getdir;
+#X obj 29 59 t s b;
+#X msg 29 124 \; pd open \$1 \$2;
+#X obj 18 166 declare -lib libdir -lib ggee;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X restore 26 161 pd open;
+#X msg 26 138 0autopreset-help.pd;
+#X connect 8 0 7 0;

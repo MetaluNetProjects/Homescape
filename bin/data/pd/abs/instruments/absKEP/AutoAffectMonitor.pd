@@ -1,0 +1,118 @@
+#N canvas 257 330 838 468 10;
+#X obj 280 41 automon KEG1 1;
+#X obj 281 61 automon KEG2 2;
+#X obj 280 82 automon KEG3 3;
+#X obj 280 103 automon KEG4 4;
+#X obj 280 123 automon KEG5 5;
+#X obj 280 144 automon KEG6 6;
+#X obj 393 384 list;
+#X msg 394 413 \; \$1-SelectCache-rcv \$2;
+#X text 472 122 r123 + basse + melo + poly;
+#X text 489 164 r123 + basse + rodey + paf;
+#X text 501 205 r123 + basse + melo + paf;
+#X msg 436 257 KEG1 1 \, KEG2 2 \, KEG3 3 \, KEG4 4 \, KEG5 5 \, KEG6
+7;
+#X text 515 242 r123 + basse + melo + rodey;
+#X text 499 286 r1 + basse + melo + poly + rodey + paf;
+#X text 520 334 r3 + basse + melo + poly + rodey + paf;
+#X obj 392 39 r selectSetInstru;
+#X obj 393 62 symbol;
+#X obj 393 87 sel SynteOrgue PianoCoin SyntheCoin SynthePiano BoumMelo
+TsiiMelo;
+#X symbolatom 454 60 10 0 0 0 - - -, f 10;
+#X msg 393 137 KEG1 1 \, KEG2 2 \, KEG3 3 \, KEG4 4 \, KEG5 5 \, KEG6
+8;
+#X msg 410 179 KEG1 1 \, KEG2 2 \, KEG3 3 \, KEG4 4 \, KEG5 7 \, KEG6
+6;
+#X msg 422 220 KEG1 1 \, KEG2 2 \, KEG3 3 \, KEG4 4 \, KEG5 5 \, KEG6
+6;
+#X msg 447 301 KEG1 1 \, KEG2 4 \, KEG3 5 \, KEG4 8 \, KEG5 7 \, KEG6
+6;
+#X msg 468 349 KEG1 3 \, KEG2 4 \, KEG3 5 \, KEG4 8 \, KEG5 7 \, KEG6
+6;
+#N canvas 1 82 450 300 SelectInstruSet 0;
+#X obj 103 120 flatgui/popup 124 25 #ffffff popup SynteOrgue PianoCoin
+SyntheCoin SynthePiano BoumMelo TsiiMelo;
+#X msg 136 59 options SynteOrgue PianoCoin SyntheCoin SynthePiano BoumMelo
+TsiiMelo;
+#X obj 243 188 s selectSetInstru;
+#X symbolatom 177 182 10 0 0 0 - - -, f 10;
+#X obj 135 31 loadbang;
+#X connect 0 1 2 0;
+#X connect 0 1 3 0;
+#X connect 1 0 0 0;
+#X connect 4 0 1 0;
+#X coords 0 -1 1 1 130 50 1 100 100;
+#X restore 102 123 pd SelectInstruSet;
+#N canvas 1 92 450 300 SelectSong 0;
+#X obj 103 120 flatgui/popup 124 25 #ffffff popup arrets baroque1 blues
+blues-mineur blues-mineur-haché blues-mineur-haché-test boys circulation
+pop portes reverbere reverbere-plan tango tango2 wetbush wetbush2;
+#X symbolatom 177 182 10 0 0 0 - - -, f 10;
+#X obj 135 31 loadbang;
+#X obj 228 116 bng 30 250 50 0 empty empty GO 4 15 0 20 -4034 -1 -1
+;
+#N canvas 1 102 517 450 listSongs 0;
+#X obj 152 206 folder_list;
+#X obj 152 153 getdir;
+#X msg 152 181 symbol \$1/../absGAMME/Seq/*;
+#X obj 152 236 split_path;
+#X obj 209 278 list prepend;
+#X obj 291 278 list;
+#X msg 291 250 list;
+#X obj 133 318 list;
+#X obj 132 41 inlet init;
+#X obj 100 420 outlet popup;
+#X obj 257 375 outlet outlist;
+#X obj 105 375 list prepend options;
+#X obj 105 398 list trim;
+#X obj 133 115 t b b b;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 7 1;
+#X connect 5 0 4 1;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 7 0 10 0;
+#X connect 8 0 13 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 7 0;
+#X connect 13 1 1 0;
+#X connect 13 2 6 0;
+#X restore 103 71 pd listSongs;
+#X obj 263 186 symbol;
+#X symbolatom 253 216 10 0 0 0 - - -, f 10;
+#X obj 98 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 262 234 s KEPsong-loadSong;
+#X connect 0 1 1 0;
+#X connect 0 1 5 1;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 0 8 0;
+#X connect 7 0 4 0;
+#X coords 0 -1 1 1 160 50 1 100 100;
+#X restore 101 176 pd SelectSong;
+#X connect 6 0 7 0;
+#X connect 11 0 6 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 19 0;
+#X connect 17 1 20 0;
+#X connect 17 2 21 0;
+#X connect 17 3 11 0;
+#X connect 17 4 22 0;
+#X connect 17 5 23 0;
+#X connect 19 0 6 0;
+#X connect 20 0 6 0;
+#X connect 21 0 6 0;
+#X connect 22 0 6 0;
+#X connect 23 0 6 0;
+#X coords 0 -1 1 1 170 130 1 100 100;

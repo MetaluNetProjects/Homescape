@@ -1,0 +1,58 @@
+#N canvas 779 106 494 420 10;
+#X declare -lib libdir -lib iemlib -lib iemlib/iemlib2 -stdpath iemlib
+;
+#X text 30 9 presetfade p1 p2 p3... : fade [0:1] to [p1:p2] \, [p2
+p3]...;
+#X obj 34 41 inlet fade [0:1];
+#X obj 115 90 dollarg;
+#X obj 176 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 116 list length;
+#X obj 34 158 *;
+#X obj 34 185 t f f;
+#X obj 61 213 i;
+#X obj 34 216 -;
+#X obj 115 68 loadbang;
+#X obj 154 265 + 1;
+#X msg 61 312 A \$1;
+#X msg 154 310 B \$1;
+#X obj 34 342 outlet;
+#X msg 34 263 pos \$1;
+#X obj 61 238 change -1;
+#X obj 200 170 table \$0-t;
+#X obj 143 124 list prepend 0;
+#X obj 143 146 s \$0-t;
+#X obj 61 289 tabread \$0-t;
+#X obj 154 289 tabread \$0-t;
+#X obj 49 137 - 1;
+#X obj 100 155 b;
+#X obj 100 175 del 100;
+#X msg 100 196 set -1;
+#X obj 21 375 declare -lib libdir -lib iemlib -lib iemlib/iemlib2 -stdpath
+iemlib;
+#X connect 1 0 5 0;
+#X connect 1 0 22 0;
+#X connect 2 0 4 0;
+#X connect 2 0 17 0;
+#X connect 3 0 2 0;
+#X connect 4 0 21 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 7 0;
+#X connect 7 0 8 1;
+#X connect 7 0 15 0;
+#X connect 8 0 14 0;
+#X connect 9 0 2 0;
+#X connect 10 0 20 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 14 0 13 0;
+#X connect 15 0 19 0;
+#X connect 15 0 10 0;
+#X connect 17 0 18 0;
+#X connect 19 0 11 0;
+#X connect 20 0 12 0;
+#X connect 21 0 5 1;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 15 0;

@@ -1,0 +1,26 @@
+#N canvas 463 95 395 145 10;
+#X declare -lib libdir -lib ggee;
+#X text 18 25 usage:;
+#X text 59 25 apsubmaster childref parentref childname_in_parent;
+#X text 16 -1 AutoPreset SubMaster;
+#X text 17 0 AutoPreset SubMaster;
+#X text 149 0 : create a sub-reference;
+#X obj 20 54 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
+0;
+#N canvas 634 338 164 175 open 0;
+#X obj 29 16 inlet;
+#X obj 29 38 symbol;
+#X obj 29 103 pack s s;
+#X obj 56 80 getdir;
+#X obj 29 59 t s b;
+#X msg 29 124 \; pd open \$1 \$2;
+#X obj 18 164 declare -lib libdir -lib ggee;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X restore 24 94 pd open;
+#X msg 24 71 0autopreset-help.pd;
+#X connect 7 0 6 0;

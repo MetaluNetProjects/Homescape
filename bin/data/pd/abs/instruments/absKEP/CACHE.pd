@@ -1,0 +1,53 @@
+#N canvas 311 1153 440 167 10;
+#X text 254 -29 \$2 : numero unique cache rfid;
+#X text 147 -27 \$1 : KEPcontrol;
+#X text 5 -27 CACHE KEPcontrol 1234;
+#X obj 1 1 cnv 15 78 98 empty \$1-\$2-CACHEcan-rcv rfid:\$2 38 38 1
+10 -166441 -262144 0;
+#X obj 64 84 bng 13 250 50 0 \$1-\$2-SelPrep-snd \$1-\$2-SelPrep-rcv
+sel 0 -7 1 10 -257985 -1 -1;
+#X symbolatom 27 14 0 0 0 2 type #1-#2-type-rcv #1-#2-type-snd;
+#X symbolatom 2 49 0 0 0 2 prepa #1-#2-prepa-rcv #1-#2-prepa-snd;
+#X obj 1 15 nbx 2 14 1 100 0 1 \$1-\$2-num_type-snd \$1-\$2-num_type-rcv
+num 0 -8 1 10 -262144 -1 -1 1 256;
+#X obj 64 55 bng 13 250 50 0 \$1-\$2-rappel-snd \$1-\$2-rappel-rcv
+rappel -15 -6 1 10 -4034 -1 -1;
+#X symbolatom 2 80 0 0 0 2 fruit #1-#2-fruit-rcv #1-#2-fruit-snd;
+#X obj 97 4 nbx 5 14 0 1 0 0 \$1-\$2-b1-snd \$1-\$2-b1-rcv Vitesse
+0 -8 0 10 -262144 -1 -1 0.640537 256;
+#X obj 96 57 nbx 5 14 0 1 0 0 \$1-\$2-b2-snd \$1-\$2-b2-rcv Feedback
+0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 140 31 nbx 5 14 0 1 0 0 \$1-\$2-b3-snd \$1-\$2-b3-rcv Effet
+0 -8 0 10 -262144 -1 -1 0 256;
+#X obj 222 4 nbx 5 14 0 1 0 0 \$1-\$2-b4-snd \$1-\$2-b4-rcv Reverb
+0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 238 57 nbx 5 14 0 1 0 0 \$1-\$2-b5-snd \$1-\$2-b5-rcv Volume
+0 -8 0 10 -262144 -1 -1 0.570202 256;
+#X obj 114 82 tgl 20 0 \$1-\$2-t1-snd \$1-\$2-t1-rcv Recloop 1 11 1
+10 -261682 -1 -1 1 1;
+#X obj 137 82 tgl 20 0 \$1-\$2-t2-snd \$1-\$2-t2-rcv 1way 1 11 1 10
+-261682 -1 -1 0 1;
+#X obj 160 82 tgl 20 0 \$1-\$2-t3-snd \$1-\$2-t3-rcv Ajoute 1 11 1
+10 -261682 -1 -1 0 1;
+#X obj 183 82 tgl 20 0 \$1-\$2-t4-snd \$1-\$2-t4-rcv tOver 1 11 1 10
+-261682 -1 -1 0 1;
+#X obj 215 82 tgl 20 0 \$1-\$2-tREC-snd \$1-\$2-tREC-rcv REC 1 11 1
+10 -261234 -1 -1 0 1;
+#X obj 120 79 tgl 8 0 \$1-\$2-tl1-snd \$1-\$2-tl1-rcv l1 17 7 0 10
+-261682 -258113 -1 1 1;
+#X obj 143 79 tgl 8 0 \$1-\$2-tl2-snd \$1-\$2-tl2-rcv l2 17 7 0 10
+-261682 -258113 -1 1 1;
+#X obj 166 79 tgl 8 0 \$1-\$2-tl3-snd \$1-\$2-tl3-rcv l3 17 7 0 10
+-261682 -258113 -1 1 1;
+#X obj 189 79 tgl 8 0 \$1-\$2-tl4-snd \$1-\$2-tl4-rcv l4 17 7 0 10
+-261682 -258113 -1 0 1;
+#X obj 221 79 tgl 8 0 \$1-\$2-tlREC-snd \$1-\$2-tlREC-rcv lR 17 7 0
+10 -261682 -258113 -1 0 1;
+#X obj 163 1 tgl 20 0 \$1-\$2-tSHIFT-snd \$1-\$2-tSHIFT-rcv shift 1
+11 1 10 -204786 -1 -1 0 1;
+#X obj 186 2 bng 8 250 50 0 \$1-\$2-lvert-snd \$1-\$2-lvert-rcv lv
+17 7 0 10 -204786 -4034 -1;
+#X obj 186 10 bng 8 250 50 0 \$1-\$2-lrouge-snd \$1-\$2-lrouge-rcv
+lr 17 7 0 10 -261234 -258113 -1;
+#X obj 3 109 _cache_common \$1 \$2;
+#X coords 0 -1 1 1 80 100 2 0 0;

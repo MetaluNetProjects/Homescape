@@ -1,0 +1,10 @@
+#N canvas 1 81 450 300 12;
+#X obj 100 107 inlet;
+#X msg 100 131 getdir;
+#X obj 100 155 pofutil;
+#X obj 100 222 outlet;
+#X obj 100 188 route getdir;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;

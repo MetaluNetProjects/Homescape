@@ -1,0 +1,31 @@
+#N canvas 1611 329 519 323 10;
+#X declare -lib libdir -lib ggee -stdpath ggee;
+#X obj 151 121 vsl 18 77 0 1 0 0 midi-MASTERVOL-\$1-snd midi-MASTERVOL-\$1-rcv
+empty 0 -9 0 10 -159808 -1 -1 0 1;
+#X obj 15 37 ctlin \$1 \$2;
+#X floatatom 26 103 5 0 0 0 - - -, f 5;
+#X text 148 29 arg1:ctl \; arg2:channel \; arg3:nVCA;
+#X obj 15 65 / 127;
+#X obj 206 239 s MASTERVOL-rcv;
+#X obj 151 101 tgl 18 0 on-midi-MASTERVOL-\$3-snd on-midi-MASTERVOL-\$3-rcv
+\$3 2 10 1 12 -24198 -24198 -262144 0 1;
+#X obj 151 208 spigot;
+#X obj 257 107 sel 0 1;
+#X msg 257 134 color 13 13 10;
+#X msg 277 156 color 16 16 0;
+#X obj 88 11 api MASTERS on-midi-MASTERVOL-\$3 on-midi-MASTERVOL-\$3
+2;
+#X obj 257 82 r on-midi-MASTERVOL-\$3-snd;
+#X obj 257 180 s on-midi-MASTERVOL-\$3-rcv;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 0 0;
+#X connect 6 0 7 1;
+#X connect 7 0 5 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 13 0;
+#X connect 10 0 13 0;
+#X connect 12 0 8 0;
+#X coords 0 -1 1 1 20 102 1 150 100;

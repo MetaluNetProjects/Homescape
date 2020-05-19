@@ -1,0 +1,13 @@
+#N canvas 2070 210 548 99 10;
+#X obj 298 42 r \$1-\$4-snd;
+#X obj 298 65 s \$1-\$4;
+#X obj 295 19 apf \$2-\$3 \$4 \$1-\$4;
+#X text 125 6 juno-param \$1=\$0 parent;
+#X text 122 23 \$2=instru;
+#X text 122 37 \$3=groupe;
+#X text 122 52 \$4=nom;
+#X text 122 67 \$5=label;
+#X obj 4 1 hsl 90 10 0 1 0 0 \$1-\$4-snd \$1-\$4-rcv \$5 5 5 0 10 -33289
+-258113 -262144 0 1;
+#X connect 0 0 1 0;
+#X coords 0 -1 1 1 97 12 2 0 0;

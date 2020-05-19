@@ -1,0 +1,89 @@
+/*buildscript {
+    
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}*/
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+
+apply plugin: 'com.android.application'
+
+
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '23.0.1'
+
+    lintOptions {
+      abortOnError false
+    }
+    
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 22
+    }
+    
+
+    // Configure source folders like Eclipse
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            jni.srcDirs = []
+            java.srcDirs = ['srcJava']
+            resources.srcDirs = ['srcJava']
+            aidl.srcDirs = ['srcJava']
+            renderscript.srcDirs = ['srcJava']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+if(project.hasProperty("AA.signing")
+ && new File(project.property("AA.signing")).exists()) {
+    apply from: project.property("AA.signing");
+}
+
+
+dependencies {
+    compile project(':ofAndroidLib')
+}
+
+clean.dependsOn(":openFrameworksProject:clean")
+
+assembleDebug.dependsOn(":openFrameworksProject:compileDebugOF")
+
+assembleRelease.dependsOn(":openFrameworksProject:compileReleaseOF")
+
+

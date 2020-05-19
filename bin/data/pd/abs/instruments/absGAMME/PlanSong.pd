@@ -1,0 +1,13 @@
+#N canvas 96 225 732 251 10;
+#X obj 455 225 bng 15 250 50 0 \$0-reset \$0-reset-rcv reset 17 7 0
+10 -260818 -260818 -1;
+#X obj 21 145 tlBars \$0;
+#X obj 20 60 tlTrack \$0 1;
+#X obj 609 225 bng 15 250 50 0 \$0-delete empty delete 17 7 0 10 -257985
+-1 -1;
+#X obj 20 82 tlTrack \$0 2;
+#X obj 20 104 tlTrack \$0 3;
+#X obj 20 39 tlClock \$0;
+#X obj 26 190 tlsongcommon \$0 \$1 \$2;
+#X obj 20 126 tlTrack \$0 4;
+#X coords 0 -1 1 1 701 160 1 20 20;

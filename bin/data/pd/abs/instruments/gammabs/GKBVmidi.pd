@@ -1,0 +1,86 @@
+#N canvas 801 369 412 229 10;
+#X obj 101 116 cnv 11 89 42 empty \$0-canvas empty 34 12 1 14 -261234
+-16662 0;
+#X obj 101 140 vsl 11 16 0 127 0 0 \$0-s0-snd \$0-s0-rcv empty 0 -9
+0 10 -260818 -260818 -262144 0 0;
+#X obj 114 140 vsl 11 16 0 127 0 0 \$0-s2-snd \$0-s2-rcv empty 0 -9
+0 10 -260818 -260818 -262144 0 0;
+#X obj 127 140 vsl 11 16 0 127 0 0 \$0-s4-snd \$0-s4-rcv empty 0 -9
+0 10 -260818 -260818 -262144 0 1;
+#X obj 140 140 vsl 11 16 0 127 0 0 \$0-s5-snd \$0-s5-rcv empty 0 -9
+0 10 -260818 -260818 -262144 0 1;
+#X obj 153 140 vsl 11 16 0 127 0 0 \$0-s7-snd \$0-s7-rcv empty 0 -9
+0 10 -260818 -260818 -262144 0 1;
+#X obj 166 140 vsl 11 16 0 127 0 0 \$0-s9-snd \$0-s9-rcv empty 0 -9
+0 10 -260818 -260818 -262144 0 1;
+#X obj 179 140 vsl 11 16 0 127 0 0 \$0-s11-snd \$0-s11-rcv empty 0
+-9 0 10 -260818 -260818 -262144 0 1;
+#X obj 107 118 vsl 11 16 0 127 0 0 \$0-s1-snd \$0-s1-rcv empty 0 -9
+0 10 -1 -1 -233017 0 0;
+#X obj 121 118 vsl 11 16 0 127 0 0 \$0-s3-snd \$0-s3-rcv empty 0 -9
+0 10 -1 -1 -233017 0 1;
+#X obj 146 118 vsl 11 16 0 127 0 0 \$0-s6-snd \$0-s6-rcv empty 0 -9
+0 10 -1 -1 -233017 0 1;
+#X obj 160 118 vsl 11 16 0 127 0 0 \$0-s8-snd \$0-s8-rcv empty 0 -9
+0 10 -1 -1 -233017 0 0;
+#X obj 174 118 vsl 11 16 0 127 0 0 \$0-s10-snd \$0-s10-rcv empty 0
+-9 0 10 -1 -1 -233017 0 0;
+#X obj 100 72 _GAMME_COMMON \$1 \$0 \$2;
+#N canvas 826 724 700 500 midi 0;
+#X obj 101 28 inlet;
+#X obj 85 247 s \$0-s0-rcv;
+#X msg 85 226 0;
+#X obj 122 103 sel 0 1 2 3 4 5 6 7 8 9 10 11, f 54;
+#X msg 115 203 0;
+#X msg 145 181 0;
+#X msg 175 158 0;
+#X obj 115 224 s \$0-s1-rcv;
+#X obj 145 202 s \$0-s2-rcv;
+#X obj 175 179 s \$0-s3-rcv;
+#X msg 215 225 0;
+#X msg 245 202 0;
+#X msg 275 180 0;
+#X msg 305 157 0;
+#X obj 215 246 s \$0-s4-rcv;
+#X obj 245 223 s \$0-s5-rcv;
+#X obj 275 201 s \$0-s6-rcv;
+#X obj 305 178 s \$0-s7-rcv;
+#X msg 341 228 0;
+#X msg 371 205 0;
+#X msg 401 183 0;
+#X msg 431 160 0;
+#X obj 341 249 s \$0-s8-rcv;
+#X obj 371 226 s \$0-s9-rcv;
+#X obj 401 204 s \$0-s10-rcv;
+#X obj 431 181 s \$0-s11-rcv;
+#X floatatom 158 55 5 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 0 0 26 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;
+#X connect 3 2 5 0;
+#X connect 3 3 6 0;
+#X connect 3 4 10 0;
+#X connect 3 5 11 0;
+#X connect 3 6 12 0;
+#X connect 3 7 13 0;
+#X connect 3 8 18 0;
+#X connect 3 9 19 0;
+#X connect 3 10 20 0;
+#X connect 3 11 21 0;
+#X connect 4 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 10 0 14 0;
+#X connect 11 0 15 0;
+#X connect 12 0 16 0;
+#X connect 13 0 17 0;
+#X connect 18 0 22 0;
+#X connect 19 0 23 0;
+#X connect 20 0 24 0;
+#X connect 21 0 25 0;
+#X restore 268 71 pd midi;
+#X obj 268 38 inlet;
+#X connect 15 0 14 0;
+#X coords 0 0 1 1 90 60 1 100 100;

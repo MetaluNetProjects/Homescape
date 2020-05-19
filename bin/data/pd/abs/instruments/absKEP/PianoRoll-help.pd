@@ -1,0 +1,9 @@
+#N canvas 167 215 539 587 10;
+#X obj 208 182 PianoRoll;
+#X floatatom 235 385 7 0 0 0 - - -;
+#X floatatom 329 378 5 0 0 0 - - -;
+#X obj 424 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;

@@ -1,0 +1,29 @@
+#N canvas 1133 1190 444 347 10;
+#X obj 32 52 inlet~;
+#X obj 45 77 inlet;
+#X obj 32 248 outlet~;
+#X text 72 52 ~signal_in~;
+#X text 79 249 ~signal_out~;
+#X obj 32 225 *~;
+#X obj 45 204 line~;
+#X obj 51 156 loadbang;
+#X obj 45 185 pack \$1 \$2;
+#X obj 45 119 Vcurve;
+#X text 82 76 <float> multiplication-coefficient or;
+#X text 82 88 <list> multiplication-coefficient + interpol_time [ms]
+;
+#X obj 120 119 inlet;
+#X text 155 120 <float> interpolation_time [ms];
+#X text 157 158 1.arg: <float> multiplication-coefficient;
+#X text 157 169 2.arg: <float> interpolation_time [ms];
+#X text 21 19 Vmull~;
+#X text 72 18 signal-multiplication with line~ interpolation and curve
+;
+#X connect 0 0 5 0;
+#X connect 1 0 9 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 1;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 0;
+#X connect 12 0 8 1;

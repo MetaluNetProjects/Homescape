@@ -1,0 +1,11 @@
+#N canvas 406 193 240 212 10;
+#X obj 60 -33 list prepend 0;
+#X obj 33 -65 t b a;
+#X obj 33 -96 inlet;
+#X obj 33 14 s \$2-rythmpat-changed;
+#X obj 31 49 table \$2-rythmpat-\$3 64;
+#X obj 60 -13 s \$2-rythmpat-\$3;
+#X connect 0 0 5 0;
+#X connect 1 0 3 0;
+#X connect 1 1 0 0;
+#X connect 2 0 1 0;

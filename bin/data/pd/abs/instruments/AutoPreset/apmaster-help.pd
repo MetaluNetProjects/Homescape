@@ -1,0 +1,36 @@
+#N canvas 376 68 425 292 10;
+#X declare -lib libdir -lib ggee;
+#X text 214 181 been loaded/saved.;
+#X text 83 71 load: choose a file to read.;
+#X text 83 84 loadfile my_file: open the designated file.;
+#X text 83 96 loadin: reload actual file.;
+#X text 83 123 savefile my_file: write the designated file.;
+#X text 83 111 save: choose a file to write in (like "save as").;
+#X text 83 135 savein: save the actual file.;
+#X text 14 27 Use "apmaster Ref" to save/load all presets;
+#X text 14 58 You can speak to Ref-apmaster-rcv:;
+#X text 18 154 You can listen to Ref-apmaster-snd:;
+#X text 82 168 loaded/saved my_file: signals that my_file has;
+#X text 17 3 AutoPreset Master;
+#X text 18 4 AutoPreset Master;
+#X text 23 40 of "Ref" and its children to/from a single text file.
+;
+#X obj 19 210 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
+0;
+#N canvas 634 338 164 175 open 0;
+#X obj 29 16 inlet;
+#X obj 29 38 symbol;
+#X obj 29 103 pack s s;
+#X obj 56 80 getdir;
+#X obj 29 59 t s b;
+#X msg 29 124 \; pd open \$1 \$2;
+#X obj 18 166 declare -lib libdir -lib ggee;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X restore 23 250 pd open;
+#X msg 23 227 0autopreset-help.pd;
+#X connect 16 0 15 0;

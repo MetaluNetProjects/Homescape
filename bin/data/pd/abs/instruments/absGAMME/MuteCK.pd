@@ -1,0 +1,65 @@
+#N canvas 757 117 523 320 10;
+#X obj 1 14 cnv 15 150 50 empty empty Mute 5 7 0 14 -51168 -262144
+0;
+#X obj 11 137 hradio 15 1 0 8 \$0-mode-snd \$0-mode-rcv Mode:symbol
+0 -6 0 10 -262144 -1 -257985 0;
+#X obj 108 14 bng 15 250 50 0 \$0-rec-snd \$0-rec-rcv rec 17 7 0 10
+-195568 -195568 -195568;
+#X msg 6 -25 0;
+#N canvas 55 398 349 335 1:End 0;
+#X obj 103 27 sel 1;
+#X obj 58 66 tgl 15 0 empty empty on 17 7 0 10 -262144 -1 -1 0 1;
+#X obj 58 91 t f f;
+#X obj 85 141 s \$0-allstop;
+#X obj 58 0 r \$0-mode-snd;
+#X obj 103 71 s \$0-modename;
+#X obj 58 23 == 1;
+#X msg 103 49 End;
+#X obj 91 161 r \$1-enableend-snd;
+#X obj 58 185 spigot;
+#X obj 80 210 spigot 1;
+#X msg 150 211 0;
+#X msg 151 189 1;
+#X obj 85 116 sel 1 0;
+#X obj 225 245 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 35 117 sel 1 0;
+#X obj 58 293 s \$1-open_rnd_seq-rcv;
+#X obj 58 262 s \$1-\$4-home-rcv;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 2 0 15 0;
+#X connect 2 1 13 0;
+#X connect 6 0 0 0;
+#X connect 6 0 1 0;
+#X connect 7 0 5 0;
+#X connect 8 0 9 1;
+#X connect 9 0 14 0;
+#X connect 9 0 17 0;
+#X connect 10 0 11 0;
+#X connect 10 0 17 0;
+#X connect 11 0 10 1;
+#X connect 12 0 10 1;
+#X connect 13 0 3 0;
+#X connect 13 1 12 0;
+#X connect 15 0 9 0;
+#X restore 8 155 pd 1:End;
+#X symbolatom 28 70 16 0 0 0 nom #0-name-rcv #0-name-snd;
+#X obj 164 33 apsym \$0 name \$0-name;
+#X obj 175 100 s \$0-modename;
+#X obj 175 78 r \$0-name-snd;
+#X obj 275 91 tgl 15 0 \$0-loop-snd \$0-loop-rcv loop 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 164 53 apf \$0 loop \$0-loop;
+#X symbolatom 241 141 10 0 0 0 - - -;
+#X obj 163 7 block_common \$0 \$1 \$2 \$1 \$4 \$3;
+#X obj 57 181 r \$0-outside;
+#X obj 57 227 == 0;
+#X obj 57 205 change -1;
+#X obj 57 251 s \$1-\$4-mute;
+#X connect 8 0 7 0;
+#X connect 8 0 11 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X coords 0 0 1 1 152 65 1 0 0;

@@ -1,0 +1,77 @@
+#N canvas 53 355 315 360 10;
+#X obj 32 99 apf \$0 vol \$0-vol;
+#X obj 3 92 mknob 25 100 0 127 0 0 \$0-vol-snd \$0-vol-rcv vol -2 -6
+1728 8 -262144 -1 -1 9900 1;
+#X obj 5 21 mknob 15 100 0 127 0 0 \$0-vol2-snd \$0-vol2-rcv vol2 -2
+-6 1728 8 -261689 -1 -1 9900 1;
+#X obj 31 20 apf \$0 vol2 \$0-vol2;
+#X obj 4 59 mknob 15 100 0 127 0 0 \$0-vol3-snd \$0-vol3-rcv vol3 -2
+-6 1728 8 -261689 -1 -1 0 1;
+#X obj 30 58 apf \$0 vol3 \$0-vol3;
+#X obj 19 382 apsubmaster \$0 \$1 \$2;
+#X obj 130 245 table \$0-t1 256;
+#X obj 129 218 aptab \$0 t1 \$0-t1 256;
+#X obj 128 307 s \$0-t1-len-snd;
+#X obj 128 280 init 256;
+#X obj 129 262 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X msg 272 243 10;
+#X msg 272 290 resize \$1;
+#X obj 272 318 s \$0-t1;
+#X floatatom 272 266 0 0 0;
+#X msg 302 242 1000;
+#X msg 340 242 10000;
+#X msg 166 422 const 0;
+#X msg 391 204 16387;
+#X msg 387 243 100000;
+#X obj 12 136 fndrev \$0 rev2;
+#X obj 12 200 fndrev \$0 rev1;
+#X obj 12 267 fndrev \$0 rev3;
+#X obj 196 36 apmaster \$0;
+#SUB settings /home/antoine/Datas/PdPatchs/preset/test/2 /home/antoine/Datas/PdPatchs/preset/test/3
+;
+#X obj 375 270 r \$0-t1-len-rcv;
+#X floatatom 375 322 0 0 0;
+#X msg 233 388 sinesum 170000 0.2 0.5 0.5 0.1 0.4;
+#X msg 233 409 131072;
+#X msg 234 447 sinesum 300000 0.7 0.3 0 0.1 0.2;
+#X msg 234 472 262144;
+#X obj 196 19 bng 15 250 50 0 empty empty empty 0 -6 0 8 -24198 -1
+-1;
+#X obj 268 18 bng 15 250 50 0 empty empty empty 0 -6 0 8 -258699 -1
+-1;
+#X obj 305 607 s \$0-pattern-snd;
+#X obj 393 544 hdl 10 0 0 16 empty empty empty 0 -6 0 8 -24198 -1 -1
+0;
+#X obj 393 557 unpack f;
+#X msg 393 577 load \$1;
+#X obj 220 543 hdl 10 0 0 16 empty empty empty 0 -6 0 8 -258699 -1
+-1 0;
+#X obj 220 556 unpack f;
+#X msg 220 576 store \$1;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 15 0;
+#X connect 13 0 14 0;
+#X connect 15 0 13 0;
+#X connect 15 0 9 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 0;
+#X connect 18 0 14 0;
+#X connect 19 0 15 0;
+#X connect 20 0 15 0;
+#X connect 25 0 15 0;
+#X connect 27 0 14 0;
+#X connect 27 0 28 0;
+#X connect 28 0 15 0;
+#X connect 29 0 14 0;
+#X connect 29 0 30 0;
+#X connect 30 0 15 0;
+#X connect 31 0 24 0;
+#X connect 32 0 24 1;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 33 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 0;
+#X connect 39 0 33 0;

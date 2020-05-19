@@ -1,0 +1,3 @@
+ #!/bin/sh
+
+pd -rt -jack -mididev 1,2,3,4 -open ~/SynologyDrive/PdPatchDrive/HomeScape/0EditMaster.pd &

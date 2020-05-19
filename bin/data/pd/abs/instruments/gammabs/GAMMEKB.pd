@@ -1,0 +1,36 @@
+#N canvas 581 134 558 167 10;
+#X obj 1 1 cnv 11 89 42 empty \$0-canvas empty 34 12 1 14 -261234 -16662
+0;
+#X obj 1 24 vsl 11 16 0 127 0 0 \$0-s0-snd \$0-s0-rcv empty 0 -9 0
+10 -262144 -262144 -233017 0 0;
+#X obj 14 24 vsl 11 16 0 127 0 0 \$0-s2-snd \$0-s2-rcv empty 0 -9 0
+10 -262144 -262144 -233017 0 0;
+#X obj 27 24 vsl 11 16 0 127 0 0 \$0-s4-snd \$0-s4-rcv empty 0 -9 0
+10 -262144 -262144 -233017 0 1;
+#X obj 40 24 vsl 11 16 0 127 0 0 \$0-s5-snd \$0-s5-rcv empty 0 -9 0
+10 -262144 -262144 -233017 0 1;
+#X obj 53 24 vsl 11 16 0 127 0 0 \$0-s7-snd \$0-s7-rcv empty 0 -9 0
+10 -262144 -262144 -233017 0 1;
+#X obj 66 24 vsl 11 16 0 127 0 0 \$0-s9-snd \$0-s9-rcv empty 0 -9 0
+10 -262144 -262144 -233017 0 1;
+#X obj 79 24 vsl 11 16 0 127 0 0 \$0-s11-snd \$0-s11-rcv empty 0 -9
+0 10 -262144 -262144 -233017 0 1;
+#X obj 7 2 vsl 11 16 0 127 0 0 \$0-s1-snd \$0-s1-rcv empty 0 -9 0 10
+-1 -1 -233017 0 0;
+#X obj 21 2 vsl 11 16 0 127 0 0 \$0-s3-snd \$0-s3-rcv empty 0 -9 0
+10 -1 -1 -233017 0 1;
+#X obj 46 2 vsl 11 16 0 127 0 0 \$0-s6-snd \$0-s6-rcv empty 0 -9 0
+10 -1 -1 -233017 0 1;
+#X obj 60 2 vsl 11 16 0 127 0 0 \$0-s8-snd \$0-s8-rcv empty 0 -9 0
+10 -1 -1 -233017 0 0;
+#X obj 74 2 vsl 11 16 0 127 0 0 \$0-s10-snd \$0-s10-rcv empty 0 -9
+0 10 -1 -1 -233017 0 0;
+#X obj 120 51 s \$0-self;
+#X obj 281 7 namecanvas \$0-self;
+#X msg 120 30 donecanvasdialog 1 -1 1 \, donecanvasdialog 1 -1 0 \,
+dirty 0;
+#X obj 119 83 _GAMME_COMMON \$1 \$0 \$2;
+#X msg 120 7 show_args;
+#X connect 15 0 13 0;
+#X connect 17 0 15 0;
+#X coords 0 -1 1 1 91 44 2 0 0;

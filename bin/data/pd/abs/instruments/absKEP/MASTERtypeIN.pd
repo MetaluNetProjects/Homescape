@@ -1,0 +1,76 @@
+#N canvas 2404 466 515 505 10;
+#X obj 11 11 cnv 15 32 83 empty empty empty 5 23 0 8 -4160 -257985
+0;
+#X obj 35 12 vu 8 80 vu-IN-\$1-\$2 empty 8 -8 0 10 -159808 -1 0 0;
+#X obj 12 68 tgl 14 0 mute-IN-\$1-\$2-snd mute-IN-\$1-\$2-rcv mute
+-1 19 1 8 -24198 -24198 -262144 0 1;
+#X obj 13 13 nbx 1 12 1 8 0 0 num-IN-\$1-\$2-snd num-IN-\$1-\$2-rcv
+empty 0 -8 0 10 -262144 -1 -1 1 256;
+#X obj 22 167 IN 1;
+#X text 63 -18 MASTERtypeIN \$1 num;
+#X text 202 -19 \$1 : nom unique instrument;
+#X obj 22 450 outlet~;
+#X obj 22 144 r num-IN-\$1-\$2-snd;
+#X obj 209 132 sel 0 1;
+#X msg 209 159 color 13 13 10;
+#X msg 229 181 color 16 16 0;
+#X obj 209 107 r mute-IN-\$1-\$2-snd;
+#X obj 209 204 s mute-IN-\$1-\$2-rcv;
+#X obj 22 280 mull~ 0 10;
+#X obj 50 231 r trim-IN-\$1-\$2-snd;
+#X obj 77 426 s vu-IN-\$1-\$2;
+#X obj 43 356 unpack 0 0 0;
+#X obj 77 378 + 11;
+#X obj 77 402 change;
+#X obj 23 209 mull~ 0 10;
+#X obj 51 186 r mute-IN-\$1-\$2-snd;
+#X obj 95 283 loadbang;
+#X msg 95 306 t_metro 50 \, t_hold 50 \, t_release 50;
+#X text 46 11 ------numero d'input;
+#X text 49 32 ------trim de linput;
+#X text 47 66 ------mute input;
+#X text 45 48 ------vu-metre input;
+#X obj 250 332 api MASTERS num-IN-\$1-\$2 num-IN-\$1-\$2 2;
+#X obj 250 354 apf MASTERS mute-IN-\$1-\$2 mute-IN-\$1-\$2 2;
+#X obj 249 378 apf MASTERS trim-IN-\$1-\$2 trim-IN-\$1-\$2 2;
+#X obj 27 30 vsl 8 60 0 1 0 0 trim-IN-\$1-\$2-snd trim-IN-\$1-\$2-rcv
+trim -14 30 1 8 -260097 -262130 -262144 0 1;
+#X obj 50 256 Vcurve;
+#X obj 43 334 prvu~;
+#X text 203 -8 \$2 : num : num d'entree instrument;
+#X text 201 6 \$3 : num : \$0 de MAIN pour prepa;
+#X obj 10 40 cnv 10 20 10 \$0-can-snd \$0-can-rcv Base 0 5 1 8 -257985
+-1 0;
+#X obj 343 83 s \$0-can-rcv;
+#X msg 343 61 label \$1;
+#X obj 343 39 r \$3-prepa;
+#X obj 11 25 cnv 10 16 10 \$0-can-in-snd \$0-can-in-rcv IN:1 1 5 1
+8 -4160 -262144 0;
+#X msg 370 230 label \$1;
+#X obj 370 252 s \$0-can-in-rcv;
+#X obj 370 209 makesymbol IN:%s;
+#X obj 370 186 r num-IN-\$1-\$2-snd;
+#X connect 4 0 20 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 10 0 13 0;
+#X connect 11 0 13 0;
+#X connect 12 0 9 0;
+#X connect 14 0 7 0;
+#X connect 14 0 33 0;
+#X connect 15 0 32 0;
+#X connect 17 1 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 16 0;
+#X connect 20 0 14 0;
+#X connect 21 0 20 1;
+#X connect 22 0 23 0;
+#X connect 32 0 14 1;
+#X connect 33 0 17 0;
+#X connect 38 0 37 0;
+#X connect 39 0 38 0;
+#X connect 41 0 42 0;
+#X connect 43 0 41 0;
+#X connect 44 0 43 0;
+#X coords 0 -1 1 1 34 85 2 10 10;

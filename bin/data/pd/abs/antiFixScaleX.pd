@@ -1,0 +1,16 @@
+#N canvas 577 469 278 223 10;
+#X obj 67 139 pofscale 1 1;
+#X obj 67 18 inlet;
+#X obj 67 165 outlet;
+#X obj 101 115 /;
+#X obj 101 46 r ScreenScaleW;
+#X obj 122 67 r ScreenScaleH;
+#X obj 208 172 outlet;
+#X obj 101 91 pack f f;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 7 1;
+#X connect 7 0 3 0;

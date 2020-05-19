@@ -1,0 +1,128 @@
+#N canvas 1973 407 594 673 10;
+#X obj 150 9 inlet head;
+#X obj 185 178 poftranslate;
+#X obj 194 155 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 48 256;
+#X obj 253 155 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 -19 256;
+#X obj 187 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 51 183 poftranslate;
+#X obj 60 160 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 27 256;
+#X obj 119 160 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 37 256;
+#X obj 63 299 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 255 258 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 51 253 poftranslate;
+#X obj 73 233 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 -128 256;
+#X obj 63 278 imageTouchOnOff song/PlaySong 0.3;
+#X obj 75 381 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 75 361 imageTouch song/StopSong.png 0.3;
+#X obj 51 336 poftranslate 49;
+#X obj 75 465 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 51 420 poftranslate 49;
+#X obj 75 445 imageTouchOnOff song/ChoixSong 0.3;
+#X obj 274 424 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 74 559 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 263 516 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 74 537 imageTouchOnOff song/RecSong 0.3;
+#X obj 465 411 pofcolor 0 0 0 0.2;
+#X obj 477 446 pofrect 200 100;
+#X floatatom 284 183 5 0 0 0 - - -, f 5;
+#X obj 397 170 poftranslate;
+#X obj 406 147 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 -48 256;
+#X obj 465 147 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 -5 256;
+#X floatatom 521 186 5 0 0 0 - - -, f 5;
+#X obj 185 128 t a a;
+#X obj 201 474 sel 0;
+#X obj 201 496 s song-choix-open;
+#X obj 257 310 sel 1;
+#X obj 288 362 s song-play;
+#X obj 169 384 sel 1;
+#X obj 169 406 s song-stop;
+#X obj 254 237 r song-playing;
+#X obj 344 263 metro 250;
+#X obj 343 290 r song-playing;
+#X obj 343 312 == 0;
+#X obj 328 333 f;
+#X floatatom 126 480 5 0 0 0 - - -, f 5;
+#X obj 51 509 poftranslate 80;
+#X obj 51 211 fixScaleX;
+#X obj 185 201 fixScaleX;
+#X obj 397 191 fixScaleX;
+#X obj 107 58 t a a;
+#X floatatom 350 58 5 0 0 0 - - -, f 5;
+#X floatatom 418 55 5 0 0 0 - - -, f 5;
+#X floatatom 236 28 5 0 0 0 - - -, f 5;
+#X floatatom 283 21 5 0 0 0 - - -, f 5;
+#X floatatom 333 14 5 0 0 0 - - -, f 5;
+#X obj 186 223 imageTouch song/MixTape.png 0.18;
+#X obj 208 86 pofimage song/FondSong.png 211 142;
+#X obj 205 61 poftranslate 11 1 4;
+#X obj 397 217 pofimage SongLegend.png 65 65;
+#X connect 0 0 55 0;
+#X connect 1 0 45 0;
+#X connect 2 0 1 1;
+#X connect 3 0 1 2;
+#X connect 5 0 44 0;
+#X connect 6 0 5 1;
+#X connect 7 0 5 2;
+#X connect 8 0 33 0;
+#X connect 9 0 12 2;
+#X connect 10 0 12 0;
+#X connect 10 0 15 0;
+#X connect 11 0 10 1;
+#X connect 12 0 8 0;
+#X connect 13 0 35 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 15 0 17 0;
+#X connect 16 0 19 0;
+#X connect 16 0 31 0;
+#X connect 17 0 18 0;
+#X connect 17 0 43 0;
+#X connect 18 0 16 0;
+#X connect 19 0 18 2;
+#X connect 20 0 21 0;
+#X connect 21 0 22 2;
+#X connect 22 0 20 0;
+#X connect 23 0 24 0;
+#X connect 25 0 53 1;
+#X connect 26 0 46 0;
+#X connect 27 0 26 1;
+#X connect 28 0 26 2;
+#X connect 29 0 56 1;
+#X connect 30 0 1 0;
+#X connect 30 1 26 0;
+#X connect 31 0 32 0;
+#X connect 33 0 34 0;
+#X connect 35 0 36 0;
+#X connect 37 0 9 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 1;
+#X connect 42 0 43 1;
+#X connect 43 0 22 0;
+#X connect 44 0 10 0;
+#X connect 45 0 53 0;
+#X connect 46 0 56 0;
+#X connect 47 0 5 0;
+#X connect 47 0 30 0;
+#X connect 48 0 54 1;
+#X connect 49 0 54 2;
+#X connect 50 0 55 1;
+#X connect 51 0 55 2;
+#X connect 52 0 55 3;
+#X connect 53 0 4 0;
+#X connect 55 0 54 0;
+#X connect 55 0 47 0;

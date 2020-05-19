@@ -1,0 +1,29 @@
+#N canvas 496 107 447 172 10;
+#X declare -lib libdir -lib ggee;
+#X text 69 25 -if pat_no_all==1 \, doesn't receive "_all_" pattern
+commands store/load. If pat_no_all==2 \, no pattern for this.;
+#X text 22 -11 AutoPreset Symbol;
+#X text 23 -10 AutoPreset Symbol;
+#X text 24 9 usage : apsym Ref Name [BusName [pat_no_all [dont-recall]]]
+;
+#X text 68 55 -if dont-recall=1 \, saved value is not sent when we
+load the preset.;
+#X obj 27 92 cnv 15 130 60 empty empty help: 20 7 0 12 -204800 -66577
+0;
+#N canvas 634 338 164 175 open 0;
+#X obj 29 16 inlet;
+#X obj 29 38 symbol;
+#X obj 29 103 pack s s;
+#X obj 56 80 getdir;
+#X obj 29 59 t s b;
+#X msg 29 124 \; pd open \$1 \$2;
+#X obj 18 166 declare -lib libdir -lib ggee;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 1 3 0;
+#X restore 31 132 pd open;
+#X msg 31 109 0autopreset-help.pd;
+#X connect 7 0 6 0;

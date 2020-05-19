@@ -1,0 +1,10 @@
+#N canvas 5 75 450 300 10;
+#X obj 82 134 inlet;
+#X obj 212 133 inlet;
+#X obj 343 137 inlet;
+#X obj 82 226 outlet;
+#X obj 82 185 pofimage PopUpBalancesVide.png \$1 \$2;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 2 0 4 2;
+#X connect 4 0 3 0;

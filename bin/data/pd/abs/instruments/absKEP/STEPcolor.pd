@@ -1,0 +1,11 @@
+#N canvas 2369 705 324 145 10;
+#X obj 26 -79 inlet;
+#X msg 59 -37 color 26 26 10;
+#X msg 26 -15 color 16 16 0;
+#X obj 26 -57 sel \$2;
+#X obj 26 12 s \$1-seq\$2-STEPcan-rcv;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;

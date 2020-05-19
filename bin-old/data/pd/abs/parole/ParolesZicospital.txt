@@ -1,0 +1,82 @@
+## Nom du mode
+
+Nom # "ce mode s'appelle Fred énervé !"
+
+## Ouverture de l’application :
+
+Allumage #  “bienvenue sur Zicospital”
+
+## Console :
+
+HelpConsole # “voici la console de mixage grâce à laquelle vous allez pouvoir réaliser votre propre concert- pour lancer un morceau appuyer sur play song- etc”
+
+## PopUpchoixSong :
+
+ChoixSong # “choisissez un morceau à interpréter et confirmer”
+
+ChoixSongRappel # “je vous rappelle que vous devez choisir un morceau s’il vous plaît”
+
+## PopUpPlayMixTape :
+
+OuverturePlayMixTape # “selectionner un enregistrement pour l’écouter- appuyez sur Mail pour l’envoyer par email
+
+MailMixTape # “indiquez l'adresse email à laquelle vous voulez envoyer la MixTape selectionée”
+
+## PopUpRecMixTape :
+
+OuvertureRecMixTape # “si vous voulez sauver votre enregistrement appuyez sur Save - vous pouvez d'abord le réécouter en appuyant sur play"
+
+NomMixTape # “donnez un nom à votre enregistrement"
+
+SaveMixTape # “Votre Mixtape est sauvée vous pourrez la réécouter plus tard et même l’envoyer par mail en appuyant sur MixTape”
+
+# PopUpAbout :
+
+OuvertureAbout # “Cette application a été réalisée par Al1 & Ant1 et Métalu.net - en collaboration avec L'Aéronef la Polyclinique du Bois et L'Agence Régionale de Santé Nord-Pas-de-Calais-Picardie”
+
+## PopUpBalance :
+
+HelpBalance # “c'est ici que l'on peut enregistrer et regler ses propres sets de son- il suffit de sélectionner un instrument d'appuyer sur rec- et se laisser guider. “ 
+
+RecGrosseCaisse # “allez-y- faites la grosse caisse”
+
+RecCaisseClaire # “allez-y- faites un son de caisse claire”
+
+RecCharlestone # “allez-y- faites un son de charlestone”
+
+RecTom # “allez-y- faites un son de tom”
+
+RecCymbal # “allez-y- faites un son de cymbale”
+
+RecBasse # “allez-y- faites une note de bassse”
+
+RecGuitar # “allez-y- faites une note guitare”
+
+RecSynthe # “allez-y- faites une note de synthétiseur”
+
+RecPiano # “allez-y- faites une note de piano”
+
+RecChant # “allez-y- chantez une note”
+
+RelanceSon #  “je vous rappelle que vous devez enregistrer un son s’il vous plaît”
+
+## PopUpMode :
+
+OuvertureMode # “choisissez un personnage qui vous suivra pour votre balance”
+
+## PopUpSaveSet :
+
+OuvertureSaveSet # “écrivez le nom de votre set et décrivez le oralement - puis confirmez”
+
+RelanceNomSet # “je vous rappelle que vous devez écrire le nom de votre set”
+
+ConfirmNomSet # “Merci- et maintenant- dites le nom de votre set avec votre nom et une description- vous pouvez le réécouter et confirmer”
+
+RelanceRecNom # “vous devez dire le nom de votre set s’il vous plaît”
+
+ConfirmSet # “Merci d’avoir enregistré votre set”
+
+## PopUpLoadSet :
+
+OuvertureLoadSet # “choisissez un set de son”
+

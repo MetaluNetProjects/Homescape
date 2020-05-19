@@ -1,0 +1,21 @@
+#N canvas 1526 1202 394 286 10;
+#X obj 32 26 inlet~;
+#X obj 188 15 inlet~;
+#X obj 35 66 throw~ OUTinstru-1;
+#X obj 186 62 throw~ OUTinstru-2;
+#X obj 121 119 env~;
+#X obj 136 254 s concert-inst-level-\$1;
+#X obj 227 165 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 139 218 f;
+#X obj 128 176 / 120;
+#X obj 231 187 metro 10;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 4 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X coords 0 286 1 285 200 70 0;

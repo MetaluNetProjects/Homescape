@@ -1,0 +1,14 @@
+#N canvas 2250 724 266 198 10;
+#X obj 19 53 inlet~;
+#X obj 158 53 inlet~;
+#X obj 52 123 REC \$3;
+#X obj 132 122 REC \$4;
+#X obj 86 30 r bus-\$3+\$4-\$1-\$2-snd;
+#X obj 53 98 mull~ 0 10;
+#X obj 132 98 mull~ 0 10;
+#X connect 0 0 5 0;
+#X connect 1 0 6 0;
+#X connect 4 0 5 1;
+#X connect 4 0 6 1;
+#X connect 5 0 2 0;
+#X connect 6 0 3 0;
