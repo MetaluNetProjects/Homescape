@@ -1,5 +1,4 @@
 #N canvas 7 81 722 570 10;
-#X declare -stdpath moonlib;
 #X text 210 89 num val;
 #X obj 182 373 route 0 1;
 #X obj 182 468 &;
@@ -256,10 +255,10 @@
 #X obj 128 65 dispatch \$2-s 0 11;
 #X obj 182 111 r \$2-s-snd;
 #X obj 263 136 f \$3;
-#X floatatom 134 245 5 0 0 0 - - -, f 5;
+#X floatatom 134 245 5 0 0 0 - - -;
 #X obj 427 107 v \$1;
 #X obj 427 86 loadbang;
-#X obj 127 32 declare -stdpath moonlib;
+#X obj 127 32 rem declare -stdpath moonlib;
 #X connect 1 0 12 0;
 #X connect 1 1 3 0;
 #X connect 2 0 24 0;
