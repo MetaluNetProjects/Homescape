@@ -36,7 +36,7 @@
 #X obj 40 135 change;
 #X obj 39 66 l syncjams \$0/syncer \, bpm 10 \, namespace syncjams
 \, port 23232;
-#N canvas 290 628 646 427 SYNC 0;
+#N canvas 290 628 646 427 SYNC 1;
 #X obj 75 97 route set-state;
 #X obj 94 223 spigot 0;
 #X obj 75 279 t f f;
@@ -54,7 +54,7 @@
 #X obj 75 71 r SYNCER;
 #X obj 445 183 s SYNCER/r;
 #X obj 318 73 t b f;
-#X obj 318 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 318 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 318 179 /SIG \$1;
 #X obj 318 134 list prepend \$1;
@@ -84,7 +84,6 @@
 #X connect 7 0 12 0;
 #X connect 8 0 3 0;
 #X connect 9 0 14 0;
-#X connect 10 0 23 0;
 #X connect 11 0 9 0;
 #X connect 12 0 5 0;
 #X connect 12 1 1 0;
@@ -203,6 +202,7 @@
 #X obj 13 22 rem declare -stdpath SyncJams/pure-data -stdpath moonlib
 ;
 #X obj 517 516 abl_link~ 1 0 4 132;
+#X floatatom 141 492 5 0 0 0 - - -;
 #X connect 0 0 1 0;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
@@ -268,7 +268,5 @@
 #X connect 91 0 72 0;
 #X connect 91 0 76 0;
 #X connect 91 0 11 0;
-#X connect 91 1 56 0;
-#X connect 91 2 55 0;
 #X connect 91 3 59 0;
 #X connect 91 3 69 0;
