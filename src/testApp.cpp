@@ -24,11 +24,13 @@ extern "C" {
     extern void ndmetro_setup(void);
     extern void mknob_setup(void);
     extern void tabenv_setup(void);
+    extern void dispatch_setup(void);
     extern void fdn_tilde_setup(void);
     extern void dist_tilde_setup(void);
     extern void filterortho_tilde_setup(void);
     extern void f2s_setup(void);
     extern void filter_tilde_setup(void);
+    extern void scale_setup(void);
 }
 
 
@@ -86,10 +88,12 @@ void testApp::setup() {
 	mknob_setup();
 	tabenv_setup();
 	f2s_setup();
+	dispatch_setup();
 	fdn_tilde_setup();
 	dist_tilde_setup();
 	filterortho_tilde_setup();
 	filter_tilde_setup();
+	scale_setup();
     // ---------------------------------------------
 	
 	
