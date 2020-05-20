@@ -1,14 +1,16 @@
-#N canvas 66 648 1031 371 10;
+#N canvas 66 648 1101 371 10;
 #X declare -lib pof;
 #X declare -path bin/data/pd -path bin/data/pd/abs;
 #X declare -lib abl_link~ -path abl_link~;
-#X declare -lib creb/fdn~ -lib creb/filterortho~ -lib creb/dist~;
-#X declare -lib moonlib/mknob -lib moonlib/tabenv -lib moonlib/f2s
--lib moonlib/ndmetro;
 #X declare -lib cyclone/atan~ -lib cyclone/seq -lib cyclone/midiparse
 ;
 #X declare -stdpath zexy -lib zexy;
 #X declare -lib iemlib/filter~;
+#X declare -lib moonlib/mknob -lib moonlib/tabenv -lib moonlib/f2s
+-lib moonlib/ndmetro -lib moonlib/dispatch;
+#X declare -lib maxlib -path maxlib;
+#X declare -lib creb/fdn~ -lib creb/filterortho~ -lib creb/dist~ -lib
+creb;
 #X obj 24 53 declare -lib pof;
 #X obj 23 221 loadbang;
 #X msg 23 246 \; pd-pof_main.pd vis 1;
@@ -34,21 +36,23 @@
 #X msg 170 216 window 800 550 0 \, framerate 25 \, background 0 0 0
 ;
 #X obj 204 165 declare -lib abl_link~ -path abl_link~;
-#X obj 427 36 declare -lib creb/fdn~ -lib creb/filterortho~ -lib creb/dist~
-, f 61;
 #X obj 491 198 rem declare -path creb -lib creb;
 #X obj 492 218 rem declare -lib iemlib -path iemlib;
 #X obj 492 238 rem declare -lib libdir -lib ggee -stdpath ggee;
 #X obj 492 260 rem declare -lib else -path else;
 #X obj 486 288 rem declare -stdpath cyclone -lib cyclone;
-#X obj 427 55 declare -lib moonlib/mknob -lib moonlib/tabenv -lib moonlib/f2s
--lib moonlib/ndmetro, f 85;
-#X obj 427 91 declare -lib cyclone/atan~ -lib cyclone/seq -lib cyclone/midiparse
+#X obj 427 103 declare -lib cyclone/atan~ -lib cyclone/seq -lib cyclone/midiparse
 , f 67;
 #X obj 427 15 declare -stdpath zexy -lib zexy;
 #X text 645 15 for: z~ limiter~ [ NOT: lister(l) demux makesymbol envrms~]
 ;
-#X obj 427 73 declare -lib iemlib/filter~;
+#X obj 427 85 declare -lib iemlib/filter~;
+#X text 999 74 +dispatch !!, f 14;
+#X obj 428 57 declare -lib moonlib/mknob -lib moonlib/tabenv -lib moonlib/f2s
+-lib moonlib/ndmetro -lib moonlib/dispatch, f 109;
+#X obj 490 123 declare -lib maxlib -path maxlib;
+#X obj 427 36 declare -lib creb/fdn~ -lib creb/filterortho~ -lib creb/dist~
+-lib creb, f 72;
 #X connect 1 0 2 0;
 #X connect 4 0 13 0;
 #X connect 6 0 7 0;
