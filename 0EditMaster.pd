@@ -1,4 +1,4 @@
-#N canvas 66 648 1101 371 10;
+#N canvas 66 1172 1101 371 10;
 #X declare -lib pof;
 #X declare -path bin/data/pd -path bin/data/pd/abs;
 #X declare -lib abl_link~ -path abl_link~;
@@ -27,9 +27,9 @@ creb;
 #X restore 170 194 pd bang_on_first_frame;
 #X obj 24 74 declare -path bin/data/pd -path bin/data/pd/abs;
 #X obj 326 237 cputime;
-#X floatatom 328 269 5 0 0 0 - - -;
+#X floatatom 328 269 5 0 0 0 - - -, f 5;
 #X obj 251 249 iemlib/dsp;
-#X floatatom 249 274 5 0 0 0 - - -;
+#X floatatom 249 274 5 0 0 0 - - -, f 5;
 #X obj 22 190 pof_main;
 #X text 163 304 rien menu_song playing player_switched fx_none;
 #X text 63 324 portable_ant1 : 76 85 82 45 50;
