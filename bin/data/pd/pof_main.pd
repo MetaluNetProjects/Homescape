@@ -169,7 +169,7 @@
 #X restore 250 240 pd strings&paths;
 #X obj 249 221 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 5 103 344 272 fonts 0;
+#N canvas 5 130 344 272 fonts 0;
 #X obj 42 87 poffonts typo font/Typoster_demo.otf;
 #X obj 42 43 poffonts vera font/vera.ttf;
 #X obj 42 65 poffonts impact font/Impact.ttf;
@@ -381,7 +381,6 @@
 #X obj 14 29 declare -path abs -path . -path img;
 #X obj 430 265 mknob 50 100 0 1 0 0 VolMaster-snd VolMaster-rcv VolMaster
 -2 -6 0 8 -258113 -1 -1 0 1;
-#X obj 154 392 s overHead;
 #X obj 127 350 fixScaleX;
 #X obj 127 371 t a a;
 #N canvas 1460 1172 450 420 instruments 0;
@@ -401,14 +400,54 @@
 #X connect 7 4 5 0;
 #X connect 7 5 6 0;
 #X restore 127 418 pd instruments;
-#X obj 13 445 instruments/player;
 #X obj 239 7 declare -path abs/extra/iemlib;
+#X obj 13 445 instruments/player;
+#N canvas 687 449 450 352 cpu 0;
+#X obj 61 140 inlet;
+#X obj 61 212 poftranslate;
+#X obj 61 288 poftexts vera 16;
+#X obj 61 236 t a a;
+#X obj 199 262 pofcolor 0 0 0 0.5;
+#X obj 199 308 pofrect 80 20 6;
+#X obj 82 172 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 389 256;
+#X obj 144 174 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 -287 256;
+#X floatatom 335 239 0 0 0 0 - - -;
+#X obj 335 151 cputime;
+#X obj 335 31 loadbang;
+#X obj 335 95 metro 1000;
+#X obj 335 123 t b b;
+#X obj 335 211 * 0.1;
+#X obj 335 180 int;
+#X text 358 61 <= on/off;
+#X obj 335 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 174 141 text CPU:\$1%;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 1 1;
+#X connect 7 0 1 2;
+#X connect 9 0 14 0;
+#X connect 10 0 16 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 0;
+#X connect 12 1 9 1;
+#X connect 13 0 8 0;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 16 0 11 0;
+#X connect 17 0 2 0;
+#X restore 230 419 pd cpu;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
 #X connect 4 0 3 0;
 #X connect 5 0 44 0;
 #X connect 8 0 7 0;
-#X connect 10 0 62 0;
+#X connect 10 0 61 0;
 #X connect 10 1 34 0;
 #X connect 10 2 26 0;
 #X connect 13 0 0 0;
@@ -441,6 +480,6 @@
 #X connect 56 0 55 0;
 #X connect 57 0 56 0;
 #X connect 60 0 28 0;
+#X connect 61 0 62 0;
 #X connect 62 0 63 0;
-#X connect 63 0 64 0;
-#X connect 63 1 61 0;
+#X connect 62 1 66 0;
