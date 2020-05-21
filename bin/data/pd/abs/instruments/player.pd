@@ -124,7 +124,7 @@
 #X obj 436 210 decoupeur_ctl decoupeur-setting2 DECSET;
 #X obj 478 16 l autorecDomo \$1-config \$1-arec1 \$1;
 #N canvas 1538 726 381 329 InterfaceMachineAlaver 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 81 13 r concert-vol-0;
 #X obj 79 152 sel 0;
@@ -459,7 +459,7 @@ MOfiltreDisto -2 -6 1 8 -159808 -1 -1 0 1;
 #X obj 156 684 fdnrev DECSET-SEQ1 fd1;
 #X obj 439 386 fragseq DECSET-SEQ2 fragseq2;
 #X obj 436 114 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 12700 1;
 #N canvas 1450 1172 450 299 MOprog 0;
 #X obj 94 269 outlet;
 #X floatatom 158 64 5 0 0 0 - - -, f 5;
@@ -496,7 +496,7 @@ MOfiltreDisto -2 -6 1 8 -159808 -1 -1 0 1;
 #X restore 440 93 pd MOprog;
 #X obj 433 140 MORPHgroup DECSET SEQ2;
 #N canvas 1539 1202 381 329 InterfaceMicroOnde 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
@@ -576,14 +576,14 @@ MOfiltreDisto -2 -6 1 8 -159808 -1 -1 0 1;
 #X obj 439 357 OutDec~;
 #X obj 478 789 OutDec~ 2, f 52;
 #N canvas 3437 738 381 341 InterfaceCouverts 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 870 1172 450 300 MOwattTouch 0;
 #X obj 89 221 outlet;
@@ -623,7 +623,7 @@ MOfiltreDisto -2 -6 1 8 -159808 -1 -1 0 1;
 #X restore 130 207 pd MOwattTouch;
 #X obj 83 282 s COUVpause-light-snd;
 #X obj 83 124 r concert-mute-1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 106 256 s COUV-pnip1-on-rcv;
 #X obj 81 13 r concert-vol-1;
@@ -863,7 +863,7 @@ pnip1-Feedback -2 -6 1 8 -262144 -1 -1 9900 1;
 #X obj 292 567 tgl 15 0 pnip1-Reset-snd pnip1-Reset-rcv pnip1-Reset
 17 7 0 10 -262144 -1 -1 1 1;
 #X obj 104 768 tgl 15 0 COUV-pnip1-on-snd COUV-pnip1-on-rcv COUV-pnip1-on
-17 7 0 10 -262144 -1 -1 1 1;
+17 7 0 10 -262144 -1 -1 0 1;
 #X obj 507 486 r COUVCuillere-on;
 #X obj 507 508 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1641,7 +1641,7 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 54 0 45 0;
 #X restore 979 39 pd Bidon;
 #N canvas 1218 1295 381 329 InterfaceBidon 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
@@ -1650,7 +1650,7 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X msg 105 176 0, f 1;
 #X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 83 282 s BIDpause-light-snd;
 #X obj 149 88 s BID-vol;
@@ -1681,7 +1681,7 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 1 0 0 0;
 #X restore 817 79 pd GRIprog;
 #N canvas 1538 726 381 329 InterfaceGRI 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
@@ -1750,7 +1750,7 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 11 0 6 0;
 #X connect 11 0 10 0;
 #X connect 12 0 1 0;
-#X restore 1170 150 pd InterfaceGRI;
+#X restore 1129 130 pd InterfaceGRI;
 #X obj 905 738 OutDec~ 4, f 52;
 #X obj 805 293 decsample2 set-table 4 stretch-setting1;
 #X obj 805 325 *~ 0.2;
@@ -1761,10 +1761,10 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 818 196 decoupeur_ctl stretch-setting1 DECSET;
 #X obj 909 401 stretcher DECSET-GRI fragseq4 set-table-4;
 #X obj 1002 527 apssb DECSET-GRI ssb1;
-#X obj 1163 179 grilletouch GRI-0;
+#X obj 1122 159 grilletouch GRI-0;
 #X obj 1003 624 apecho DECSET-GRI ech1;
 #N canvas 1165 726 381 329 InterfaceBaignoire 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
@@ -1773,7 +1773,7 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X msg 105 176 0, f 1;
 #X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 81 13 r concert-vol-5;
 #X obj 198 49 s concert-mute-5;
@@ -1795,7 +1795,7 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 11 0 7 0;
 #X connect 13 0 6 0;
 #X connect 13 0 9 0;
-#X restore 1126 20 pd InterfaceBaignoire;
+#X restore 1081 11 pd InterfaceBaignoire;
 #N canvas 765 1172 970 748 Baignoire 0;
 #X obj 250 396 print;
 #X obj 365 343 pack f f;
@@ -1959,7 +1959,7 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 50 0 53 0;
 #X connect 53 0 48 1;
 #X connect 54 0 49 0;
-#X restore 1143 46 pd Baignoire;
+#X restore 1098 37 pd Baignoire;
 #X obj 268 50 l apmasterfile DECSET exampleSettings/DECSET.txt;
 #N canvas 31 569 450 410 apmasterfile 0;
 #X msg 164 128 getdir;
@@ -1991,16 +1991,16 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X restore 84 53 pd apmasterfile;
 #X floatatom 183 97 5 0 0 0 - - -, f 5;
 #N canvas 1165 1202 381 329 InterfaceRegle 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 81 13 r concert-vol-6;
 #X obj 149 88 s REG-vol;
@@ -2022,7 +2022,7 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 10 0 11 0;
 #X connect 12 0 1 0;
 #X connect 12 0 7 0;
-#X restore 1146 78 pd InterfaceRegle;
+#X restore 1111 71 pd InterfaceRegle;
 #N canvas 765 1172 970 748 Regle 0;
 #X obj 250 396 print;
 #X obj 365 343 pack f f;
@@ -2195,18 +2195,18 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 55 0 53 0;
 #X connect 56 0 47 1;
 #X connect 57 0 52 0;
-#X restore 1163 104 pd Regle;
+#X restore 1128 97 pd Regle;
 #N canvas 1218 1202 381 329 InterAspirateur 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 79 152 sel 0;
 #X obj 81 40 change;
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 83 124 r concert-mute-7;
 #X obj 106 256 s ASP-0-note1-on-rcv;
@@ -2228,8 +2228,8 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 12 0 2 0;
 #X connect 14 0 6 0;
 #X connect 14 0 11 0;
-#X restore 1171 248 pd InterAspirateur;
-#N canvas 2203 62 750 748 Aspirateur 1;
+#X restore 1129 192 pd InterAspirateur;
+#N canvas 1170 1172 750 748 Aspirateur 0;
 #X obj 250 396 print;
 #X obj 365 343 pack f f;
 #X msg 366 371 \$1 \$2;
@@ -2286,8 +2286,8 @@ or not.;
 #X obj 142 0 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 99 39 del 200;
-#X obj 576 261 mknob 25 100 0 127 0 1 BID-0-Note_adjust-snd BID-0-Note_adjust-rcv
-BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
+#X obj 576 261 mknob 25 100 0 127 0 1 ASP-0-Note_adjust-snd ASP-0-Note_adjust-rcv
+ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 216 22 metro 250;
 #X obj 215 2 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -2390,7 +2390,202 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 50 0 52 0;
 #X connect 51 0 49 0;
 #X connect 52 0 47 1;
-#X restore 1188 274 pd Aspirateur;
+#X restore 1146 218 pd Aspirateur;
+#N canvas 1218 1202 381 329 InterVerres 0;
+#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 79 152 sel 0;
+#X obj 81 40 change;
+#X obj 81 65 moses 0.0001;
+#X msg 79 178 1, f 1;
+#X msg 105 176 0, f 1;
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 82 13 r concert-vol-8;
+#X obj 197 18 r VER-on-snd;
+#X obj 149 88 s VER-vol;
+#X obj 106 256 s VER-0-note1-on-rcv;
+#X obj 83 282 s VERpause-light-snd;
+#X obj 83 124 r concert-mute-8;
+#X obj 198 49 s concert-mute-8;
+#X connect 0 0 11 0;
+#X connect 0 0 12 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 2 0 3 0;
+#X connect 3 1 10 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 8 0 2 0;
+#X connect 9 0 6 0;
+#X connect 9 0 14 0;
+#X connect 13 0 1 0;
+#X connect 13 0 7 0;
+#X restore 1154 263 pd InterVerres;
+#N canvas 1170 1172 750 748 Verres 0;
+#X obj 250 396 print;
+#X obj 365 343 pack f f;
+#X msg 366 371 \$1 \$2;
+#X obj 383 316 t b f;
+#X obj 390 290 f;
+#X floatatom 413 265 5 0 0 0 - - -, f 5;
+#X obj 391 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 348 260 f;
+#X floatatom 386 213 5 0 0 0 - - -, f 5;
+#X obj 349 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 417 289 vol;
+#X msg 436 240 0;
+#X floatatom 165 529 0 0 0 0 - - -;
+#X floatatom 95 498 0 0 0 0 - - -;
+#X msg 33 449 60;
+#X floatatom 26 426 0 0 0 0 - - -;
+#X msg 33 475 60.5;
+#X text 65 427 numbers at left are "pitches" which may be integers
+or not.;
+#X text 131 500 "velocity";
+#X text 200 532 duration in milliseconds;
+#X obj 26 557 makenote 3.2 500;
+#X text 178 557 creation arguments initialize velocity and duration
+;
+#N canvas 174 1172 455 334 GR 0;
+#X obj 39 33 inlet;
+#X obj 39 60 unpack f f;
+#X obj 16 171 pack f f;
+#X obj 52 131 t b f;
+#X obj 16 200 outlet;
+#X floatatom 83 175 5 0 0 0 - - -, f 5;
+#X floatatom 105 137 5 0 0 0 - - -, f 5;
+#X floatatom 184 65 5 0 0 0 - - -, f 5;
+#X obj 13 126 i;
+#X obj 112 42 * 10000;
+#X obj 113 18 r BID-Note_adjust-snd;
+#X obj 14 98 gammeRound /CHORD;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 0 11 0;
+#X connect 1 1 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 8 0 2 0;
+#X connect 8 0 5 0;
+#X connect 9 0 11 1;
+#X connect 10 0 7 0;
+#X connect 10 0 9 0;
+#X connect 11 0 8 0;
+#X restore 149 115 pd GR;
+#X obj 142 0 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 99 39 del 200;
+#X obj 576 261 mknob 25 100 0 127 0 1 VER-0-Note_adjust-snd VER-0-Note_adjust-rcv
+VER-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
+#X obj 216 22 metro 250;
+#X obj 215 2 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 444 126 ndmetro 4 4;
+#X obj 415 87 r CLOCK;
+#X msg 502 48 4 2;
+#X msg 467 48 64 1;
+#X msg 530 48 6 3;
+#X msg 561 47 16 16;
+#X msg 467 99 nd \$1 \$2;
+#X floatatom 467 178 5 0 0 0 - - -, f 5;
+#X msg 603 42 4 4;
+#X msg 102 91 58 0;
+#X msg 139 76 58 80;
+#N canvas 174 1172 455 334 GR 0;
+#X obj 39 33 inlet;
+#X obj 39 60 unpack f f;
+#X obj 16 171 pack f f;
+#X obj 52 131 t b f;
+#X obj 16 200 outlet;
+#X floatatom 83 175 5 0 0 0 - - -, f 5;
+#X floatatom 105 137 5 0 0 0 - - -, f 5;
+#X floatatom 184 65 5 0 0 0 - - -, f 5;
+#X obj 13 126 i;
+#X obj 112 42 * 10000;
+#X obj 113 18 r BID-Note_adjust-snd;
+#X obj 14 98 gammeRound /CHORD;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 1 0 11 0;
+#X connect 1 1 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 8 0 2 0;
+#X connect 8 0 5 0;
+#X connect 9 0 11 1;
+#X connect 10 0 7 0;
+#X connect 10 0 9 0;
+#X connect 11 0 8 0;
+#X restore 219 123 pd GR;
+#X msg 210 93 64 80;
+#X msg 235 69 64 0;
+#X obj 107 296 * 1;
+#X obj 558 153 s all-note-off;
+#X obj 558 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 554 361 5 0 0 0 - - -, f 5;
+#X obj 253 202 print;
+#X obj 36 329 mull~ 0.3 10;
+#X obj 60 271 / 4;
+#X obj 35 366 OutDec2~ 8, f 11;
+#X obj 536 396 s VER-0-Note_adjust-rcv;
+#X obj 61 244 r VER-vol;
+#X obj 196 204 melo 8;
+#X obj 303 26 melotouchLent VER-0 200;
+#X connect 1 0 2 0;
+#X connect 2 0 52 0;
+#X connect 3 0 1 0;
+#X connect 3 1 1 1;
+#X connect 4 0 3 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 0;
+#X connect 7 0 1 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 11 0 5 0;
+#X connect 12 0 20 2;
+#X connect 13 0 20 1;
+#X connect 14 0 20 0;
+#X connect 15 0 20 0;
+#X connect 16 0 20 0;
+#X connect 22 0 52 0;
+#X connect 23 0 24 0;
+#X connect 23 0 38 0;
+#X connect 23 0 40 0;
+#X connect 24 0 37 0;
+#X connect 24 0 41 0;
+#X connect 26 0 23 0;
+#X connect 27 0 26 0;
+#X connect 28 0 35 0;
+#X connect 29 0 28 0;
+#X connect 30 0 34 0;
+#X connect 31 0 34 0;
+#X connect 32 0 34 0;
+#X connect 33 0 34 0;
+#X connect 34 0 28 0;
+#X connect 36 0 34 0;
+#X connect 37 0 22 0;
+#X connect 38 0 22 0;
+#X connect 39 0 52 0;
+#X connect 40 0 39 0;
+#X connect 41 0 39 0;
+#X connect 42 0 47 1;
+#X connect 44 0 43 0;
+#X connect 45 0 50 0;
+#X connect 47 0 49 0;
+#X connect 47 0 49 1;
+#X connect 48 0 47 1;
+#X connect 51 0 48 0;
+#X connect 52 0 47 0;
+#X connect 53 0 52 0;
+#X restore 1171 289 pd Verres;
 #X connect 0 0 60 0;
 #X connect 1 0 60 1;
 #X connect 2 0 0 0;
