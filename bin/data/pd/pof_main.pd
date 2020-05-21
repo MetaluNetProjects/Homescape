@@ -1,4 +1,4 @@
-#N canvas 1165 1172 540 726 10;
+#N canvas 851 123 540 564 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -20,12 +20,12 @@
 #X obj 156 44 route window;
 #X obj 156 66 unpack f f;
 #X obj 159 116 min;
-#X floatatom 193 167 5 0 0 0 - - -, f 5;
+#X floatatom 193 167 5 0 0 0 - - -;
 #X obj 100 152 pofscale 1 1;
 #X text 185 115 auto-scale to screen;
 #X obj 127 249 s mainHead;
-#X floatatom 139 402 5 0 0 0 - - -, f 5;
-#X floatatom 179 399 5 0 0 0 - - -, f 5;
+#X floatatom 139 402 5 0 0 0 - - -;
+#X floatatom 179 399 5 0 0 0 - - -;
 #X obj 100 190 t a a;
 #X obj 379 113 loadbang;
 #X obj 305 172 pofbang;
@@ -64,11 +64,11 @@
 #X obj 542 268 route monitor;
 #X msg 466 223 setmonitor 1;
 #X obj 554 157 loadbang;
-#X floatatom 542 357 5 0 0 1 images_to_load_from_disk - -, f 5;
-#X floatatom 576 335 5 0 0 1 images_to_load_from_web - -, f 5;
+#X floatatom 542 357 5 0 0 1 images_to_load_from_disk - -;
+#X floatatom 576 335 5 0 0 1 images_to_load_from_web - -;
 #X obj 497 193 pofhead;
 #X obj 542 292 unpack f f f;
-#X floatatom 611 314 5 0 0 1 images_loaded - -, f 5;
+#X floatatom 611 314 5 0 0 1 images_loaded - -;
 #X obj 542 381 sel 0;
 #X obj 446 194 del 100;
 #X obj 542 457 s APP-INIT;
@@ -180,14 +180,14 @@
 #X msg 80 153 framerate 60;
 #X msg 18 120 window 800 600 0 \, framerate 60 \, background 0 0 0
 ;
-#X obj 327 539 mode/edit;
+#X obj 375 495 mode/edit;
 #X obj 161 56 loadbang;
 #X obj 161 78 del 10000;
 #X msg 161 98 build \, bang;
-#X obj 219 494 pageHead balance;
+#X obj 267 450 pageHead balance;
 #X obj 382 137 loadbang;
-#X obj 219 517 balance/GUI;
-#X obj 110 520 concert/GUI;
+#X obj 267 473 balance/GUI;
+#X obj 158 476 concert/GUI;
 #X obj 184 308 s overHead;
 #X msg 382 191 \; page concert;
 #X obj 17 340 set/manager;
@@ -270,7 +270,7 @@
 #X obj 157 328 song/listGui;
 #X obj 343 51 loadbang;
 #X msg 343 73 \; pd dsp 1;
-#N canvas 248 1172 757 435 INIT 0;
+#N canvas 248 440 757 435 INIT 0;
 #X obj 190 118 s mode;
 #X obj 163 15 loadbang;
 #X obj 163 65 t b b;
@@ -288,7 +288,7 @@
 #X obj 461 136 random;
 #X msg 461 65 getnum /;
 #X obj 461 89 pofxml sets;
-#X floatatom 507 141 5 0 0 0 - - -, f 5;
+#X floatatom 507 141 5 0 0 0 - - -;
 #X msg 461 161 get /set[\$1][@file];
 #X obj 461 190 pofxml sets;
 #X obj 461 212 route get;
@@ -299,10 +299,10 @@
 #X obj 315 169 t b f;
 #X obj 315 191 random;
 #X msg 315 120 getnum /;
-#X floatatom 361 196 5 0 0 0 - - -, f 5;
+#X floatatom 361 196 5 0 0 0 - - -;
 #X obj 315 267 route get;
 #X obj 315 289 symbol;
-#X symbolatom 383 290 10 0 0 0 - - -, f 10;
+#X symbolatom 383 290 10 0 0 0 - - -;
 #X obj 315 144 pofxml modes;
 #X msg 315 216 get /mode[\$1][@file];
 #X obj 315 245 pofxml modes;
@@ -351,28 +351,14 @@
 #X restore 328 328 pd INIT;
 #X obj 157 266 fixScaleX;
 #X obj 157 287 t a a;
-#X obj 327 515 fixScaleX;
+#X obj 375 471 fixScaleX;
 #X obj 81 185 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 74 675 5 0 0 0 - - -, f 5;
-#X msg 141 624 0;
-#X obj 130 593 t b;
-#X msg 80 643 1;
-#X obj 80 621 del 5000;
-#X obj 134 568 r iconTouched;
 #X obj 137 203 pofvisible 1;
-#X obj 149 677 pofwin;
-#X obj 167 649 f;
-#X obj 191 685 pofwin;
 #X obj 223 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 115 563 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 110 497 pageHead concert;
-#X obj 327 494 pageHead modeEdit;
-#X msg 266 634 none;
-#X obj 264 669 s page;
-#X msg 311 622 concert;
+#X obj 158 453 pageHead concert;
+#X obj 375 450 pageHead modeEdit;
 #X obj 417 97 switch~;
 #X obj 417 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -381,9 +367,9 @@
 #X obj 14 29 declare -path abs -path . -path img;
 #X obj 430 265 mknob 50 100 0 1 0 0 VolMaster-snd VolMaster-rcv VolMaster
 -2 -6 0 8 -258113 -1 -1 0 1;
-#X obj 127 350 fixScaleX;
-#X obj 127 371 t a a;
-#N canvas 1460 1172 450 420 instruments 1;
+#X obj 138 380 fixScaleX;
+#X obj 138 356 t a a;
+#N canvas 989 455 450 420 instruments 0;
 #X obj 38 29 inlet;
 #X obj 16 90 instruments/MachineAlaver 1;
 #X obj 82 149 instruments/MicroOnde 3;
@@ -407,19 +393,19 @@
 #X connect 10 7 8 0;
 #X connect 10 8 9 0;
 #X connect 10 9 11 0;
-#X restore 127 418 pd instruments;
+#X restore 138 403 pd instruments;
 #X obj 239 7 declare -path abs/extra/iemlib;
 #X obj 13 445 instruments/player;
 #N canvas 687 449 450 352 cpu 0;
-#X obj 61 140 inlet;
-#X obj 61 212 poftranslate;
+#X obj 61 92 inlet;
+#X obj 61 164 poftranslate;
 #X obj 61 288 poftexts vera 16;
 #X obj 61 236 t a a;
 #X obj 199 262 pofcolor 0 0 0 0.5;
 #X obj 199 308 pofrect 80 20 6;
-#X obj 82 172 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 389 256;
-#X obj 144 174 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+#X obj 83 124 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 353 256;
+#X obj 144 126 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -287 256;
 #X floatatom 335 239 0 0 0 0 - - -;
 #X obj 335 151 cputime;
@@ -431,9 +417,10 @@
 #X text 358 61 <= on/off;
 #X obj 335 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X msg 174 141 text CPU:\$1%;
+#X msg 174 93 text CPU:\$1%;
+#X obj 61 198 fixScaleX;
 #X connect 0 0 1 0;
-#X connect 1 0 3 0;
+#X connect 1 0 18 0;
 #X connect 3 0 2 0;
 #X connect 3 1 4 0;
 #X connect 4 0 5 0;
@@ -449,13 +436,15 @@
 #X connect 14 0 13 0;
 #X connect 16 0 11 0;
 #X connect 17 0 2 0;
-#X restore 230 419 pd cpu;
+#X connect 18 0 3 0;
+#X restore 241 404 pd cpu;
+#X msg 164 149 open;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
 #X connect 4 0 3 0;
-#X connect 5 0 44 0;
+#X connect 5 0 38 0;
 #X connect 8 0 7 0;
-#X connect 10 0 61 0;
+#X connect 10 0 49 0;
 #X connect 10 1 34 0;
 #X connect 10 2 26 0;
 #X connect 13 0 0 0;
@@ -470,24 +459,14 @@
 #X connect 35 1 23 0;
 #X connect 36 0 15 0;
 #X connect 37 0 0 0;
-#X connect 39 0 46 0;
-#X connect 39 0 52 0;
-#X connect 40 0 39 0;
-#X connect 40 0 42 0;
-#X connect 41 0 46 0;
-#X connect 41 0 54 0;
-#X connect 42 0 41 0;
-#X connect 44 0 10 0;
-#X connect 46 0 38 0;
-#X connect 48 0 44 0;
-#X connect 49 0 40 0;
-#X connect 50 0 22 0;
-#X connect 51 0 36 0;
-#X connect 52 0 53 0;
-#X connect 54 0 53 0;
-#X connect 56 0 55 0;
-#X connect 57 0 56 0;
-#X connect 60 0 28 0;
-#X connect 61 0 62 0;
-#X connect 62 0 63 0;
-#X connect 62 1 66 0;
+#X connect 38 0 10 0;
+#X connect 39 0 38 0;
+#X connect 40 0 22 0;
+#X connect 41 0 36 0;
+#X connect 43 0 42 0;
+#X connect 44 0 43 0;
+#X connect 47 0 28 0;
+#X connect 48 0 50 0;
+#X connect 49 0 48 0;
+#X connect 49 1 53 0;
+#X connect 54 0 0 0;
