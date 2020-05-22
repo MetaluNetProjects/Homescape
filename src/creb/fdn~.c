@@ -442,9 +442,9 @@ static void *fdn_new(t_floatarg maxiorder, t_floatarg maxibufsize)
   bufsize = bufround;
   
 
-  post("fdn: maximum nb of delay lines %d, total buffer "
+  /*post("fdn: maximum nb of delay lines %d, total buffer "
        "size %d samples (%f seconds)", 
-       order, bufsize, ((t_float)bufsize) / sys_getsr());
+       order, bufsize, ((t_float)bufsize) / sys_getsr());*/
   
   
   x->x_ctl.c_maxorder = order;

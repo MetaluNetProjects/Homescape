@@ -159,6 +159,7 @@ void iem_receive_setup(void)
 {
   iem_receive_class = class_new(gensym("iem_receive"), (t_newmethod)iem_receive_new, 
     (t_method)iem_receive_free, sizeof(t_iem_receive), 0, A_GIMME, 0);
+	class_addcreator((t_newmethod)iem_receive_new, gensym("iemlib/iem_receive"), A_GIMME, 0);
 	class_addcreator((t_newmethod)iem_receive_new, gensym("iem_r"), A_GIMME, 0);
 	class_addmethod(iem_receive_class, (t_method)iem_receive_clear, gensym("clear"), A_GIMME, 0);
   class_addmethod(iem_receive_class, (t_method)iem_receive_set, gensym("set"), A_GIMME, 0);

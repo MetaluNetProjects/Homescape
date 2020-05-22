@@ -31,6 +31,7 @@ extern "C" {
     extern void filter_tilde_setup(void);
     extern void scale_setup(void);
     extern void shuffle_setup(void);
+    extern void iem_receive_setup(void);
 }
 
 
@@ -68,6 +69,9 @@ void testApp::setup() {
 		ofExit();
 	}
 	
+	// add message receiver, required if you want to receive messages
+	puda.addReceiver(*this); // automatically receives from all subscribed sources
+
 	ofLogNotice(Tag, "init pof");
 	pofBase::setup();
 	
@@ -95,6 +99,7 @@ void testApp::setup() {
 	filter_tilde_setup();
 	scale_setup();
 	shuffle_setup();
+	iem_receive_setup();
     // ---------------------------------------------
 	
 	
@@ -165,7 +170,8 @@ void testApp::unloadTextures() {
 
 //--------------------------------------------------------------
 void testApp::print(const std::string& message) {
-	cout << message << endl;
+//	cout << message << endl;
+	ofLogNotice(Tag) << message << endl;
 }
 
 //--------------------------------------------------------------
