@@ -1,4 +1,4 @@
-#N canvas 455 183 1019 167 10;
+#N canvas 455 1172 1019 167 10;
 #X declare -path AutoPreset;
 #X declare -path decoupeur -path effects;
 #X declare -path absKEP;
@@ -117,7 +117,7 @@
 #X connect 9 1 11 1;
 #X restore 566 79 pd decoupeur-7-8;
 #X obj 478 16 l autorecDomo \$1-config \$1-arec1 \$1;
-#N canvas 1460 755 450 300 DiversGuts 0;
+#N canvas 1460 1172 450 300 DiversGuts 1;
 #X obj 148 12 apmaster DECSET;
 #N canvas 2051 754 1003 300 declare 0;
 #X obj 22 27 declare -path AutoPreset;
@@ -131,44 +131,40 @@
 #X obj 23 92 declare -path abs;
 #X obj 19 146 declare -path absGAMME;
 #X restore 36 12 pd declare;
-#N canvas 1157 1172 763 719 loadbank 0;
+#N canvas 1157 1172 763 719 loadbank 1;
 #X obj 21 17 loadbang;
 #X obj 22 114 s DECSET-SEQ-fragseq1-vol-rcv;
-#X floatatom 22 92 5 0 0 0 - - -;
+#X floatatom 22 92 5 0 0 0 - - -, f 5;
 #X obj 22 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 24 179 loadbang;
-#X floatatom 25 254 5 0 0 0 - - -;
+#X floatatom 25 254 5 0 0 0 - - -, f 5;
 #X obj 25 296 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 25 346 loadbang;
-#X floatatom 26 421 5 0 0 0 - - -;
-#X obj 26 463 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 32 507 loadbang;
+#X floatatom 33 582 5 0 0 0 - - -, f 5;
+#X obj 33 624 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 28 508 loadbang;
-#X floatatom 29 583 5 0 0 0 - - -;
-#X obj 29 625 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 26 342 loadbang;
+#X floatatom 27 417 5 0 0 0 - - -, f 5;
+#X obj 27 459 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 265 16 loadbang;
-#X floatatom 266 91 5 0 0 0 - - -;
+#X floatatom 266 91 5 0 0 0 - - -, f 5;
 #X obj 266 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 268 178 loadbang;
-#X floatatom 269 253 5 0 0 0 - - -;
+#X floatatom 269 253 5 0 0 0 - - -, f 5;
 #X obj 269 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 269 345 loadbang;
-#X floatatom 270 420 5 0 0 0 - - -;
+#X floatatom 270 420 5 0 0 0 - - -, f 5;
 #X obj 270 462 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 272 507 loadbang;
-#X floatatom 273 582 5 0 0 0 - - -;
+#X floatatom 273 582 5 0 0 0 - - -, f 5;
 #X obj 273 624 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 28 530 BANKA-4;
-#X obj 28 557 s DECSET-SEQ-fragseq4-sample;
-#X obj 28 605 s DECSET-SEQ-fragseq4-vol-rcv;
-#X obj 29 645 s DECSET-SEQ-fragseq4-changeall-rcv;
 #X obj 265 65 s DECSET-SEQ-fragseq5-sample;
 #X msg 265 38 BANKA-5;
 #X obj 266 113 s DECSET-SEQ-fragseq5-vol-rcv;
@@ -186,11 +182,11 @@
 #X obj 273 604 s DECSET-SEQ-fragseq8-vol-rcv;
 #X obj 273 644 s DECSET-SEQ-fragseq8-changeall-rcv;
 #X obj 509 17 loadbang;
-#X floatatom 510 92 5 0 0 0 - - -;
+#X floatatom 510 92 5 0 0 0 - - -, f 5;
 #X obj 510 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 512 179 loadbang;
-#X floatatom 513 265 5 0 0 0 - - -;
+#X floatatom 513 265 5 0 0 0 - - -, f 5;
 #X obj 513 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 509 39 BANKA-9;
@@ -208,48 +204,52 @@
 #X obj 25 276 s DECSET-SEQ2-fragseq2-vol-rcv;
 #X obj 25 316 s DECSET-SEQ2-fragseq2-changeall-rcv;
 #X msg 24 201 set-table-2;
-#X msg 25 368 set-table-9;
-#X obj 25 395 s DECSET-MIX-fragseq9-sample;
-#X obj 26 443 s DECSET-MIX-fragseq9-vol-rcv;
-#X obj 26 483 s DECSET-MIX-fragseq9-changeall-rcv;
-#X connect 0 0 59 0;
+#X msg 32 529 set-table-9;
+#X obj 32 556 s DECSET-MIX-fragseq9-sample;
+#X obj 33 604 s DECSET-MIX-fragseq9-vol-rcv;
+#X obj 33 644 s DECSET-MIX-fragseq9-changeall-rcv;
+#X msg 26 364 set-table-4;
+#X obj 26 391 s DECSET-GRI-fragseq4-sample;
+#X obj 26 439 s DECSET-GRI-fragseq4-vol-rcv;
+#X obj 27 479 s DECSET-GRI-fragseq4-changeall-rcv;
+#X connect 0 0 55 0;
 #X connect 2 0 1 0;
-#X connect 3 0 61 0;
-#X connect 4 0 65 0;
-#X connect 5 0 63 0;
-#X connect 6 0 64 0;
-#X connect 7 0 66 0;
-#X connect 8 0 68 0;
-#X connect 9 0 69 0;
-#X connect 10 0 25 0;
-#X connect 11 0 27 0;
-#X connect 12 0 28 0;
-#X connect 13 0 30 0;
-#X connect 14 0 31 0;
-#X connect 15 0 32 0;
-#X connect 16 0 33 0;
-#X connect 17 0 35 0;
-#X connect 18 0 36 0;
-#X connect 19 0 37 0;
-#X connect 20 0 39 0;
-#X connect 21 0 40 0;
-#X connect 22 0 41 0;
-#X connect 23 0 43 0;
-#X connect 24 0 44 0;
-#X connect 25 0 26 0;
-#X connect 30 0 29 0;
+#X connect 3 0 57 0;
+#X connect 4 0 61 0;
+#X connect 5 0 59 0;
+#X connect 6 0 60 0;
+#X connect 7 0 62 0;
+#X connect 8 0 64 0;
+#X connect 9 0 65 0;
+#X connect 10 0 66 0;
+#X connect 11 0 68 0;
+#X connect 12 0 69 0;
+#X connect 13 0 26 0;
+#X connect 14 0 27 0;
+#X connect 15 0 28 0;
+#X connect 16 0 29 0;
+#X connect 17 0 31 0;
+#X connect 18 0 32 0;
+#X connect 19 0 33 0;
+#X connect 20 0 35 0;
+#X connect 21 0 36 0;
+#X connect 22 0 37 0;
+#X connect 23 0 39 0;
+#X connect 24 0 40 0;
+#X connect 26 0 25 0;
+#X connect 29 0 30 0;
 #X connect 33 0 34 0;
 #X connect 37 0 38 0;
-#X connect 41 0 42 0;
-#X connect 45 0 51 0;
-#X connect 46 0 53 0;
-#X connect 47 0 54 0;
-#X connect 49 0 57 0;
-#X connect 50 0 58 0;
+#X connect 41 0 47 0;
+#X connect 42 0 49 0;
+#X connect 43 0 50 0;
+#X connect 45 0 53 0;
+#X connect 46 0 54 0;
+#X connect 47 0 48 0;
 #X connect 51 0 52 0;
 #X connect 55 0 56 0;
-#X connect 59 0 60 0;
-#X connect 65 0 62 0;
+#X connect 61 0 58 0;
+#X connect 62 0 63 0;
 #X connect 66 0 67 0;
 #X restore 36 41 pd loadbank;
 #X obj 290 12 domoNetMidi BlasterMidi;
