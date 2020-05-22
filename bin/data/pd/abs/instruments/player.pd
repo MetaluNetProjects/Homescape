@@ -14,7 +14,7 @@
 #X obj 171 26 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
 -1;
 #X obj 83 6 loadbang;
-#N canvas 1460 1172 450 300 DiversGuts 0;
+#N canvas 1460 1172 450 300 DiversGuts 1;
 #X obj 148 12 apmaster DECSET;
 #N canvas 917 1172 1003 300 declare 0;
 #X obj 22 27 declare -path AutoPreset;
@@ -150,11 +150,6 @@
 #X connect 66 0 67 0;
 #X restore 36 41 pd loadbank;
 #X obj 290 12 domoNetMidi BlasterMidi;
-#X obj 36 128 s BANKA-DATASDIR;
-#X msg 36 99 symbol \$1/decoupeur/WAVS;
-#X obj 36 70 rem ggee/getdir;
-#X connect 5 0 4 0;
-#X connect 6 0 5 0;
 #X restore 261 19 pd DiversGuts;
 #N canvas 742 1172 842 300 SeqGamme 0;
 #X obj 8 6 ./seqGAMME/seq8 \$0;

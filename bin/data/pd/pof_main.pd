@@ -1,4 +1,4 @@
-#N canvas 1180 142 540 613 10;
+#N canvas 1359 1440 540 613 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -20,12 +20,12 @@
 #X obj 156 44 route window;
 #X obj 156 66 unpack f f;
 #X obj 159 116 min;
-#X floatatom 193 167 5 0 0 0 - - -;
+#X floatatom 193 167 5 0 0 0 - - -, f 5;
 #X obj 100 152 pofscale 1 1;
 #X text 185 115 auto-scale to screen;
 #X obj 127 249 s mainHead;
-#X floatatom 139 402 5 0 0 0 - - -;
-#X floatatom 179 399 5 0 0 0 - - -;
+#X floatatom 139 402 5 0 0 0 - - -, f 5;
+#X floatatom 179 399 5 0 0 0 - - -, f 5;
 #X obj 100 190 t a a;
 #X obj 379 113 loadbang;
 #X obj 305 172 pofbang;
@@ -64,11 +64,11 @@
 #X obj 542 268 route monitor;
 #X msg 466 223 setmonitor 1;
 #X obj 554 157 loadbang;
-#X floatatom 542 357 5 0 0 1 images_to_load_from_disk - -;
-#X floatatom 576 335 5 0 0 1 images_to_load_from_web - -;
+#X floatatom 542 357 5 0 0 1 images_to_load_from_disk - -, f 5;
+#X floatatom 576 335 5 0 0 1 images_to_load_from_web - -, f 5;
 #X obj 497 193 pofhead;
 #X obj 542 292 unpack f f f;
-#X floatatom 611 314 5 0 0 1 images_loaded - -;
+#X floatatom 611 314 5 0 0 1 images_loaded - -, f 5;
 #X obj 542 381 sel 0;
 #X obj 446 194 del 100;
 #X obj 542 457 s APP-INIT;
@@ -145,7 +145,7 @@
 -1;
 #X obj 137 180 r mainHead;
 #X obj 18 295 mode/manager;
-#N canvas 913 309 450 300 strings&paths 0;
+#N canvas 436 1172 450 300 strings&paths 0;
 #X obj 162 206 pofutil;
 #X msg 162 180 setstring data .;
 #X obj 223 208 s datadir;
@@ -166,8 +166,8 @@
 #X connect 8 0 1 0;
 #X connect 8 0 2 0;
 #X connect 9 0 5 0;
-#X restore 250 240 pd strings&paths;
-#X obj 249 221 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X restore 252 216 pd strings&paths;
+#X obj 251 197 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 5 130 344 272 fonts 0;
 #X obj 42 87 poffonts typo font/Typoster_demo.otf;
@@ -193,7 +193,7 @@
 #X obj 17 340 set/manager;
 #X obj 177 246 s pageHead;
 #X obj 18 419 song/player;
-#N canvas 337 1540 570 416 audioMaster 0;
+#N canvas 337 1172 570 416 audioMaster 1;
 #X obj 211 163 catch~ Out-1;
 #X obj 80 278 *~;
 #X obj 96 255 z~ 64;
@@ -227,6 +227,31 @@
 #X obj 149 239 inlet;
 #X obj 151 75 catch~ OUTinstru-2;
 #X obj 15 77 catch~ OUTinstru-1;
+#X obj 46 387 throw~ REC-l;
+#N canvas 0 1172 450 300 getdir 0;
+#X obj 136 197 pofutil;
+#X msg 136 171 setstring data .;
+#X obj 175 16 inlet;
+#X obj 109 17 loadbang;
+#X obj 136 54 b;
+#X obj 136 118 pofutil;
+#X msg 136 94 getdir;
+#X msg 136 142 symbol \$1/data;
+#X obj 186 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 255 179 s datadir;
+#X obj 222 210 outlet;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 7 0 10 0;
+#X connect 8 0 4 0;
+#X restore 163 20 pd getdir;
+#X obj 210 389 throw~ REC-r;
 #X connect 0 0 9 0;
 #X connect 1 0 29 0;
 #X connect 2 0 1 1;
@@ -259,13 +284,15 @@
 #X connect 26 1 25 1;
 #X connect 28 0 27 1;
 #X connect 28 0 27 3;
+#X connect 28 0 35 0;
 #X connect 29 0 27 0;
 #X connect 29 0 27 2;
+#X connect 29 0 33 0;
 #X connect 30 0 29 1;
 #X connect 30 0 28 1;
 #X connect 31 0 9 0;
 #X connect 32 0 5 0;
-#X restore 410 335 pd audioMaster;
+#X restore 433 357 pd audioMaster;
 #X obj 16 363 song/manager;
 #X obj 157 328 song/listGui;
 #X obj 343 51 loadbang;
@@ -288,7 +315,7 @@
 #X obj 461 136 random;
 #X msg 461 65 getnum /;
 #X obj 461 89 pofxml sets;
-#X floatatom 507 141 5 0 0 0 - - -;
+#X floatatom 507 141 5 0 0 0 - - -, f 5;
 #X msg 461 161 get /set[\$1][@file];
 #X obj 461 190 pofxml sets;
 #X obj 461 212 route get;
@@ -299,10 +326,10 @@
 #X obj 315 169 t b f;
 #X obj 315 191 random;
 #X msg 315 120 getnum /;
-#X floatatom 361 196 5 0 0 0 - - -;
+#X floatatom 361 196 5 0 0 0 - - -, f 5;
 #X obj 315 267 route get;
 #X obj 315 289 symbol;
-#X symbolatom 383 290 10 0 0 0 - - -;
+#X symbolatom 383 290 10 0 0 0 - - -, f 10;
 #X obj 315 144 pofxml modes;
 #X msg 315 216 get /mode[\$1][@file];
 #X obj 315 245 pofxml modes;
@@ -348,7 +375,7 @@
 #X connect 36 0 35 0;
 #X connect 37 0 0 0;
 #X connect 38 0 17 0;
-#X restore 328 328 pd INIT;
+#X restore 274 246 pd INIT;
 #X obj 157 266 fixScaleX;
 #X obj 157 287 t a a;
 #X obj 375 471 fixScaleX;
@@ -365,11 +392,11 @@
 #X obj 417 55 loadbang;
 #X obj 19 6 declare -path abs -path . -path img;
 #X obj 14 29 declare -path abs -path . -path img;
-#X obj 430 265 mknob 50 100 0 1 0 0 VolMaster-snd VolMaster-rcv VolMaster
+#X obj 432 285 mknob 50 100 0 1 0 0 VolMaster-snd VolMaster-rcv VolMaster
 -2 -6 0 8 -258113 -1 -1 0 1;
 #X obj 138 380 fixScaleX;
 #X obj 138 356 t a a;
-#N canvas 989 455 450 420 instruments 0;
+#N canvas 989 1172 450 420 instruments 0;
 #X obj 38 29 inlet;
 #X obj 16 90 instruments/MachineAlaver 1;
 #X obj 82 149 instruments/MicroOnde 3;
@@ -442,6 +469,7 @@
 #X obj 180 531 loadbang;
 #X msg 180 552 the patch is running!;
 #X obj 180 580 print HOMESCAPE_DEBUG;
+#X obj 316 275 mixtape/REC-lr;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
 #X connect 4 0 3 0;
