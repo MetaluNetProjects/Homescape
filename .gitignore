@@ -68,3 +68,5 @@ res/raw/ofdataresources.zip
 
 #bin/data/pd/data/*/*
 
+.gradle/*/taskArtifacts/*
+
