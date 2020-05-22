@@ -11,7 +11,7 @@ such as your washing machine or microwave oven.
 Homescape is written with [Pure Data](http://pure-data.info), 
 and uses [Pof](https://github.com/Ant1r/ofxPof) to build the GUI.  
 It's turned to an Android app with the help of [ofxPd](https://github.com/danomatika/ofxPd), 
-thanks to [libpd](http://libpd.cc)).
+thanks to [libpd](http://libpd.cc).
 
 ------
 
