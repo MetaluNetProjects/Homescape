@@ -10,7 +10,10 @@
 #include "ofxPd.h"
 #include "opensl_stream/opensl_stream.h"
 
-class testApp : public ofxAndroidApp{
+// a namespace for the Pd types
+using namespace pd;
+
+class testApp : public ofxAndroidApp, public PdReceiver {
 
 	public:
 
@@ -39,6 +42,15 @@ class testApp : public ofxAndroidApp{
 		void audioReceived(float * input, int bufferSize, int nChannels);
 		void audioRequested(float * output, int bufferSize, int nChannels);
 		
+		// pd message receiver callbacks
+		void print(const std::string& message);
+		
+		void receiveBang(const std::string& dest);
+		void receiveFloat(const std::string& dest, float value);
+		void receiveSymbol(const std::string& dest, const std::string& symbol);
+		void receiveList(const std::string& dest, const List& list);
+		void receiveMessage(const std::string& dest, const std::string& msg, const List& list);
+
 		OPENSL_STREAM *os;
 		ofxPd puda;
 		static void opensl_process(void *app, int sample_rate, int buffer_frames,

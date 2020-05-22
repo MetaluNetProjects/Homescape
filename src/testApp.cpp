@@ -10,7 +10,6 @@
 #include "abl_link~.hpp"
 
 using namespace std;
-using namespace pd;
 
 // externals setup declarations :
 extern "C" {
@@ -31,6 +30,7 @@ extern "C" {
     extern void f2s_setup(void);
     extern void filter_tilde_setup(void);
     extern void scale_setup(void);
+    extern void shuffle_setup(void);
 }
 
 
@@ -94,6 +94,7 @@ void testApp::setup() {
 	filterortho_tilde_setup();
 	filter_tilde_setup();
 	scale_setup();
+	shuffle_setup();
     // ---------------------------------------------
 	
 	
@@ -162,6 +163,48 @@ void testApp::unloadTextures() {
 	pofBase::unloadTextures();
 }
 
+//--------------------------------------------------------------
+void testApp::print(const std::string& message) {
+	cout << message << endl;
+}
+
+//--------------------------------------------------------------
+void testApp::receiveBang(const std::string& dest) {
+	cout << "OF: bang " << dest << endl;
+}
+
+void testApp::receiveFloat(const std::string& dest, float value) {
+	cout << "OF: float " << dest << ": " << value << endl;
+}
+
+void testApp::receiveSymbol(const std::string& dest, const std::string& symbol) {
+	cout << "OF: symbol " << dest << ": " << symbol << endl;
+}
+
+void testApp::receiveList(const std::string& dest, const List& list) {
+	cout << "OF: list " << dest << ": ";
+
+	// step through the list
+	/*for(int i = 0; i < list.len(); ++i) {
+		if(list.isFloat(i))
+			cout << list.getFloat(i) << " ";
+		else if(list.isSymbol(i))
+			cout << list.getSymbol(i) << " ";
+	}
+
+	// you can also use the built in toString function or simply stream it out
+	// cout << list.toString();
+	// cout << list;
+
+	// print an OSC-style type string
+	cout << list.types() << endl;*/
+}
+
+void testApp::receiveMessage(const std::string& dest, const std::string& msg, const List& list) {
+	cout << "OF: message " << dest << ": " << msg << " " << list.toString() << list.types() << endl;
+}
+
+//--------------------------------------------------------------
 //--------------------------------------------------------------
 short testInBuf[1024], testOutBuf[1024];
 void testApp::opensl_process(void *app, int sample_rate, int buffer_frames,
