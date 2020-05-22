@@ -1,4 +1,4 @@
-#N canvas 851 123 540 564 10;
+#N canvas 1180 142 540 613 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -439,6 +439,9 @@
 #X connect 18 0 3 0;
 #X restore 241 404 pd cpu;
 #X msg 164 149 open;
+#X obj 180 531 loadbang;
+#X msg 180 552 the patch is running!;
+#X obj 180 580 print HOMESCAPE_DEBUG;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
 #X connect 4 0 3 0;
@@ -470,3 +473,5 @@
 #X connect 49 0 48 0;
 #X connect 49 1 53 0;
 #X connect 54 0 0 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 0;
