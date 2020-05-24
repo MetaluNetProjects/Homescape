@@ -88,7 +88,7 @@
 #X obj 499 279 switch~;
 #X obj 499 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 499 237 loadbang;
+#X obj 499 232 loadbang;
 #X msg 492 475 69 100;
 #X msg 31 74 goto \$1;
 #X msg 47 45 240;
@@ -208,7 +208,6 @@
 #X connect 78 0 79 0;
 #X connect 79 0 80 0;
 #X connect 82 0 81 0;
-#X connect 83 0 82 0;
 #X connect 84 0 61 0;
 #X connect 84 0 65 0;
 #X connect 84 0 66 0;
