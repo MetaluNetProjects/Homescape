@@ -7,7 +7,7 @@
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 81 13 r concert-vol-9;
 #X obj 198 49 s concert-mute-9;
@@ -85,20 +85,20 @@
 #X obj 131 399 apssb DECSET-MIX ssb1;
 #X obj 132 496 apecho DECSET-MIX ech1;
 #X obj 35 290 stretcher DECSET-MIX fragseq9 set-table-9;
-#X obj 34 584 OutDec2~ 9, f 52;
 #X obj 36 186 decsample2 set-table 9 stretch-setting2;
 #X obj 384 172 instrSwitch \$1;
 #X obj 384 193 switch~;
+#X obj 34 584 OutDec2~ \$1, f 52;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 3 0 4 1;
 #X connect 5 0 2 0;
 #X connect 8 0 9 0;
-#X connect 9 0 11 1;
-#X connect 9 0 11 0;
+#X connect 9 0 14 1;
+#X connect 9 0 14 0;
 #X connect 10 0 8 0;
-#X connect 10 0 11 0;
+#X connect 10 0 14 0;
 #X connect 10 1 8 0;
-#X connect 10 1 11 1;
-#X connect 12 0 3 0;
-#X connect 13 0 14 0;
+#X connect 10 1 14 1;
+#X connect 11 0 3 0;
+#X connect 12 0 13 0;

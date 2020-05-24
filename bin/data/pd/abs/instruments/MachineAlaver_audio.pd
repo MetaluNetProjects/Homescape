@@ -1,9 +1,9 @@
 #N canvas 579 90 506 785 10;
 #X obj 27 41 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 11675 1;
 #X obj 21 151 decoupeur_ctl decoupeur-setting1 DECSET;
 #X obj 21 268 *~ 0.2;
-#N canvas 1058 546 381 329 InterfaceMachineAlaver 1;
+#N canvas 1058 546 381 329 InterfaceMachineAlaver 0;
 #X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 81 13 r concert-vol-0;
@@ -12,7 +12,7 @@
 #X obj 81 40 change;
 #X obj 149 88 s DECSET-SEQ1-fragseq1-vol-rcv;
 #X obj 106 256 s DECSET-SEQ1-fragseq1-on-rcv;
-#N canvas 870 1492 450 300 MALprogTouch 0;
+#N canvas 870 575 450 300 MALprogTouch 0;
 #X obj 89 221 outlet;
 #X obj 123 8 r MALprogTouch;
 #X obj 122 63 sel 0 1;
@@ -53,7 +53,7 @@
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
 #X obj 197 18 r MAL-on-snd;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 198 49 s concert-mute-0;
 #X connect 0 0 3 0;
@@ -113,29 +113,29 @@
 #X obj 244 516 apvdel DECSET-SEQ1 vdl1;
 #X obj 93 514 apvdel DECSET-SEQ1 vdl1;
 #X obj 149 624 fdnrev DECSET-SEQ1 fd1;
-#X obj 41 703 OutDec~ 0, f 54;
 #X obj 21 297 OutDec~;
 #X obj 21 232 decsample2 set-table 0 decoupeur-setting1;
 #X floatatom 176 37 5 0 0 0 - - -;
 #X obj 356 172 instrSwitch \$1;
 #X obj 356 193 switch~;
+#X obj 42 702 OutDec2~ \$1, f 54;
 #X connect 0 0 6 0;
-#X connect 2 0 14 0;
-#X connect 2 0 14 1;
+#X connect 2 0 13 0;
+#X connect 2 0 13 1;
 #X connect 4 0 0 0;
 #X connect 7 0 8 0;
 #X connect 7 0 11 0;
 #X connect 7 0 12 0;
-#X connect 7 0 13 0;
+#X connect 7 0 18 0;
 #X connect 7 1 9 0;
 #X connect 7 1 10 0;
 #X connect 7 1 12 0;
-#X connect 7 1 13 1;
-#X connect 8 0 13 0;
-#X connect 9 0 13 1;
-#X connect 10 0 13 1;
-#X connect 11 0 13 0;
-#X connect 12 0 13 0;
-#X connect 12 1 13 1;
-#X connect 15 0 2 0;
-#X connect 17 0 18 0;
+#X connect 7 1 18 1;
+#X connect 8 0 18 0;
+#X connect 9 0 18 1;
+#X connect 10 0 18 1;
+#X connect 11 0 18 0;
+#X connect 12 0 18 0;
+#X connect 12 1 18 1;
+#X connect 14 0 2 0;
+#X connect 16 0 17 0;

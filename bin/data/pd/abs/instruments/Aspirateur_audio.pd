@@ -7,9 +7,9 @@
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 83 124 r concert-mute-7;
 #X obj 106 256 s ASP-0-note1-on-rcv;
@@ -44,15 +44,15 @@ ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 48 120 r ASP-vol;
 #X obj 27 71 melotouchLent ASP-0 200;
 #X obj 47 147 / 4;
-#X obj 22 242 OutDec2~ 7, f 11;
 #X obj 220 218 instrSwitch \$1;
 #X obj 220 239 switch~;
+#X obj 22 242 OutDec2~ \$1;
 #X connect 3 0 2 0;
 #X connect 4 0 6 0;
-#X connect 5 0 11 0;
-#X connect 5 0 11 1;
+#X connect 5 0 13 0;
+#X connect 5 0 13 1;
 #X connect 7 0 5 0;
 #X connect 8 0 10 0;
 #X connect 9 0 7 0;
 #X connect 10 0 5 1;
-#X connect 12 0 13 0;
+#X connect 11 0 12 0;
