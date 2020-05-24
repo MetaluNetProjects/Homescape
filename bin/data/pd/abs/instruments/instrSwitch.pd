@@ -9,11 +9,13 @@
 #X obj 106 173 outlet;
 #X floatatom 39 71 5 0 0 0 - - -;
 #X obj 106 57 sel 1 0;
+#X obj 195 175 s concert-instrument-level-\$1;
 #X connect 0 0 6 0;
 #X connect 0 0 8 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
 #X connect 3 0 5 0;
+#X connect 3 0 10 0;
 #X connect 4 0 5 0;
 #X connect 5 0 7 0;
 #X connect 6 0 9 0;
