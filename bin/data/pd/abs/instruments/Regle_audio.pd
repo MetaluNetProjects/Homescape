@@ -1,4 +1,4 @@
-#N canvas 1 1172 429 452 10;
+#N canvas 1 423 429 452 10;
 #N canvas 1165 1202 381 329 InterfaceRegle 0;
 #X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -7,9 +7,9 @@
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 81 13 r concert-vol-6;
 #X obj 149 88 s REG-vol;
@@ -38,7 +38,7 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 188 37 s all-note-off;
 #X obj 188 13 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 160 183 5 0 0 0 - - -, f 5;
+#X floatatom 160 183 5 0 0 0 - - -;
 #X obj 43 323 mull~ 0.3 10;
 #X obj 42 360 OutDec2~ 6, f 11;
 #X obj 68 238 r REG-vol;
@@ -50,6 +50,8 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 43 114 + 24;
 #X obj 67 265 / 3;
 #X obj 42 62 melotouch REG-0 200;
+#X obj 262 262 instrSwitch \$1;
+#X obj 262 283 switch~;
 #X connect 2 0 6 1;
 #X connect 4 0 3 0;
 #X connect 5 0 9 0;
@@ -65,3 +67,4 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 14 0 12 0;
 #X connect 15 0 6 1;
 #X connect 16 0 11 0;
+#X connect 17 0 18 0;

@@ -1,9 +1,9 @@
-#N canvas 579 101 506 785 10;
+#N canvas 579 90 506 785 10;
 #X obj 27 41 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 21 151 decoupeur_ctl decoupeur-setting1 DECSET;
 #X obj 21 268 *~ 0.2;
-#N canvas 1538 726 381 329 InterfaceMachineAlaver 0;
+#N canvas 1058 546 381 329 InterfaceMachineAlaver 1;
 #X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 81 13 r concert-vol-0;
@@ -117,6 +117,8 @@
 #X obj 21 297 OutDec~;
 #X obj 21 232 decsample2 set-table 0 decoupeur-setting1;
 #X floatatom 176 37 5 0 0 0 - - -;
+#X obj 356 172 instrSwitch \$1;
+#X obj 356 193 switch~;
 #X connect 0 0 6 0;
 #X connect 2 0 14 0;
 #X connect 2 0 14 1;
@@ -136,3 +138,4 @@
 #X connect 12 0 13 0;
 #X connect 12 1 13 1;
 #X connect 15 0 2 0;
+#X connect 17 0 18 0;

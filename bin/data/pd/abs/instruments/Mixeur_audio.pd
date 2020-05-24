@@ -87,6 +87,8 @@
 #X obj 35 290 stretcher DECSET-MIX fragseq9 set-table-9;
 #X obj 34 584 OutDec2~ 9, f 52;
 #X obj 36 186 decsample2 set-table 9 stretch-setting2;
+#X obj 384 172 instrSwitch \$1;
+#X obj 384 193 switch~;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 3 0 4 1;
@@ -99,3 +101,4 @@
 #X connect 10 1 8 0;
 #X connect 10 1 11 1;
 #X connect 12 0 3 0;
+#X connect 13 0 14 0;

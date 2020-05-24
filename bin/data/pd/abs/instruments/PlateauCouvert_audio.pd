@@ -1,4 +1,4 @@
-#N canvas 1 81 706 842 10;
+#N canvas 1 81 706 794 10;
 #N canvas 3427 738 381 341 InterfaceCouverts 0;
 #X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -47,7 +47,7 @@
 #X restore 130 207 pd MOwattTouch;
 #X obj 83 282 s COUVpause-light-snd;
 #X obj 83 124 r concert-mute-1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 106 256 s COUV-pnip1-on-rcv;
 #X obj 81 13 r concert-vol-1;
@@ -840,6 +840,8 @@ pnip1-Feedback -2 -6 1 8 -262144 -1 -1 9900 1;
 #X obj 374 625 r COUVreset;
 #X obj 186 634 s COUV-ledtime;
 #X obj 196 610 t b;
+#X obj 480 47 instrSwitch \$1;
+#X obj 480 68 switch~;
 #X connect 2 0 10 1;
 #X connect 3 0 10 1;
 #X connect 4 0 10 1;
@@ -892,3 +894,4 @@ pnip1-Feedback -2 -6 1 8 -262144 -1 -1 9900 1;
 #X connect 61 0 50 1;
 #X connect 62 0 7 0;
 #X connect 64 0 63 0;
+#X connect 65 0 66 0;

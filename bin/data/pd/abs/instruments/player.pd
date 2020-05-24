@@ -1,4 +1,4 @@
-#N canvas 455 1172 1019 167 10;
+#N canvas 11 632 607 200 10;
 #X declare -path AutoPreset;
 #X declare -path decoupeur -path effects;
 #X declare -path absKEP;
@@ -14,7 +14,7 @@
 #X obj 171 26 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
 -1;
 #X obj 83 6 loadbang;
-#N canvas 1460 1172 450 300 DiversGuts 1;
+#N canvas 989 575 450 300 DiversGuts 0;
 #X obj 148 12 apmaster DECSET;
 #N canvas 917 1172 1003 300 declare 0;
 #X obj 22 27 declare -path AutoPreset;
@@ -31,35 +31,35 @@
 #N canvas 1157 1172 763 719 loadbank 0;
 #X obj 21 17 loadbang;
 #X obj 22 114 s DECSET-SEQ-fragseq1-vol-rcv;
-#X floatatom 22 92 5 0 0 0 - - -, f 5;
+#X floatatom 22 92 5 0 0 0 - - -;
 #X obj 22 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 24 179 loadbang;
-#X floatatom 25 254 5 0 0 0 - - -, f 5;
+#X floatatom 25 254 5 0 0 0 - - -;
 #X obj 25 296 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 32 507 loadbang;
-#X floatatom 33 582 5 0 0 0 - - -, f 5;
+#X floatatom 33 582 5 0 0 0 - - -;
 #X obj 33 624 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 26 342 loadbang;
-#X floatatom 27 417 5 0 0 0 - - -, f 5;
+#X floatatom 27 417 5 0 0 0 - - -;
 #X obj 27 459 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 265 16 loadbang;
-#X floatatom 266 91 5 0 0 0 - - -, f 5;
+#X floatatom 266 91 5 0 0 0 - - -;
 #X obj 266 133 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 268 178 loadbang;
-#X floatatom 269 253 5 0 0 0 - - -, f 5;
+#X floatatom 269 253 5 0 0 0 - - -;
 #X obj 269 295 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 269 345 loadbang;
-#X floatatom 270 420 5 0 0 0 - - -, f 5;
+#X floatatom 270 420 5 0 0 0 - - -;
 #X obj 270 462 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 272 507 loadbang;
-#X floatatom 273 582 5 0 0 0 - - -, f 5;
+#X floatatom 273 582 5 0 0 0 - - -;
 #X obj 273 624 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 265 65 s DECSET-SEQ-fragseq5-sample;
@@ -79,11 +79,11 @@
 #X obj 273 604 s DECSET-SEQ-fragseq8-vol-rcv;
 #X obj 273 644 s DECSET-SEQ-fragseq8-changeall-rcv;
 #X obj 509 17 loadbang;
-#X floatatom 510 92 5 0 0 0 - - -, f 5;
+#X floatatom 510 92 5 0 0 0 - - -;
 #X obj 510 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 512 179 loadbang;
-#X floatatom 513 265 5 0 0 0 - - -, f 5;
+#X floatatom 513 265 5 0 0 0 - - -;
 #X obj 513 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 509 39 BANKA-9;
@@ -151,7 +151,7 @@
 #X restore 36 41 pd loadbank;
 #X obj 290 12 domoNetMidi BlasterMidi;
 #X restore 261 19 pd DiversGuts;
-#N canvas 742 1172 842 300 SeqGamme 0;
+#N canvas 597 575 842 300 SeqGamme 0;
 #X obj 8 6 ./seqGAMME/seq8 \$0;
 #X restore 272 47 pd SeqGamme;
 #N canvas 31 1172 450 410 apmasterfile 0;
@@ -182,16 +182,16 @@
 #X connect 11 0 3 0;
 #X connect 12 0 3 0;
 #X restore 84 53 pd apmasterfile;
-#X obj 59 118 MachineAlaver_audio;
-#X obj 313 117 MicroOnde_audio;
-#X obj 183 118 PlateauCouvert_audio;
-#X obj 413 116 Bidon_audio;
-#X obj 487 116 Grille_audio;
-#X obj 568 116 Baignoire_audio;
-#X obj 667 116 Regle_audio;
-#X obj 742 116 Aspirateur_audio;
-#X obj 848 117 Verres_audio;
-#X obj 932 118 Mixeur_audio;
+#X obj 15 80 MachineAlaver_audio 0;
+#X obj 57 100 PlateauCouvert_audio 1;
+#X obj 125 120 MicroOnde_audio 2;
+#X obj 226 163 Grille_audio 4;
+#X obj 325 78 Baignoire_audio 5;
+#X obj 190 140 Bidon_audio 3;
+#X obj 362 98 Regle_audio 6;
+#X obj 390 117 Aspirateur_audio 7;
+#X obj 457 134 Verres_audio 8;
+#X obj 488 155 Mixeur_audio 9;
 #X connect 0 0 5 0;
 #X connect 1 0 5 1;
 #X connect 2 0 0 0;

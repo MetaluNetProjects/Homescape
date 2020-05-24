@@ -1,4 +1,4 @@
-#N canvas 1 1172 426 354 10;
+#N canvas 1 521 426 354 10;
 #N canvas 1218 1295 381 329 InterfaceBidon 0;
 #X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -7,9 +7,9 @@
 #X obj 81 65 moses 0.0001;
 #X msg 79 178 1, f 1;
 #X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 83 282 s BIDpause-light-snd;
 #X obj 149 88 s BID-vol;
@@ -40,12 +40,14 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 247 88 s all-note-off;
 #X obj 247 64 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 177 96 5 0 0 0 - - -, f 5;
+#X floatatom 177 96 5 0 0 0 - - -;
 #X obj 31 205 mull~ 0.3 10;
 #X obj 56 120 r BID-vol;
 #X obj 55 147 / 3;
 #X obj 178 122 s BID-0-Note_adjust-rcv;
 #X obj 32 57 melotouch BID-0 30;
+#X obj 238 246 instrSwitch \$1;
+#X obj 238 267 switch~;
 #X connect 2 0 8 1;
 #X connect 4 0 8 0;
 #X connect 6 0 5 0;
@@ -55,3 +57,4 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 9 0 10 0;
 #X connect 10 0 8 1;
 #X connect 12 0 4 0;
+#X connect 13 0 14 0;
