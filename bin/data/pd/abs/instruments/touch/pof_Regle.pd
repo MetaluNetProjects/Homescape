@@ -1,4 +1,4 @@
-#N canvas 1469 1269 441 454 10;
+#N canvas 1459 601 441 454 10;
 #X msg 33 61 draw \$1;
 #X obj 33 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -21,8 +21,8 @@
 #X restore 218 63 pd title;
 #X obj 144 20 r \$1;
 #X obj 87 7 inlet;
-#X floatatom 149 114 5 0 0 0 - - -, f 5;
-#X floatatom 210 114 5 0 0 0 - - -, f 5;
+#X floatatom 149 114 5 0 0 0 - - -;
+#X floatatom 210 114 5 0 0 0 - - -;
 #X obj 87 39 t a a a;
 #X obj 106 61 s \$0-touchhead;
 #X obj 91 147 poftouch 520 215 0 1;
@@ -33,10 +33,10 @@
 #X obj 55 368 l touch \$0 5;
 #N canvas 0 1172 485 300 bouge 0;
 #X obj 347 69 != 1;
-#X floatatom 307 55 5 0 0 0 - - -, f 5;
-#X floatatom 351 102 5 0 0 0 - - -, f 5;
-#X floatatom 141 114 5 0 0 0 - - -, f 5;
-#X floatatom 215 198 5 0 0 0 - - -, f 5;
+#X floatatom 307 55 5 0 0 0 - - -;
+#X floatatom 351 102 5 0 0 0 - - -;
+#X floatatom 141 114 5 0 0 0 - - -;
+#X floatatom 215 198 5 0 0 0 - - -;
 #X obj 149 189 t b f;
 #X obj 120 234 pack f f;
 #X obj 117 69 r seqx-REG-0 32;
@@ -55,12 +55,18 @@
 #X connect 10 0 0 0;
 #X restore 342 165 pd bouge;
 #X obj 54 266 touchRegle \$0 0 REG;
+#X obj 238 263 route down;
+#X obj 238 284 b;
+#X obj 238 305 outlet;
 #X connect 0 0 11 0;
 #X connect 1 0 0 0;
 #X connect 3 1 2 0;
+#X connect 3 1 19 0;
 #X connect 6 0 9 0;
 #X connect 7 0 11 1;
 #X connect 8 0 11 2;
 #X connect 9 0 11 0;
 #X connect 9 1 10 0;
 #X connect 11 1 3 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;

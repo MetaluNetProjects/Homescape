@@ -1,60 +1,28 @@
-#N canvas 1 559 405 316 10;
-#N canvas 1165 726 381 329 InterfaceBaignoire 0;
-#X obj 93 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 79 152 sel 0;
-#X obj 81 40 change;
-#X obj 81 65 moses 0.0001;
-#X msg 79 178 1, f 1;
-#X msg 105 176 0, f 1;
-#X obj 302 36 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 213 171 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 81 13 r concert-vol-5;
-#X obj 198 49 s concert-mute-5;
-#X obj 83 282 s BAIpause-light-snd;
-#X obj 83 124 r concert-mute-5;
-#X obj 149 88 s BAI-vol;
-#X obj 197 18 r BAI-on-snd;
-#X obj 106 256 s BAI-0-note1-on-rcv;
-#X connect 0 0 10 0;
-#X connect 0 0 14 0;
-#X connect 1 0 4 0;
-#X connect 1 1 5 0;
-#X connect 2 0 3 0;
-#X connect 3 1 12 0;
-#X connect 4 0 0 0;
-#X connect 5 0 0 0;
-#X connect 8 0 2 0;
-#X connect 11 0 1 0;
-#X connect 11 0 7 0;
-#X connect 13 0 6 0;
-#X connect 13 0 9 0;
-#X restore 55 20 pd InterfaceBaignoire;
-#X obj 184 173 mknob 25 100 0 127 0 1 BAI-0-Note_adjust-snd BAI-0-Note_adjust-rcv
+#N canvas 48 360 384 309 10;
+#X obj 148 233 mknob 25 100 0 127 0 1 BAI-0-Note_adjust-snd BAI-0-Note_adjust-rcv
 BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
-#X obj 127 156 * 1;
-#X obj 201 51 s all-note-off;
-#X obj 201 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 165 111 s all-note-off;
+#X obj 165 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 168 84 5 0 0 0 - - -;
-#X obj 56 189 mull~ 0.3 10;
-#X obj 81 104 r BAI-vol;
-#X obj 168 108 s BAI-Note_adjust-rcv;
-#X obj 80 131 / 3;
-#X obj 56 78 melo 5;
-#X obj 56 46 melotouch BAI-0 200;
-#X obj 254 199 instrSwitch \$1;
-#X obj 254 220 switch~;
-#X obj 56 226 OutDec2~ \$1;
-#X connect 2 0 6 1;
-#X connect 4 0 3 0;
-#X connect 5 0 8 0;
-#X connect 6 0 14 0;
-#X connect 6 0 14 1;
-#X connect 7 0 9 0;
-#X connect 9 0 6 1;
-#X connect 10 0 6 0;
-#X connect 11 0 10 0;
+#X floatatom 163 139 5 0 0 0 - - -;
+#X obj 163 163 s BAI-Note_adjust-rcv;
+#X obj 20 138 melo 5;
+#X obj 20 111 melotouch BAI-0 200;
+#X obj 218 259 instrSwitch \$1;
+#X obj 218 280 switch~;
+#X obj 21 197 OutDec2~ \$1;
+#X obj 20 159 *~ 0.3;
+#X obj 20 81 s BAI-0-note1-on-rcv;
+#X obj 20 15 r concert-mute-\$1;
+#X obj 20 36 change;
+#X obj 20 57 == 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 10 0 9 0;
+#X connect 10 0 9 1;
 #X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 11 0;
