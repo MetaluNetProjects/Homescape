@@ -1,4 +1,4 @@
-#N canvas 888 1172 669 350 10;
+#N canvas 888 1371 669 350 10;
 #X obj 6 6 cnv 15 96 105 empty empty REC-lr 2 10 0 14 -260097 -1 0
 ;
 #X obj 25 86 bng 20 250 50 0 load-REC16-snd load-REC16-rcv load 3 10
@@ -42,14 +42,17 @@
 #X msg 468 144 stop;
 #X obj 518 129 savepanel;
 #X obj 495 47 sel 0 1;
-#N canvas 1588 1202 332 271 writesf~ 0;
+#N canvas 1588 1401 332 271 writesf~ 0;
 #X obj 19 18 inlet;
-#X obj 62 190 writesf~ 2, f 18;
 #X obj 63 125 catch~ REC-l;
-#X obj 131 154 catch~ REC-r;
-#X connect 0 0 1 0;
-#X connect 2 0 1 0;
-#X connect 3 0 1 1;
+#X obj 90 152 catch~ REC-r;
+#X obj 62 190 writesf~ 4, f 18;
+#X obj 187 103 adc~ 3 4;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 3 2;
+#X connect 4 1 3 3;
 #X restore 518 263 pd writesf~;
 #N canvas 1427 1172 493 376 readsf~ 0;
 #X obj 21 17 inlet;
@@ -173,6 +176,12 @@
 #X connect 7 0 10 0;
 #X connect 8 0 4 0;
 #X restore 516 83 pd getdir;
+#X obj 72 21 mknob 25 100 0 1 0 1 empty empty in_3-4 -2 -6 0 8 -262144
+-1 -1 3400 1;
+#X obj 240 64 adc~ 3 4;
+#X obj 212 116 mull~ 0.5 10;
+#X obj 299 116 mull~ 0.5 10;
+#X obj 238 185 dac~ 1 2;
 #X connect 1 0 32 0;
 #X connect 2 0 8 0;
 #X connect 4 0 9 0;
@@ -209,4 +218,10 @@
 #X connect 31 0 8 0;
 #X connect 32 0 14 0;
 #X connect 33 0 7 0;
+#X connect 34 0 36 1;
+#X connect 34 0 37 1;
+#X connect 35 0 36 0;
+#X connect 35 1 37 0;
+#X connect 36 0 38 0;
+#X connect 37 0 38 1;
 #X coords 0 -1 1 1 98 107 2 5 5;
