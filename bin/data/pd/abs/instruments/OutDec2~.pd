@@ -1,4 +1,4 @@
-#N canvas 1082 595 514 371 10;
+#N canvas 925 504 514 371 10;
 #X obj 35 138 inlet~;
 #X obj 188 132 inlet~;
 #X obj 36 189 throw~ OUTinstru-1;
@@ -18,11 +18,11 @@
 #X obj 36 162 *~;
 #X obj 189 158 *~;
 #X obj 90 100 *~, f 20;
-#X obj 208 14 r concert-mute-\$1;
 #X msg 208 55 1 10;
 #X msg 242 55 0 1900;
 #X obj 208 76 line~;
-#X obj 208 35 sel 0 1, f 12;
+#X obj 208 14 r concert-instrument-isplaying-\$1;
+#X obj 208 35 sel 1 0, f 12;
 #X connect 0 0 15 0;
 #X connect 1 0 16 0;
 #X connect 4 0 8 0;
@@ -41,10 +41,10 @@
 #X connect 16 0 4 0;
 #X connect 17 0 15 1;
 #X connect 17 0 16 1;
-#X connect 18 0 22 0;
-#X connect 19 0 21 0;
-#X connect 20 0 21 0;
-#X connect 21 0 17 1;
-#X connect 22 0 19 0;
-#X connect 22 1 20 0;
+#X connect 18 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 17 1;
+#X connect 21 0 22 0;
+#X connect 22 0 18 0;
+#X connect 22 1 19 0;
 #X coords 0 371 1 370 200 70 0;
