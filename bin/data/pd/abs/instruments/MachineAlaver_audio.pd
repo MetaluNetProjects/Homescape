@@ -1,6 +1,6 @@
-#N canvas 794 91 565 785 10;
+#N canvas 38 90 579 785 10;
 #X obj 27 41 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 8479 1;
+-1 -1 4507 1;
 #X obj 21 151 decoupeur_ctl decoupeur-setting1 DECSET;
 #X obj 21 268 *~ 0.2;
 #N canvas 1469 756 450 299 MALprog 0;
@@ -54,9 +54,8 @@
 #X obj 355 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 355 136 s DECSET-SEQ1-fragseq1-on-rcv;
-#X obj 355 66 == 0;
 #X obj 355 87 change;
-#X obj 355 42 r concert-mute-\$1;
+#X obj 355 42 r concert-instrument-isplaying-\$1;
 #X connect 0 0 5 0;
 #X connect 2 0 12 0;
 #X connect 2 0 12 1;
@@ -78,6 +77,5 @@
 #X connect 13 0 2 0;
 #X connect 15 0 16 0;
 #X connect 18 0 19 0;
-#X connect 20 0 21 0;
-#X connect 21 0 18 0;
-#X connect 22 0 20 0;
+#X connect 20 0 18 0;
+#X connect 21 0 20 0;

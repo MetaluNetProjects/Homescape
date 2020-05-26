@@ -1,4 +1,4 @@
-#N canvas 1 585 339 341 10;
+#N canvas 1 534 339 341 10;
 #X obj 157 189 mknob 25 100 0 127 0 1 VER-0-Note_adjust-snd VER-0-Note_adjust-rcv
 VER-0-Note_adjust -2 -6 0 8 -257985 -1 -1 3962 1;
 #X obj 179 82 s all-note-off;
@@ -12,10 +12,9 @@ VER-0-Note_adjust -2 -6 0 8 -257985 -1 -1 3962 1;
 #X obj 190 252 switch~;
 #X obj 26 229 OutDec2~ \$1;
 #X obj 27 189 *~ 0.25;
-#X obj 31 85 s VER-0-note1-on-rcv;
-#X obj 31 20 r concert-mute-\$1;
+#X obj 31 62 s VER-0-note1-on-rcv;
 #X obj 31 41 change;
-#X obj 31 62 == 0;
+#X obj 31 20 r concert-instrument-isplaying-\$1;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
 #X connect 5 0 10 0;
@@ -23,6 +22,5 @@ VER-0-Note_adjust -2 -6 0 8 -257985 -1 -1 3962 1;
 #X connect 7 0 8 0;
 #X connect 10 0 9 0;
 #X connect 10 0 9 1;
-#X connect 12 0 13 0;
-#X connect 13 0 14 0;
-#X connect 14 0 11 0;
+#X connect 12 0 11 0;
+#X connect 13 0 12 0;
