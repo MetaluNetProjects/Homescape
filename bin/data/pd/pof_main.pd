@@ -1,4 +1,4 @@
-#N canvas 1359 442 540 613 10;
+#N canvas 899 262 540 613 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -446,7 +446,7 @@
 #X obj 180 580 print HOMESCAPE_DEBUG;
 #X obj 316 275 mixtape/REC-lr;
 #X obj 138 403 s instrument_pof_head;
-#N canvas 1113 194 298 397 instruments_pof 1;
+#N canvas 1114 247 298 397 instruments_pof 1;
 #X obj 42 162 instruments/Baignoire 5;
 #X obj 44 187 instruments/Regle 6;
 #X obj 44 211 instruments/Aspirateur 7;
