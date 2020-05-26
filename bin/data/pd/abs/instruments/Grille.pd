@@ -1,4 +1,4 @@
-#N canvas 573 81 553 938 10;
+#N canvas 573 81 553 794 10;
 #X floatatom 62 29 5 0 0 0 - - -;
 #X floatatom 116 29 5 0 0 0 - - -;
 #X floatatom 202 70 5 0 0 0 - - -;
@@ -15,7 +15,7 @@
 #X floatatom 150 373 5 0 0 0 - - -;
 #X floatatom 59 308 5 0 0 0 - - -;
 #X floatatom 100 310 5 0 0 0 - - -;
-#X obj 216 273 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 216 273 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 237 454 route down;
 #X obj 237 473 b;
@@ -82,10 +82,10 @@
 #X obj 382 127 s concert-mute-\$1;
 #X msg 382 104 0;
 #X obj 21 11 instrument_pof_common \$1 Grille de four;
-#X obj 216 253 r concert-mute-\$1;
-#X obj 216 293 sel 1 0;
 #X obj 393 79 r GRIwattTouch;
 #X obj 382 46 r GRI-0-down;
+#X obj 216 253 r concert-instrument-isplaying-\$1;
+#X obj 216 293 sel 0 1;
 #X connect 1 0 56 2;
 #X connect 2 0 4 2;
 #X connect 3 0 58 1;
@@ -97,7 +97,7 @@
 #X connect 11 0 39 1;
 #X connect 12 0 63 1;
 #X connect 13 0 63 2;
-#X connect 14 0 75 0;
+#X connect 14 0 77 0;
 #X connect 15 0 16 0;
 #X connect 16 0 18 0;
 #X connect 16 0 68 0;
@@ -162,8 +162,8 @@
 #X connect 69 0 70 0;
 #X connect 72 0 71 0;
 #X connect 73 0 56 0;
-#X connect 74 0 14 0;
-#X connect 75 0 21 0;
-#X connect 75 1 20 0;
-#X connect 76 0 72 0;
-#X connect 77 0 72 0;
+#X connect 74 0 72 0;
+#X connect 75 0 72 0;
+#X connect 76 0 14 0;
+#X connect 77 0 21 0;
+#X connect 77 1 20 0;

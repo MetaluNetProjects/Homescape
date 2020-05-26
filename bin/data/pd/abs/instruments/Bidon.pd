@@ -1,4 +1,4 @@
-#N canvas 1024 107 564 928 10;
+#N canvas 875 81 564 794 10;
 #X floatatom 124 43 5 0 0 0 - - -;
 #X floatatom 242 86 5 0 0 0 - - -;
 #X floatatom 205 171 5 0 0 0 - - -;
@@ -14,7 +14,7 @@
 #X floatatom 134 407 5 0 0 0 - - -;
 #X floatatom 70 337 5 0 0 0 - - -;
 #X floatatom 113 340 5 0 0 0 - - -;
-#X obj 269 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 269 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 218 488 route down;
 #X obj 218 507 b;
@@ -80,9 +80,9 @@
 #X obj 391 449 s concert-mute-\$1;
 #X msg 391 426 0;
 #X obj 29 15 instrument_pof_common \$1 Bidon;
-#X obj 269 251 r concert-mute-\$1;
-#X obj 269 297 sel 1 0;
 #X obj 401 403 r BID-0-adjTouch;
+#X obj 269 251 r concert-instrument-isplaying-\$1;
+#X obj 269 297 sel 0 1;
 #X connect 0 0 38 2;
 #X connect 1 0 3 2;
 #X connect 2 0 59 1;
@@ -94,7 +94,7 @@
 #X connect 10 0 41 1;
 #X connect 11 0 61 1;
 #X connect 12 0 61 2;
-#X connect 13 0 73 0;
+#X connect 13 0 74 0;
 #X connect 14 0 15 0;
 #X connect 15 0 17 0;
 #X connect 15 0 66 0;
@@ -159,7 +159,7 @@
 #X connect 67 0 68 0;
 #X connect 70 0 69 0;
 #X connect 71 0 38 0;
-#X connect 72 0 13 0;
-#X connect 73 0 20 0;
-#X connect 73 1 19 0;
-#X connect 74 0 70 0;
+#X connect 72 0 70 0;
+#X connect 73 0 13 0;
+#X connect 74 0 20 0;
+#X connect 74 1 19 0;
