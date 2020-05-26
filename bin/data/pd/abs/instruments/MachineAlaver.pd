@@ -1,4 +1,4 @@
-#N canvas 638 136 542 629 10;
+#N canvas 746 127 581 629 10;
 #X floatatom 72 52 5 0 0 0 - - -;
 #X floatatom 120 59 5 0 0 0 - - -;
 #X floatatom 212 95 5 0 0 0 - - -;
@@ -74,8 +74,6 @@
 #X msg 423 458 0, f 1;
 #X obj 423 481 change;
 #X obj 25 19 instrument_pof_common \$1 Machine A Laver;
-#X obj 423 523 s concert-mute-\$1;
-#X msg 423 501 0;
 #N canvas 3042 62 443 1037 LedsEssorage 0;
 #X obj 84 97 inlet head;
 #X floatatom 129 334 5 0 0 0 - - -;
@@ -88,7 +86,7 @@
 #X obj 225 342 sel 0 1;
 #X obj 33 220 t b b;
 #X obj 33 189 loadbang;
-#X obj 287 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 287 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 287 129 sel 1 0;
 #X obj 11 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -99,7 +97,7 @@
 #X floatatom 145 491 5 0 0 0 - - -;
 #X floatatom 38 438 5 0 0 0 - - -;
 #X floatatom 83 435 5 0 0 0 - - -;
-#X obj 245 477 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 245 477 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 241 499 sel 0 1;
 #X floatatom 195 491 5 0 0 0 - - -;
@@ -534,7 +532,7 @@
 #N canvas 2829 62 700 300 DivEssorage 0;
 #X obj 85 35 inlet;
 #X obj 85 122 hradio 15 1 0 5 nbDivEssorage-snd nbDivEssorage-rcv nbDivEssorage
-0 -8 0 10 -262144 -1 -1 2;
+0 -8 0 10 -262144 -1 -1 4;
 #X obj 77 65 i;
 #X obj 108 65 + 1;
 #X floatatom 257 213 5 0 0 0 - - -;
@@ -640,12 +638,12 @@
 #X floatatom 134 235 5 0 0 0 - - -;
 #X floatatom 170 107 5 0 0 0 - - -;
 #X floatatom 223 103 5 0 0 0 - - -;
-#X obj 275 271 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 275 271 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 271 293 sel 0 1;
 #X obj 35 173 t b b;
 #X obj 35 142 loadbang;
-#X obj 289 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 289 61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 289 82 sel 1 0;
 #X obj 13 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -978,6 +976,7 @@
 #X connect 85 0 84 0;
 #X connect 85 1 81 0;
 #X restore 25 498 pd LedsDifferésPrelavageCourt;
+#X obj 423 508 s instrument_touched-\$1;
 #X connect 0 0 11 1;
 #X connect 1 0 11 2;
 #X connect 2 0 3 2;
@@ -1000,7 +999,7 @@
 #X connect 17 0 24 3;
 #X connect 18 0 20 0;
 #X connect 19 0 10 0;
-#X connect 19 0 36 0;
+#X connect 19 0 34 0;
 #X connect 20 1 22 0;
 #X connect 22 0 23 0;
 #X connect 23 0 21 0;
@@ -1012,10 +1011,9 @@
 #X connect 28 0 29 0;
 #X connect 29 0 31 0;
 #X connect 30 0 31 0;
-#X connect 31 0 34 0;
+#X connect 31 0 38 0;
 #X connect 32 0 11 0;
-#X connect 34 0 33 0;
-#X connect 36 0 37 0;
-#X connect 37 0 39 0;
-#X connect 38 0 35 0;
-#X connect 39 0 38 0;
+#X connect 34 0 35 0;
+#X connect 35 0 37 0;
+#X connect 36 0 33 0;
+#X connect 37 0 36 0;

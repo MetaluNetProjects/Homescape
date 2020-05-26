@@ -1,4 +1,4 @@
-#N canvas 1459 591 441 454 10;
+#N canvas 998 421 441 454 10;
 #X msg 33 61 draw \$1;
 #X obj 33 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
@@ -33,7 +33,7 @@
 #X obj 55 326 touch \$0 3;
 #X obj 55 348 touch \$0 4;
 #X obj 55 368 touch \$0 5;
-#N canvas 0 1172 485 300 bouge 0;
+#N canvas 1 575 485 300 bouge 0;
 #X obj 347 69 != 1;
 #X floatatom 307 55 5 0 0 0 - - -;
 #X floatatom 351 102 5 0 0 0 - - -;
@@ -49,25 +49,27 @@
 #X connect 5 0 6 0;
 #X connect 5 1 6 1;
 #X connect 6 0 8 0;
-#X connect 7 0 3 0;
 #X connect 7 0 6 0;
-#X connect 9 0 4 0;
 #X connect 9 0 5 0;
 #X connect 10 0 1 0;
 #X connect 10 0 0 0;
 #X restore 342 165 pd bouge;
-#X obj 255 255 route down;
-#X obj 255 276 b;
 #X obj 255 297 outlet;
+#X obj 255 255 route up down;
+#X msg 255 276 0;
+#X msg 285 275 1;
 #X connect 0 0 13 0;
 #X connect 1 0 0 0;
+#X connect 5 0 22 0;
 #X connect 5 1 2 0;
-#X connect 5 1 20 0;
+#X connect 5 1 21 0;
 #X connect 8 0 11 0;
 #X connect 9 0 13 1;
 #X connect 10 0 13 2;
 #X connect 11 0 13 0;
 #X connect 11 1 12 0;
 #X connect 13 1 5 0;
-#X connect 20 0 21 0;
 #X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 22 0 20 0;
+#X connect 23 0 20 0;

@@ -15,7 +15,7 @@
 #X floatatom 156 371 5 0 0 0 - - -;
 #X floatatom 63 317 5 0 0 0 - - -;
 #X floatatom 106 315 5 0 0 0 - - -;
-#X obj 277 245 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 277 245 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 243 452 route down;
 #X obj 243 471 b;
@@ -76,12 +76,13 @@
 #X obj 256 494 f;
 #X obj 256 515 == 0;
 #X obj 256 536 s concert-mute-\$1;
-#X obj 397 176 s concert-mute-\$1;
-#X msg 397 153 0;
 #X obj 21 9 instrument_pof_common \$1 Regle;
-#X obj 397 126 r REG-0-Note_adjust-rcv;
 #X obj 277 224 r concert-instrument-isplaying-\$1;
 #X obj 276 265 sel 0 1;
+#X obj 351 93 multiOR, f 23;
+#X obj 351 117 s instrument_touched-\$1;
+#X obj 373 68 r REG-0-adjTouch;
+#X obj 351 43 r REG-0-on;
 #X connect 1 0 58 2;
 #X connect 2 0 4 2;
 #X connect 3 0 59 1;
@@ -93,7 +94,7 @@
 #X connect 11 0 39 1;
 #X connect 12 0 57 1;
 #X connect 13 0 57 2;
-#X connect 14 0 74 0;
+#X connect 14 0 71 0;
 #X connect 15 0 16 0;
 #X connect 16 0 66 0;
 #X connect 17 0 39 2;
@@ -149,15 +150,15 @@
 #X connect 58 0 38 0;
 #X connect 58 0 56 0;
 #X connect 59 0 21 0;
-#X connect 60 0 70 0;
 #X connect 61 0 57 0;
 #X connect 61 0 60 0;
 #X connect 65 0 66 1;
 #X connect 66 0 67 0;
 #X connect 67 0 68 0;
-#X connect 70 0 69 0;
-#X connect 71 0 58 0;
-#X connect 72 0 70 0;
-#X connect 73 0 14 0;
-#X connect 74 0 20 0;
-#X connect 74 1 19 0;
+#X connect 69 0 58 0;
+#X connect 70 0 14 0;
+#X connect 71 0 20 0;
+#X connect 71 1 19 0;
+#X connect 72 0 73 0;
+#X connect 74 0 72 1;
+#X connect 75 0 72 0;

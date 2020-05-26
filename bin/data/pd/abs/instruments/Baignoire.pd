@@ -15,7 +15,7 @@
 #X floatatom 319 369 5 0 0 0 - - -;
 #X floatatom 75 315 5 0 0 0 - - -;
 #X floatatom 123 316 5 0 0 0 - - -;
-#X obj 315 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 315 240 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 406 450 route down;
 #X obj 406 469 b;
@@ -76,12 +76,13 @@
 #X obj 435 494 f;
 #X obj 435 515 == 0;
 #X obj 435 536 s concert-mute-\$1;
-#X obj 436 142 s concert-mute-\$1;
-#X msg 436 119 0;
 #X obj 36 11 instrument_pof_common \$1 Baignoire;
-#X obj 432 81 r BAI-0-Note_adjust-rcv;
 #X obj 315 217 r concert-instrument-isplaying-\$1;
 #X obj 315 263 sel 0 1;
+#X obj 346 46 r BAI-0-on;
+#X obj 346 94 multiOR, f 23;
+#X obj 346 118 s instrument_touched-\$1;
+#X obj 368 69 r BAI-0-adjTouch;
 #X connect 1 0 60 2;
 #X connect 2 0 4 2;
 #X connect 3 0 58 1;
@@ -93,7 +94,7 @@
 #X connect 11 0 39 1;
 #X connect 12 0 57 1;
 #X connect 13 0 57 2;
-#X connect 14 0 74 0;
+#X connect 14 0 71 0;
 #X connect 15 0 16 0;
 #X connect 16 0 66 0;
 #X connect 17 0 39 2;
@@ -147,7 +148,6 @@
 #X connect 57 0 35 0;
 #X connect 57 0 39 0;
 #X connect 58 0 21 0;
-#X connect 59 0 70 0;
 #X connect 60 0 38 0;
 #X connect 60 0 56 0;
 #X connect 61 0 57 0;
@@ -155,9 +155,10 @@
 #X connect 65 0 66 1;
 #X connect 66 0 67 0;
 #X connect 67 0 68 0;
-#X connect 70 0 69 0;
-#X connect 71 0 60 0;
-#X connect 72 0 70 0;
-#X connect 73 0 14 0;
-#X connect 74 0 20 0;
-#X connect 74 1 19 0;
+#X connect 69 0 60 0;
+#X connect 70 0 14 0;
+#X connect 71 0 20 0;
+#X connect 71 1 19 0;
+#X connect 72 0 73 0;
+#X connect 73 0 74 0;
+#X connect 75 0 73 1;
