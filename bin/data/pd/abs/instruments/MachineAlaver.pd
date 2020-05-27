@@ -86,7 +86,7 @@
 #X obj 225 342 sel 0 1;
 #X obj 33 220 t b b;
 #X obj 33 189 loadbang;
-#X obj 287 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 287 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 287 129 sel 1 0;
 #X obj 11 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -97,7 +97,7 @@
 #X floatatom 145 491 5 0 0 0 - - -;
 #X floatatom 38 438 5 0 0 0 - - -;
 #X floatatom 83 435 5 0 0 0 - - -;
-#X obj 245 477 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 245 477 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 241 499 sel 0 1;
 #X floatatom 195 491 5 0 0 0 - - -;
@@ -532,7 +532,7 @@
 #N canvas 2829 62 700 300 DivEssorage 0;
 #X obj 85 35 inlet;
 #X obj 85 122 hradio 15 1 0 5 nbDivEssorage-snd nbDivEssorage-rcv nbDivEssorage
-0 -8 0 10 -262144 -1 -1 4;
+0 -8 0 10 -262144 -1 -1 2;
 #X obj 77 65 i;
 #X obj 108 65 + 1;
 #X floatatom 257 213 5 0 0 0 - - -;
@@ -638,7 +638,7 @@
 #X floatatom 134 235 5 0 0 0 - - -;
 #X floatatom 170 107 5 0 0 0 - - -;
 #X floatatom 223 103 5 0 0 0 - - -;
-#X obj 275 271 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 275 271 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 271 293 sel 0 1;
 #X obj 35 173 t b b;
@@ -989,7 +989,6 @@
 #X connect 9 0 10 2;
 #X connect 10 0 25 0;
 #X connect 10 1 26 0;
-#X connect 11 0 4 0;
 #X connect 11 0 24 0;
 #X connect 12 0 18 1;
 #X connect 13 0 18 0;
