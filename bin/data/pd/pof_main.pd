@@ -1,4 +1,4 @@
-#N canvas 1302 292 540 613 10;
+#N canvas 1144 195 540 586 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -180,14 +180,14 @@
 #X msg 80 153 framerate 60;
 #X msg 18 120 window 800 600 0 \, framerate 60 \, background 0 0 0
 ;
-#X obj 375 495 mode/edit;
+#X obj 409 444 mode/edit;
 #X obj 161 56 loadbang;
 #X obj 161 78 del 10000;
 #X msg 161 98 build \, bang;
-#X obj 267 450 pageHead balance;
+#X obj 301 399 pageHead balance;
 #X obj 382 137 loadbang;
-#X obj 267 473 balance/GUI;
-#X obj 158 476 concert/GUI;
+#X obj 301 422 balance/GUI;
+#X obj 138 423 concert/GUI;
 #X obj 184 308 s overHead;
 #X msg 382 191 \; page concert;
 #X obj 17 340 set/manager;
@@ -378,14 +378,14 @@
 #X restore 274 246 pd INIT;
 #X obj 157 266 fixScaleX;
 #X obj 157 287 t a a;
-#X obj 375 471 fixScaleX;
+#X obj 409 420 fixScaleX;
 #X obj 81 185 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 137 203 pofvisible 1;
 #X obj 223 177 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 158 453 pageHead concert;
-#X obj 375 450 pageHead modeEdit;
+#X obj 138 400 pageHead concert;
+#X obj 409 399 pageHead modeEdit;
 #X obj 417 97 switch~;
 #X obj 417 77 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -394,8 +394,6 @@
 #X obj 14 29 declare -path abs -path . -path img;
 #X obj 432 285 mknob 50 100 0 1 0 0 VolMaster-snd VolMaster-rcv VolMaster
 -2 -6 0 8 -258113 -1 -1 0 1;
-#X obj 138 380 fixScaleX;
-#X obj 138 356 t a a;
 #X obj 239 7 declare -path abs/extra/iemlib;
 #X obj 13 445 instruments/player;
 #N canvas 687 449 450 352 cpu 0;
@@ -439,14 +437,13 @@
 #X connect 16 0 11 0;
 #X connect 17 0 2 0;
 #X connect 18 0 3 0;
-#X restore 206 381 pd cpu;
+#X restore 138 349 pd cpu;
 #X msg 164 149 open;
-#X obj 180 531 loadbang;
-#X msg 180 552 the patch is running!;
-#X obj 180 580 print HOMESCAPE_DEBUG;
+#X obj 139 500 loadbang;
+#X msg 139 521 the patch is running!;
+#X obj 139 549 print HOMESCAPE_DEBUG;
 #X obj 316 275 mixtape/REC-lr;
-#X obj 138 403 s instrument_pof_head;
-#N canvas 1085 738 298 397 instruments_pof 0;
+#N canvas 1085 658 298 397 instruments_pof 0;
 #X obj 42 162 instruments/Baignoire 5;
 #X obj 44 187 instruments/Regle 6;
 #X obj 44 211 instruments/Aspirateur 7;
@@ -457,14 +454,14 @@
 #X obj 38 88 instruments/MicroOnde 2;
 #X obj 39 112 instruments/Bidon 3;
 #X obj 40 137 instruments/Grille 4;
-#X restore 136 425 pd instruments_pof;
-#X obj 158 496 concert/instrument_panel;
+#X restore 138 462 pd instruments_pof;
+#X obj 138 443 concert/instrument_panel;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
 #X connect 4 0 3 0;
 #X connect 5 0 38 0;
 #X connect 8 0 7 0;
-#X connect 10 0 49 0;
+#X connect 10 0 50 0;
 #X connect 10 1 34 0;
 #X connect 10 2 26 0;
 #X connect 13 0 0 0;
@@ -473,7 +470,7 @@
 #X connect 18 0 0 0;
 #X connect 19 0 21 0;
 #X connect 20 0 24 0;
-#X connect 22 0 60 0;
+#X connect 22 0 57 0;
 #X connect 31 0 32 0;
 #X connect 34 0 35 0;
 #X connect 35 0 30 0;
@@ -487,8 +484,6 @@
 #X connect 43 0 42 0;
 #X connect 44 0 43 0;
 #X connect 47 0 28 0;
-#X connect 48 0 58 0;
-#X connect 49 1 52 0;
-#X connect 53 0 0 0;
-#X connect 54 0 55 0;
-#X connect 55 0 56 0;
+#X connect 51 0 0 0;
+#X connect 52 0 53 0;
+#X connect 53 0 54 0;
