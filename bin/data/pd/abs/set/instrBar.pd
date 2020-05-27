@@ -1,7 +1,7 @@
-#N canvas 1171 1172 431 419 10;
+#N canvas 1386 559 431 419 10;
 #X obj 75 9 inlet head;
-#X floatatom 121 160 5 0 0 0 - - -, f 5;
-#X floatatom 171 157 5 0 0 0 - - -, f 5;
+#X floatatom 121 160 5 0 0 0 - - -;
+#X floatatom 171 157 5 0 0 0 - - -;
 #X obj 75 204 instrItem 0 \$1;
 #X obj 75 225 instrItem 1 \$1;
 #X obj 75 245 instrItem 2 \$1;
@@ -14,11 +14,11 @@
 #X obj 75 388 instrItem 9 \$1;
 #X obj 74 39 t a a;
 #X obj 110 85 pofcolor 0.4 0.5 0.5 1;
-#X floatatom 153 110 5 0 0 0 - - -, f 5;
-#X floatatom 202 109 5 0 0 0 - - -, f 5;
-#X floatatom 151 39 5 0 0 0 - - -, f 5;
-#X floatatom 195 38 5 0 0 0 - - -, f 5;
-#X floatatom 242 38 5 0 0 0 - - -, f 5;
+#X floatatom 153 110 5 0 0 0 - - -;
+#X floatatom 202 109 5 0 0 0 - - -;
+#X floatatom 151 39 5 0 0 0 - - -;
+#X floatatom 195 38 5 0 0 0 - - -;
+#X floatatom 242 38 5 0 0 0 - - -;
 #X obj 110 133 cadreVec 735 83;
 #X obj 74 181 poftranslate -324 231;
 #X obj 110 63 poftranslate 0 232;
@@ -35,7 +35,6 @@
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
 #X connect 13 0 21 0;
-#X connect 13 1 22 0;
 #X connect 14 0 20 0;
 #X connect 15 0 20 1;
 #X connect 16 0 20 2;
