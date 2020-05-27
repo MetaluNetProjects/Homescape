@@ -1,4 +1,4 @@
-#N canvas 39 93 737 673 10;
+#N canvas 501 364 737 673 10;
 #X obj 82 15 adc~ 1;
 #X obj 144 127 env~;
 #X obj 144 200 s rec-level;
@@ -8,7 +8,7 @@
 -1 -1;
 #X obj 526 379 tabplay~ \$0-t;
 #X obj 233 476 writesf~;
-#N canvas 783 75 635 768 autorec 0;
+#N canvas 783 81 635 768 autorec 0;
 #X obj 110 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 133 105 > 60;
@@ -28,7 +28,7 @@
 #X obj 133 439 +;
 #X obj 160 439 f;
 #X obj 133 410 * -1;
-#X floatatom 146 473 5 0 0 0 - - -, f 5;
+#X floatatom 146 473 5 0 0 0 - - -;
 #X msg 202 335 list 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X obj 133 518 change;
 #X obj 133 495 > 7;
@@ -66,9 +66,9 @@
 #X obj 246 632 del 100;
 #X obj 225 77 r rec-autorec-thres;
 #X obj 204 134 > 56;
-#X floatatom 270 16 5 0 0 0 - - -, f 5;
+#X floatatom 270 16 5 0 0 0 - - -;
 #X obj 270 35 * 10;
-#X floatatom 206 22 5 0 0 0 - - -, f 5;
+#X floatatom 206 22 5 0 0 0 - - -;
 #X obj 110 640 del 900;
 #X obj 204 237 del 950;
 #X obj 225 109 - 3;
@@ -171,8 +171,8 @@
 #X obj 588 164 s rec-playing;
 #X msg 588 141 0;
 #X msg 618 140 1;
-#X obj 588 183 r rec-playing;
-#X obj 588 205 s play-light;
+#X obj 588 186 r rec-playing;
+#X obj 588 208 s play-light;
 #X obj 83 50 hip~ 40;
 #X obj 193 339 *~;
 #X obj 209 316 z~ 64;
@@ -222,7 +222,7 @@
 #X msg 545 473 0 \, 1 2;
 #X msg 590 513 0 10;
 #X obj 547 495 line~;
-#X floatatom 638 478 5 0 0 0 - - -, f 5;
+#X floatatom 638 478 5 0 0 0 - - -;
 #X obj 545 450 / 44.1;
 #X obj 275 418 del 100;
 #X msg 378 387 stop;
@@ -234,7 +234,7 @@
 #X obj 161 9 r rec-rec;
 #X obj 223 212 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 17 321 5 0 0 0 - - -, f 5;
+#X floatatom 17 321 5 0 0 0 - - -;
 #X msg 50 278 72;
 #X obj 54 522 r rec-autorec-thres;
 #X obj 54 544 change;
@@ -255,7 +255,7 @@
 #X msg 45 433 get prop;
 #X obj 114 437 route get;
 #X obj 114 459 route threshold;
-#X floatatom 47 496 5 0 0 0 - - -, f 5;
+#X floatatom 47 496 5 0 0 0 - - -;
 #X obj 114 484 s rec-autorec-thres;
 #X obj 54 588 del 2000;
 #X obj 115 276 del 100;

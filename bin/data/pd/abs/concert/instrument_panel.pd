@@ -8,18 +8,18 @@
 #X obj 643 410 cadreVec 735 444;
 #X floatatom 325 69 5 0 0 0 - - -;
 #X floatatom 369 65 5 0 0 0 - - -;
-#N canvas 319 419 822 702 PLAY/REC 0;
+#N canvas 757 199 822 702 PLAY/REC 0;
 #X obj 48 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 162 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 199 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 74 184 symbol;
 #X obj 109 276 r rec-recording;
 #X obj 109 299 spigot;
 #X obj 47 28 r set-rec;
-#X obj 162 99 r set-play;
+#X obj 199 95 r set-play;
 #X obj 74 207 s rec-rectab;
-#X obj 162 228 s rec-playtab;
+#X obj 199 245 s rec-playtab;
 #X msg 132 66 symbol set-table-\$1;
 #X obj 109 350 timer;
 #X obj 109 322 sel 1 0;
@@ -33,11 +33,11 @@
 #X obj 200 508 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X floatatom 200 555 8 0 0 0 - - -;
-#X obj 162 206 pack s f;
+#X obj 199 223 pack s f;
 #X obj 132 43 t f f;
-#X obj 207 163 tabread set-table-length;
-#X obj 207 137 f;
-#X obj 162 143 t b b;
+#X obj 244 180 tabread set-table-length;
+#X obj 244 154 f;
+#X obj 199 160 t b b;
 #X obj 553 128 r rec-fiddle;
 #X obj 616 244 table \$0-fid 200;
 #X obj 469 303 tabwrite \$0-fid;
@@ -279,7 +279,7 @@
 #X floatatom 707 434 5 0 0 0 - - -;
 #X obj 521 382 tabwrite set-table-pitch;
 #X obj 362 42 r set-saving;
-#X msg 284 77 1;
+#X msg 324 89 1;
 #X msg 362 92 0;
 #X obj 74 152 t b b;
 #X obj 362 64 sel 1;
@@ -303,7 +303,7 @@
 #X obj 157 587 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 6;
 #X msg 192 38 0;
-#X obj 153 181 symbol;
+#X obj 190 198 symbol;
 #X obj 342 619 moses 5;
 #X msg 342 724 \; song-midi-drum-\$1 1 100;
 #X obj 428 642 tabread set-table-pitch;
@@ -330,6 +330,26 @@
 #X obj 342 594 r concert_instrument;
 #X obj 662 358 r concert_instrument;
 #X obj 157 609 s concert_instrument;
+#N canvas 1 81 417 199 play/stop 0;
+#X obj 61 23 inlet;
+#X obj 61 109 outlet play;
+#X obj 152 136 outlet stop;
+#X msg 152 111 stop;
+#X obj 94 45 r rec-playing;
+#X obj 61 44 b;
+#X obj 61 65 f;
+#X obj 61 86 sel 0 1, f 31;
+#X obj 106 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 6 1;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 7 1 3 0;
+#X restore 199 116 pd play/stop;
 #X connect 0 0 62 0;
 #X connect 0 0 67 0;
 #X connect 1 0 25 0;
@@ -337,7 +357,7 @@
 #X connect 3 0 4 0;
 #X connect 4 0 11 0;
 #X connect 5 0 0 0;
-#X connect 6 0 1 0;
+#X connect 6 0 99 0;
 #X connect 9 0 2 1;
 #X connect 9 0 72 1;
 #X connect 10 0 16 0;
@@ -446,6 +466,8 @@
 #X connect 95 0 17 1;
 #X connect 96 0 73 0;
 #X connect 97 0 49 1;
+#X connect 99 0 1 0;
+#X connect 99 1 8 0;
 #X restore 374 164 pd PLAY/REC;
 #N canvas 180 89 546 768 fiddle 0;
 #X obj 149 20 inlet;
