@@ -1,4 +1,4 @@
-#N canvas 899 262 540 613 10;
+#N canvas 1302 292 540 613 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -458,6 +458,7 @@
 #X obj 39 112 instruments/Bidon 3;
 #X obj 40 137 instruments/Grille 4;
 #X restore 136 425 pd instruments_pof;
+#X obj 158 496 concert/instrument_panel;
 #X connect 1 0 0 0;
 #X connect 2 0 14 0;
 #X connect 4 0 3 0;
@@ -472,6 +473,7 @@
 #X connect 18 0 0 0;
 #X connect 19 0 21 0;
 #X connect 20 0 24 0;
+#X connect 22 0 60 0;
 #X connect 31 0 32 0;
 #X connect 34 0 35 0;
 #X connect 35 0 30 0;
