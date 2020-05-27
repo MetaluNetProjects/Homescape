@@ -1,4 +1,4 @@
-#N canvas 988 292 542 407 10;
+#N canvas 1407 130 542 407 10;
 #X declare -path ../;
 #X obj 49 42 inlet;
 #X msg 116 92 draw 1;
@@ -16,14 +16,14 @@
 #X obj 66 297 t a a;
 #X obj 66 183 t a a, f 27;
 #X obj 225 270 pofvisible 0;
-#X obj 129 207 r concert_show_instrument;
-#X obj 98 245 == -1;
-#X obj 184 245 != -1;
 #X obj 225 291 instrument_panel;
-#X obj 363 212 s concert_show_instrument;
 #X obj 378 181 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X msg 345 182 -1;
+#X obj 98 245 == -1;
+#X obj 184 245 != -1;
+#X obj 129 207 r concert-instrument-show;
+#X obj 363 212 s concert-instrument-show;
 #X connect 0 0 12 0;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
@@ -36,10 +36,10 @@
 #X connect 13 1 9 0;
 #X connect 14 0 11 0;
 #X connect 14 1 15 0;
-#X connect 15 0 19 0;
-#X connect 16 0 17 0;
-#X connect 16 0 18 0;
-#X connect 17 0 11 0;
-#X connect 18 0 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 22 0;
+#X connect 18 0 22 0;
+#X connect 19 0 11 0;
+#X connect 20 0 15 0;
+#X connect 21 0 19 0;
 #X connect 21 0 20 0;
-#X connect 22 0 20 0;
