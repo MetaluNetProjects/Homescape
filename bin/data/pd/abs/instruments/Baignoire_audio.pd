@@ -1,13 +1,12 @@
-#N canvas 48 414 384 309 10;
+#N canvas 48 1401 384 309 10;
 #X obj 148 233 mknob 25 100 0 127 0 1 BAI-0-Note_adjust-snd BAI-0-Note_adjust-rcv
 BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
-#X obj 165 111 s all-note-off;
-#X obj 165 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X floatatom 163 139 5 0 0 0 - - -;
-#X obj 163 163 s BAI-Note_adjust-rcv;
+#X obj 237 145 s all-note-off;
+#X obj 237 121 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 235 173 5 0 0 0 - - -, f 5;
+#X obj 235 197 s BAI-Note_adjust-rcv;
 #X obj 20 138 melo 5;
-#X obj 20 111 melotouch BAI-0 200;
 #X obj 218 259 instrSwitch \$1;
 #X obj 218 280 switch~;
 #X obj 21 197 OutDec2~ \$1;
@@ -15,12 +14,13 @@ BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 20 58 s BAI-0-note1-on-rcv;
 #X obj 20 36 change;
 #X obj 20 15 r concert-instrument-isplaying-\$1;
+#X obj 20 111 melotouch BAI-0 200 /BASS 48;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
-#X connect 5 0 10 0;
-#X connect 6 0 5 0;
-#X connect 7 0 8 0;
-#X connect 10 0 9 0;
-#X connect 10 0 9 1;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 9 0 8 0;
+#X connect 9 0 8 1;
+#X connect 11 0 10 0;
 #X connect 12 0 11 0;
-#X connect 13 0 12 0;
+#X connect 13 0 5 0;
