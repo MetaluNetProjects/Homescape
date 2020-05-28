@@ -1,25 +1,25 @@
-#N canvas 915 81 524 794 10;
-#X floatatom 81 50 5 0 0 0 - - -;
-#X floatatom 115 50 5 0 0 0 - - -;
-#X floatatom 233 101 5 0 0 0 - - -;
-#X floatatom 199 182 5 0 0 0 - - -;
+#N canvas 915 1371 524 794 10;
+#X floatatom 81 50 5 0 0 0 - - -, f 5;
+#X floatatom 115 50 5 0 0 0 - - -, f 5;
+#X floatatom 233 101 5 0 0 0 - - -, f 5;
+#X floatatom 199 182 5 0 0 0 - - -, f 5;
 #X obj 85 120 pofrect 650 345 10 10 0 0;
-#X floatatom 266 183 5 0 0 0 - - -;
+#X floatatom 266 183 5 0 0 0 - - -, f 5;
 #X obj 66 151 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -25 256;
-#X floatatom 139 150 5 0 0 0 - - -;
-#X obj 182 293 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X floatatom 139 150 5 0 0 0 - - -, f 5;
+#X obj 224 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 183 254 route down;
-#X obj 183 273 b;
-#X floatatom 218 390 5 0 0 0 - - -;
-#X floatatom 72 328 5 0 0 0 - - -;
-#X floatatom 112 328 5 0 0 0 - - -;
+#X obj 225 225 route down;
+#X obj 225 244 b;
+#X floatatom 218 390 5 0 0 0 - - -, f 5;
+#X floatatom 72 328 5 0 0 0 - - -, f 5;
+#X floatatom 112 328 5 0 0 0 - - -, f 5;
 #X obj 262 285 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 278 463 route down;
 #X obj 278 482 b;
-#X floatatom 316 389 5 0 0 0 - - -;
+#X floatatom 316 389 5 0 0 0 - - -, f 5;
 #X obj 248 487 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 197 441 poftouch 36 36;
@@ -32,24 +32,24 @@
 -262144 -1 -1 200 256;
 #X obj 113 490 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 153 546 5 0 0 0 - - -;
-#X floatatom 223 545 5 0 0 0 - - -;
-#X floatatom 48 596 5 0 0 0 - - -;
+#X floatatom 153 546 5 0 0 0 - - -, f 5;
+#X floatatom 223 545 5 0 0 0 - - -, f 5;
+#X floatatom 48 596 5 0 0 0 - - -, f 5;
 #X obj 289 587 route up down;
 #X obj 289 608 t b;
 #X obj 329 611 t b;
 #X msg 329 634 1, f 1;
 #X msg 289 630 0, f 1;
 #X obj 289 653 change;
-#X floatatom 289 674 5 0 0 0 - - -;
+#X floatatom 289 674 5 0 0 0 - - -, f 5;
 #X obj 34 538 poftranslate 2 200;
 #X obj 90 586 * 128;
 #X obj 34 70 poftranslate 0 -16;
 #X obj 64 565 imageKnob380 instruments/Watt.png 0.53;
 #X obj 85 97 pofcolor 0.1 0.8 0.1 1;
 #X obj 110 410 pofimage BoutonMachineOff.png 35 35;
-#X floatatom 73 779 5 0 0 0 - - -;
-#X floatatom 126 775 5 0 0 0 - - -;
+#X floatatom 73 779 5 0 0 0 - - -, f 5;
+#X floatatom 126 775 5 0 0 0 - - -, f 5;
 #X obj 223 749 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 179 886 route down;
@@ -72,7 +72,6 @@
 #X obj 261 905 s ASP-0-reset;
 #X obj 264 696 s ASP-0-adjTouch;
 #X obj 87 200 pofimage instruments/Tapis.png 596 294;
-#X obj 45 295 touch/pof_Aspirateur;
 #X obj 34 270 poftranslate 0 0;
 #X obj 350 465 r concert-mute-\$1;
 #X obj 335 488 f;
@@ -85,6 +84,7 @@
 #X obj 333 103 s instrument_touched-\$1;
 #X obj 355 55 r ASP-0-adjTouch;
 #X obj 333 29 r ASP-0-on;
+#X obj 45 295 touch/pof_Instru \$1 ASP 50;
 #X connect 1 0 38 2;
 #X connect 2 0 4 2;
 #X connect 3 0 63 1;
@@ -96,10 +96,10 @@
 #X connect 11 0 41 1;
 #X connect 12 0 59 1;
 #X connect 13 0 59 2;
-#X connect 14 0 72 0;
+#X connect 14 0 71 0;
 #X connect 15 0 16 0;
 #X connect 16 0 18 0;
-#X connect 16 0 67 0;
+#X connect 16 0 66 0;
 #X connect 17 0 41 2;
 #X connect 19 1 15 0;
 #X connect 20 0 41 0;
@@ -148,19 +148,19 @@
 #X connect 56 0 44 0;
 #X connect 57 0 51 0;
 #X connect 58 0 63 0;
-#X connect 58 0 65 0;
+#X connect 58 0 64 0;
 #X connect 59 0 36 0;
 #X connect 59 0 41 0;
 #X connect 63 0 22 0;
-#X connect 65 0 59 0;
-#X connect 65 0 64 0;
-#X connect 66 0 67 1;
+#X connect 64 0 59 0;
+#X connect 64 0 76 0;
+#X connect 65 0 66 1;
+#X connect 66 0 67 0;
 #X connect 67 0 68 0;
-#X connect 68 0 69 0;
-#X connect 70 0 38 0;
-#X connect 71 0 14 0;
-#X connect 72 0 21 0;
-#X connect 72 1 20 0;
-#X connect 73 0 74 0;
-#X connect 75 0 73 1;
-#X connect 76 0 73 0;
+#X connect 69 0 38 0;
+#X connect 70 0 14 0;
+#X connect 71 0 21 0;
+#X connect 71 1 20 0;
+#X connect 72 0 73 0;
+#X connect 74 0 72 1;
+#X connect 75 0 72 0;

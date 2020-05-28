@@ -1,4 +1,4 @@
-#N canvas 2495 947 564 794 10;
+#N canvas 1356 1371 564 794 10;
 #X floatatom 124 43 5 0 0 0 - - -, f 5;
 #X floatatom 242 86 5 0 0 0 - - -, f 5;
 #X floatatom 205 171 5 0 0 0 - - -, f 5;
@@ -82,7 +82,7 @@
 #X obj 403 466 multiOR, f 23;
 #X obj 403 490 s instrument_touched-\$1;
 #X obj 30 249 poftranslate 0 0;
-#X obj 46 304 touch/pof_Instru \$1 BID 60;
+#X obj 46 304 touch/pof_Instru \$1 BID 90;
 #X connect 0 0 37 2;
 #X connect 1 0 3 2;
 #X connect 2 0 58 1;
