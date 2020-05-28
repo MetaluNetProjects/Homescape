@@ -15,7 +15,7 @@
 #X floatatom 239 339 5 0 0 0 - - -, f 5;
 #X floatatom 66 300 5 0 0 0 - - -, f 5;
 #X floatatom 112 299 5 0 0 0 - - -, f 5;
-#X obj 305 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 305 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 239 412 route down;
 #X obj 239 431 b;
@@ -68,7 +68,6 @@
 #X obj 27 319 poftranslate 309 -85;
 #X obj 80 175 pofimage instruments/MurDeVerres.png 596 294;
 #X obj 27 230 poftranslate 0 0;
-#X obj 84 593 s VER-0-Note_adjust-rcv;
 #X obj 275 656 s VER-0-adjTouch;
 #X obj 299 434 r concert-mute-\$1;
 #X obj 284 457 f;
@@ -79,10 +78,11 @@
 #X obj 305 259 sel 0 1;
 #X obj 336 67 multiOR, f 23;
 #X obj 336 91 s instrument_touched-\$1;
-#X obj 358 43 r VER-0-adjTouch;
+#X obj 411 13 r VER-0-adjTouch;
 #X obj 336 18 r VER-0-on;
 #X obj 126 895 s VER-0-reset;
 #X obj 49 258 touch/pof_Instru \$1 VER 40;
+#X obj 84 593 s VER-0-Note_adjust;
 #X connect 1 0 37 2;
 #X connect 2 0 4 2;
 #X connect 3 0 59 1;
@@ -94,9 +94,9 @@
 #X connect 11 0 40 1;
 #X connect 12 0 58 1;
 #X connect 13 0 58 2;
-#X connect 14 0 69 0;
+#X connect 14 0 68 0;
 #X connect 15 0 16 0;
-#X connect 16 0 64 0;
+#X connect 16 0 63 0;
 #X connect 17 0 40 2;
 #X connect 18 1 15 0;
 #X connect 19 0 40 0;
@@ -115,10 +115,10 @@
 #X connect 31 0 33 0;
 #X connect 32 0 33 0;
 #X connect 33 0 34 0;
-#X connect 33 0 62 0;
+#X connect 33 0 61 0;
 #X connect 35 0 56 0;
 #X connect 35 0 38 0;
-#X connect 36 0 61 0;
+#X connect 36 0 75 0;
 #X connect 37 0 57 0;
 #X connect 38 0 27 0;
 #X connect 38 0 36 0;
@@ -131,7 +131,7 @@
 #X connect 44 0 45 0;
 #X connect 45 0 49 0;
 #X connect 45 0 52 0;
-#X connect 45 0 74 0;
+#X connect 45 0 73 0;
 #X connect 46 0 48 0;
 #X connect 46 1 47 0;
 #X connect 47 0 50 0;
@@ -150,14 +150,13 @@
 #X connect 58 0 40 0;
 #X connect 59 0 21 0;
 #X connect 60 0 58 0;
-#X connect 60 0 75 0;
-#X connect 63 0 64 1;
+#X connect 60 0 74 0;
+#X connect 62 0 63 1;
+#X connect 63 0 64 0;
 #X connect 64 0 65 0;
-#X connect 65 0 66 0;
-#X connect 67 0 37 0;
-#X connect 68 0 14 0;
-#X connect 69 0 20 0;
-#X connect 69 1 19 0;
-#X connect 70 0 71 0;
-#X connect 72 0 70 1;
-#X connect 73 0 70 0;
+#X connect 66 0 37 0;
+#X connect 67 0 14 0;
+#X connect 68 0 20 0;
+#X connect 68 1 19 0;
+#X connect 69 0 70 0;
+#X connect 72 0 69 0;

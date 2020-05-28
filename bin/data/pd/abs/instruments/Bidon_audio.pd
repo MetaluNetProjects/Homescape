@@ -1,12 +1,12 @@
-#N canvas 841 1525 413 354 10;
-#X obj 265 196 mknob 25 100 0 127 0 1 BID-0-Note_adjust-snd BID-0-Note_adjust-rcv
-BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 2709 1;
+#N canvas 2617 1346 413 354 10;
+#X obj 245 282 mknob 25 100 0 127 0 1 BID-0-Note_adjust-snd BID-0-Note_adjust-rcv
+BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 9 69 melo 3;
-#X obj 265 117 s all-note-off;
-#X obj 265 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 249 102 s all-note-off;
+#X obj 249 78 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 196 129 5 0 0 0 - - -, f 5;
-#X obj 196 151 s BID-0-Note_adjust-rcv;
+#X floatatom 80 68 5 0 0 0 - - -, f 5;
+#X obj 80 90 s BID-0-Note_adjust-rcv;
 #X obj 103 222 instrSwitch \$1;
 #X obj 103 243 switch~;
 #X obj 9 139 OutDec2~ \$1;
@@ -15,6 +15,11 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 2709 1;
 #X obj 216 31 change;
 #X obj 216 10 r concert-instrument-isplaying-\$1;
 #X obj 8 14 melotouch BID-0 30 /CHORD 48;
+#X obj 234 130 r BID-0-Note_adjust;
+#X obj 253 241 f;
+#X obj 223 205 del 100;
+#X obj 234 155 t b b f;
+#X msg 243 181 stop;
 #X connect 1 0 10 0;
 #X connect 3 0 2 0;
 #X connect 4 0 5 0;
@@ -24,3 +29,10 @@ BID-0-Note_adjust -2 -6 0 8 -257985 -1 -1 2709 1;
 #X connect 11 0 9 0;
 #X connect 12 0 11 0;
 #X connect 13 0 1 0;
+#X connect 14 0 17 0;
+#X connect 15 0 0 0;
+#X connect 16 0 15 0;
+#X connect 17 0 16 0;
+#X connect 17 1 18 0;
+#X connect 17 2 15 1;
+#X connect 18 0 16 0;
