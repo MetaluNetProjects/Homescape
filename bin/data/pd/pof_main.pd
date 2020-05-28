@@ -1,4 +1,4 @@
-#N canvas 1144 195 540 586 10;
+#N canvas 1144 1371 540 586 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -20,12 +20,12 @@
 #X obj 156 44 route window;
 #X obj 156 66 unpack f f;
 #X obj 159 116 min;
-#X floatatom 193 167 5 0 0 0 - - -;
+#X floatatom 193 167 5 0 0 0 - - -, f 5;
 #X obj 100 152 pofscale 1 1;
 #X text 185 115 auto-scale to screen;
 #X obj 127 249 s mainHead;
-#X floatatom 139 402 5 0 0 0 - - -;
-#X floatatom 179 399 5 0 0 0 - - -;
+#X floatatom 139 402 5 0 0 0 - - -, f 5;
+#X floatatom 179 399 5 0 0 0 - - -, f 5;
 #X obj 100 190 t a a;
 #X obj 379 113 loadbang;
 #X obj 305 172 pofbang;
@@ -64,11 +64,11 @@
 #X obj 542 268 route monitor;
 #X msg 466 223 setmonitor 1;
 #X obj 554 157 loadbang;
-#X floatatom 542 357 5 0 0 1 images_to_load_from_disk - -;
-#X floatatom 576 335 5 0 0 1 images_to_load_from_web - -;
+#X floatatom 542 357 5 0 0 1 images_to_load_from_disk - -, f 5;
+#X floatatom 576 335 5 0 0 1 images_to_load_from_web - -, f 5;
 #X obj 497 193 pofhead;
 #X obj 542 292 unpack f f f;
-#X floatatom 611 314 5 0 0 1 images_loaded - -;
+#X floatatom 611 314 5 0 0 1 images_loaded - -, f 5;
 #X obj 542 381 sel 0;
 #X obj 446 194 del 100;
 #X obj 542 457 s APP-INIT;
@@ -315,7 +315,7 @@
 #X obj 461 136 random;
 #X msg 461 65 getnum /;
 #X obj 461 89 pofxml sets;
-#X floatatom 507 141 5 0 0 0 - - -;
+#X floatatom 507 141 5 0 0 0 - - -, f 5;
 #X msg 461 161 get /set[\$1][@file];
 #X obj 461 190 pofxml sets;
 #X obj 461 212 route get;
@@ -326,10 +326,10 @@
 #X obj 315 169 t b f;
 #X obj 315 191 random;
 #X msg 315 120 getnum /;
-#X floatatom 361 196 5 0 0 0 - - -;
+#X floatatom 361 196 5 0 0 0 - - -, f 5;
 #X obj 315 267 route get;
 #X obj 315 289 symbol;
-#X symbolatom 383 290 10 0 0 0 - - -;
+#X symbolatom 383 290 10 0 0 0 - - -, f 10;
 #X obj 315 144 pofxml modes;
 #X msg 315 216 get /mode[\$1][@file];
 #X obj 315 245 pofxml modes;

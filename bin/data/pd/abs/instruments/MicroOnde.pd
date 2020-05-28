@@ -1,34 +1,34 @@
-#N canvas 718 81 650 794 10;
-#X floatatom 74 49 5 0 0 0 - - -;
-#X floatatom 122 56 5 0 0 0 - - -;
-#X floatatom 240 99 5 0 0 0 - - -;
-#X floatatom 213 182 5 0 0 0 - - -;
+#N canvas 718 1371 650 881 10;
+#X floatatom 74 49 5 0 0 0 - - -, f 5;
+#X floatatom 122 56 5 0 0 0 - - -, f 5;
+#X floatatom 240 99 5 0 0 0 - - -, f 5;
+#X floatatom 213 182 5 0 0 0 - - -, f 5;
 #X obj 27 75 poftranslate 0 -16;
 #X obj 78 125 pofrect 650 345 10 10 0 0;
 #X obj 78 102 pofcolor 0.1 0.8 0.1 1;
-#X floatatom 363 183 5 0 0 0 - - -;
+#X floatatom 363 183 5 0 0 0 - - -, f 5;
 #X obj 69 333 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 206 256;
 #X obj 146 330 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -29 256;
 #X obj 110 312 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 159 362 5 0 0 0 - - -;
-#X floatatom 205 364 5 0 0 0 - - -;
-#X floatatom 65 421 5 0 0 0 - - -;
+#X floatatom 159 362 5 0 0 0 - - -, f 5;
+#X floatatom 205 364 5 0 0 0 - - -, f 5;
+#X floatatom 65 421 5 0 0 0 - - -, f 5;
 #X obj 88 587 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 2 256;
 #X obj 166 556 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 100 256;
 #X obj 109 514 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 187 579 5 0 0 0 - - -;
-#X floatatom 235 591 5 0 0 0 - - -;
-#X floatatom 73 661 5 0 0 0 - - -;
-#X floatatom 263 363 5 0 0 0 - - -;
+#X floatatom 187 579 5 0 0 0 - - -, f 5;
+#X floatatom 235 591 5 0 0 0 - - -, f 5;
+#X floatatom 73 661 5 0 0 0 - - -, f 5;
+#X floatatom 263 363 5 0 0 0 - - -, f 5;
 #X obj 58 156 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X floatatom 124 154 5 0 0 0 - - -;
+#X floatatom 124 154 5 0 0 0 - - -, f 5;
 #X obj 27 608 poftranslate -124 68;
 #X obj 68 226 poftouch 658 307;
 #X obj 161 294 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -44,7 +44,7 @@
 #X msg 328 705 1, f 1;
 #X msg 291 704 0, f 1;
 #X obj 291 727 change;
-#X floatatom 291 748 5 0 0 0 - - -;
+#X floatatom 291 748 5 0 0 0 - - -, f 5;
 #X obj 260 786 s MOminTouch;
 #N canvas 725 1172 450 358 MOmin 0;
 #X obj 126 57 inlet;
@@ -57,14 +57,14 @@
 #X msg 314 463 1, f 1;
 #X msg 277 462 0, f 1;
 #X obj 277 485 change;
-#X floatatom 277 506 5 0 0 0 - - -;
+#X floatatom 277 506 5 0 0 0 - - -, f 5;
 #X obj 249 532 s MOwattTouch;
 #N canvas 725 1172 450 358 MOwatt 0;
 #X obj 126 57 inlet;
 #X obj 148 114 * 20;
 #X obj 126 81 t f f;
 #X obj 148 139 i;
-#X floatatom 134 172 5 0 0 0 - - -;
+#X floatatom 134 172 5 0 0 0 - - -, f 5;
 #X msg 23 229 0, f 1;
 #X obj 216 153 moses 16;
 #X obj 207 187 t b;
@@ -75,7 +75,7 @@
 #X msg 243 243 1, f 1;
 #X msg 288 245 2, f 1;
 #X obj 233 277 change;
-#X floatatom 247 325 5 0 0 0 - - -;
+#X floatatom 247 325 5 0 0 0 - - -, f 5;
 #X obj 44 132 s MOwatt;
 #X obj 136 301 s nbDivMOwatt;
 #X connect 0 0 2 0;
@@ -107,33 +107,33 @@
 -262144 -1 -1 -101 256;
 #X obj 107 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 139 64 5 0 0 0 - - -;
-#X floatatom 187 76 5 0 0 0 - - -;
-#X floatatom 72 152 5 0 0 0 - - -;
+#X floatatom 139 64 5 0 0 0 - - -, f 5;
+#X floatatom 187 76 5 0 0 0 - - -, f 5;
+#X floatatom 72 152 5 0 0 0 - - -, f 5;
 #X obj 162 348 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -1 256;
 #X obj 240 317 nbx 6 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 100 256;
 #X obj 183 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 261 340 5 0 0 0 - - -;
-#X floatatom 309 352 5 0 0 0 - - -;
-#X floatatom 138 413 5 0 0 0 - - -;
-#X floatatom 252 94 5 0 0 0 - - -;
+#X floatatom 261 340 5 0 0 0 - - -, f 5;
+#X floatatom 309 352 5 0 0 0 - - -, f 5;
+#X floatatom 138 413 5 0 0 0 - - -, f 5;
+#X floatatom 252 94 5 0 0 0 - - -, f 5;
 #X obj 365 422 route up down;
 #X obj 365 443 t b;
 #X obj 402 443 t b;
 #X msg 402 466 1, f 1;
 #X msg 365 465 0, f 1;
 #X obj 365 488 change;
-#X floatatom 365 509 5 0 0 0 - - -;
+#X floatatom 365 509 5 0 0 0 - - -, f 5;
 #X obj 284 150 route up down;
 #X obj 284 171 t b;
 #X obj 321 171 t b;
 #X msg 321 194 1, f 1;
 #X msg 284 193 0, f 1;
 #X obj 284 216 change;
-#X floatatom 284 237 5 0 0 0 - - -;
+#X floatatom 284 237 5 0 0 0 - - -, f 5;
 #X obj 57 115 imageKnob380 instruments/Watt.png 0.48;
 #X obj 131 396 imageKnob380 instruments/Watt.png 0.47;
 #X obj 21 545 outlet;
@@ -151,7 +151,7 @@
 #N canvas 725 1172 450 358 MOnim 0;
 #X obj 126 57 inlet;
 #X obj 140 143 s fragseq2-DivOption;
-#X floatatom 106 202 5 0 0 0 - - -;
+#X floatatom 106 202 5 0 0 0 - - -, f 5;
 #X obj 130 99 * 40;
 #X connect 0 0 3 0;
 #X connect 3 0 1 0;
@@ -200,13 +200,13 @@
 #X connect 32 0 30 0;
 #X connect 32 0 29 0;
 #X restore 27 734 pd potars-gauche;
-#N canvas 715 163 556 712 boutons 0;
+#N canvas 715 1371 556 712 boutons 0;
 #X obj 38 28 inlet head;
-#X floatatom 190 279 5 0 0 0 - - -;
-#X floatatom 79 159 5 0 0 0 - - -;
-#X floatatom 122 157 5 0 0 0 - - -;
-#X floatatom 77 388 5 0 0 0 - - -;
-#X floatatom 130 384 5 0 0 0 - - -;
+#X floatatom 190 279 5 0 0 0 - - -, f 5;
+#X floatatom 79 159 5 0 0 0 - - -, f 5;
+#X floatatom 122 157 5 0 0 0 - - -, f 5;
+#X floatatom 77 388 5 0 0 0 - - -, f 5;
+#X floatatom 130 384 5 0 0 0 - - -, f 5;
 #X obj 190 181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 152 83 t b b;
@@ -224,20 +224,20 @@
 #X msg 106 535 set BoutonMachineTouch.png;
 #X msg 190 226 set BoutonMachineOff.png;
 #X msg 209 248 set BoutonMachineOn.png;
-#X floatatom 248 273 5 0 0 0 - - -;
+#X floatatom 248 273 5 0 0 0 - - -, f 5;
 #X msg 152 106 reserve BoutonMachineOn.png \, reserve BoutonMachineOff.png
 ;
 #X obj 190 398 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 154 627 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 1220 1172 700 300 DivEssorage 0;
+#N canvas 1220 1371 700 300 DivEssorage 0;
 #X obj 85 35 inlet;
 #X obj 85 122 hradio 15 1 0 5 nbDivMOessorage-snd nbDivMOessorage-rcv
 nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X obj 77 65 i;
 #X obj 108 65 + 1;
-#X floatatom 257 213 5 0 0 0 - - -;
+#X floatatom 257 213 5 0 0 0 - - -, f 5;
 #X obj 140 60 loadbang;
 #X obj 85 147 sel 0 1 2 3 4;
 #X obj 77 87 mod 5;
@@ -252,7 +252,7 @@ nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X msg 294 70 0;
 #X obj 108 242 s fragseq2-DivEssorage;
 #X obj 235 122 s MOessorage-light;
-#X msg 141 82 0;
+#X msg 141 82 2;
 #X connect 0 0 2 0;
 #X connect 0 0 14 0;
 #X connect 1 0 6 0;
@@ -334,13 +334,13 @@ nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X connect 38 0 18 0;
 #X connect 38 1 19 0;
 #X restore 27 759 pd boutons;
-#N canvas 3032 57 522 1022 LedsEssorage 0;
+#N canvas 1398 1371 522 991 LedsEssorage 0;
 #X obj 84 97 inlet head;
-#X floatatom 129 334 5 0 0 0 - - -;
-#X floatatom 69 282 5 0 0 0 - - -;
-#X floatatom 132 282 5 0 0 0 - - -;
-#X floatatom 168 154 5 0 0 0 - - -;
-#X floatatom 221 150 5 0 0 0 - - -;
+#X floatatom 129 334 5 0 0 0 - - -, f 5;
+#X floatatom 69 282 5 0 0 0 - - -, f 5;
+#X floatatom 132 282 5 0 0 0 - - -, f 5;
+#X floatatom 168 154 5 0 0 0 - - -, f 5;
+#X floatatom 221 150 5 0 0 0 - - -, f 5;
 #X obj 229 320 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 225 342 sel 0 1;
@@ -351,16 +351,16 @@ nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X obj 287 129 sel 1 0;
 #X obj 11 161 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 179 334 5 0 0 0 - - -;
-#X floatatom 245 202 5 0 0 0 - - -;
-#X floatatom 344 202 5 0 0 0 - - -;
-#X floatatom 145 491 5 0 0 0 - - -;
-#X floatatom 38 438 5 0 0 0 - - -;
-#X floatatom 83 435 5 0 0 0 - - -;
+#X floatatom 179 334 5 0 0 0 - - -, f 5;
+#X floatatom 245 202 5 0 0 0 - - -, f 5;
+#X floatatom 344 202 5 0 0 0 - - -, f 5;
+#X floatatom 145 491 5 0 0 0 - - -, f 5;
+#X floatatom 38 438 5 0 0 0 - - -, f 5;
+#X floatatom 83 435 5 0 0 0 - - -, f 5;
 #X obj 245 477 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 241 499 sel 0 1;
-#X floatatom 195 491 5 0 0 0 - - -;
+#X floatatom 195 491 5 0 0 0 - - -, f 5;
 #X msg 5 254 reserve LedOn.png \, reserve LedOff.png;
 #X msg 306 154 set LedOff.png;
 #X msg 287 177 set LedOn.png;
@@ -368,22 +368,22 @@ nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X msg 228 389 set LedOn.png;
 #X msg 240 523 set LedOff.png;
 #X msg 244 546 set LedOn.png;
-#X floatatom 136 660 5 0 0 0 - - -;
-#X floatatom 38 609 5 0 0 0 - - -;
-#X floatatom 83 606 5 0 0 0 - - -;
+#X floatatom 136 660 5 0 0 0 - - -, f 5;
+#X floatatom 38 609 5 0 0 0 - - -, f 5;
+#X floatatom 83 606 5 0 0 0 - - -, f 5;
 #X obj 236 646 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 232 668 sel 0 1;
-#X floatatom 186 660 5 0 0 0 - - -;
+#X floatatom 186 660 5 0 0 0 - - -, f 5;
 #X msg 231 692 set LedOff.png;
 #X msg 235 715 set LedOn.png;
-#X floatatom 136 836 5 0 0 0 - - -;
-#X floatatom 46 792 5 0 0 0 - - -;
-#X floatatom 91 789 5 0 0 0 - - -;
+#X floatatom 136 836 5 0 0 0 - - -, f 5;
+#X floatatom 46 792 5 0 0 0 - - -, f 5;
+#X floatatom 91 789 5 0 0 0 - - -, f 5;
 #X obj 236 822 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 232 844 sel 0 1;
-#X floatatom 186 836 5 0 0 0 - - -;
+#X floatatom 186 836 5 0 0 0 - - -, f 5;
 #X msg 231 868 set LedOff.png;
 #X msg 235 891 set LedOn.png;
 #X msg 325 813 1, f 1;
@@ -417,11 +417,11 @@ nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X obj 12 461 poftranslate 0 13;
 #X obj 12 632 poftranslate 0 14;
 #X obj 105 188 poftranslate -32 -23;
-#X obj 219 46 r nbDivMOessorage-snd;
-#X obj 334 277 r nbDivMOessorage-snd;
-#X obj 323 406 r nbDivMOessorage-snd;
+#X obj 335 277 r nbDivMOessorage-snd;
+#X obj 324 406 r nbDivMOessorage-snd;
 #X obj 321 571 r nbDivMOessorage-snd;
 #X obj 323 770 r nbDivMOessorage-snd;
+#X obj 219 46 r nbDivMOessorage-snd;
 #X connect 0 0 75 0;
 #X connect 1 0 66 1;
 #X connect 2 0 72 1;
@@ -507,11 +507,11 @@ nbDivMOessorage 0 -8 0 10 -262144 -1 -1 0;
 #X connect 74 0 70 0;
 #X connect 75 0 65 0;
 #X connect 75 0 72 0;
-#X connect 76 0 64 0;
-#X connect 77 0 60 0;
-#X connect 78 0 55 0;
-#X connect 79 0 52 0;
-#X connect 80 0 48 0;
+#X connect 76 0 60 0;
+#X connect 77 0 55 0;
+#X connect 78 0 52 0;
+#X connect 79 0 48 0;
+#X connect 80 0 64 0;
 #X restore 27 783 pd LedsEssorage;
 #X obj 27 17 instrument_pof_common \$1 Micro-onde;
 #X obj 373 297 r MOttawTouch;
