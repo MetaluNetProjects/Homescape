@@ -1,4 +1,4 @@
-#N canvas 788 1371 1077 820 10;
+#N canvas 339 81 1077 714 10;
 #X obj 9 492 r CLOCK;
 #X obj 64 589 ndmetro 4 4;
 #X floatatom 125 705 5 0 0 0 - - -, f 5;
@@ -9,7 +9,7 @@
 #X obj 64 670 s \$0-step;
 #X obj 51 55 seqstep \$0 0;
 #X obj 51 38 nbx 5 14 1 32 0 0 \$0-denum \$0-denum denum 0 -8 0 10
--262144 -1 -1 32 256;
+-262144 -1 -1 4 256;
 #X obj 122 330 r \$0-denum;
 #X obj 154 395 t b f;
 #X msg 16 39 1;
@@ -54,9 +54,9 @@
 #X obj 276 539 * 40;
 #X obj 769 495 r \$0-denum;
 #X obj 185 37 nbx 5 14 1 300 0 0 \$0-bpm \$0-bpm bpm 0 -8 0 10 -262144
--1 -1 116 256;
+-1 -1 75 256;
 #X obj 241 36 tgl 15 0 \$0-bpm_on \$0-bpm_on bpm_on 0 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 784 515 r \$0-bpm;
 #X obj 849 514 r \$0-bpm_on;
 #X obj 710 465 + 32;
@@ -74,70 +74,70 @@
 #X obj 457 547 spigot;
 #X obj 457 505 r \$0-bpm;
 #X obj 363 37 tgl 15 0 \$1-play \$1-play \$1-play 0 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 117 611 r \$1-play;
 #X obj 64 611 spigot;
 #X obj 457 569 s /BPM;
 #X obj 278 37 nbx 5 14 1 300 0 0 /BPM /BPM /BPM(current) 0 -8 0 10
--262144 -1 -1 130 256;
+-262144 -1 -1 75 256;
 #X obj 496 525 r \$0-bpm_on;
 #X msg 773 323 31;
-#N canvas 5 74 450 300 table 0;
+#N canvas 1 81 450 300 table 0;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-table 1320 float 2;
 #X coords 0 1 1320 -1 200 140 1 0 0;
 #X restore 36 102 graph;
 #X restore 843 305 pd table;
 #X obj 494 25 hradio 15 1 0 12 \$1-recall \$1-recall \$1-recall 0 -8
-0 10 -4034 -1 -1 0;
+0 10 -4034 -1 -1 2;
 #X obj 684 25 hradio 15 1 0 12 \$1-store \$1-store \$1-store 0 -8 0
-10 -258113 -1 -1 3;
+10 -258113 -1 -1 11;
 #X obj 330 492 r \$1-recall;
 #X obj 590 304 r \$1-store;
 #X msg 628 4 set \$1;
-#N canvas 403 103 512 371 \$0-file 0;
-#X obj 43 239 soundfiler;
-#X obj 210 180 list prepend \$0-table;
-#X obj 43 181 list prepend \$0-table;
-#X msg 43 204 read seq\$2.wav \$1;
-#X msg 210 201 write -bytes 4 -wave seq\$2.wav \$1;
-#X obj 43 112 hradio 15 1 0 12 \$1-load \$1-load \$1-load 0 -8 0 10
--4034 -1 -1 0;
-#X obj 290 114 hradio 15 1 0 12 \$1-save \$1-save \$1-save 0 -8 0 10
+#N canvas 234 81 568 321 \$0-file 1;
+#X obj 52 193 soundfiler;
+#X obj 219 134 list prepend \$0-table;
+#X obj 52 135 list prepend \$0-table;
+#X msg 52 158 read seq\$2.wav \$1;
+#X msg 219 155 write -bytes 4 -wave seq\$2.wav \$1;
+#X obj 52 66 hradio 15 1 0 12 \$1-load \$1-load \$1-load 0 -8 0 10
+-4034 -1 -1 2;
+#X obj 299 68 hradio 15 1 0 12 \$1-save \$1-save \$1-save 0 -8 0 10
 -258113 -1 -1 2;
-#X obj 210 157 r \$1-save;
-#X obj 43 159 r \$1-load;
-#X msg 187 67 set \$1;
-#X text 307 130 1;
-#X text 324 130 2;
-#X text 338 130 3;
-#X text 353 130 4;
-#X text 369 130 5;
-#X text 384 130 6;
-#X text 401 130 7;
-#X text 415 130 8;
-#X text 430 130 9;
-#X text 443 130 10;
-#X text 459 130 11;
-#X text 57 129 1;
-#X text 74 129 2;
-#X text 88 129 3;
-#X text 103 129 4;
-#X text 119 129 5;
-#X text 134 129 6;
-#X text 151 129 7;
-#X text 165 129 8;
-#X text 180 129 9;
-#X text 193 129 10;
-#X text 209 129 11;
-#X obj 282 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 219 111 r \$1-save;
+#X obj 52 113 r \$1-load;
+#X msg 196 21 set \$1;
+#X text 316 84 1;
+#X text 333 84 2;
+#X text 347 84 3;
+#X text 362 84 4;
+#X text 378 84 5;
+#X text 393 84 6;
+#X text 410 84 7;
+#X text 424 84 8;
+#X text 439 84 9;
+#X text 452 84 10;
+#X text 468 84 11;
+#X text 66 83 1;
+#X text 83 83 2;
+#X text 97 83 3;
+#X text 112 83 4;
+#X text 128 83 5;
+#X text 143 83 6;
+#X text 160 83 7;
+#X text 174 83 8;
+#X text 189 83 9;
+#X text 202 83 10;
+#X text 218 83 11;
+#X obj 291 25 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 45 8 loadbang;
-#X msg 61 72 0;
-#X obj 43 29 del 250;
-#X obj 41 50 t b b;
-#X obj 28 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 427 198 r mainSeq-load;
+#X obj 406 221 list;
+#X obj 406 242 list trim;
+#X obj 406 266 s mainSeq-save;
+#X obj 406 181 bng 15 250 50 0 empty empty saveSong 17 7 0 10 -258113
+-1 -1;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
@@ -146,17 +146,15 @@
 #X connect 7 0 1 0;
 #X connect 8 0 2 0;
 #X connect 9 0 5 0;
-#X connect 33 0 35 0;
-#X connect 34 0 5 0;
+#X connect 33 0 34 1;
+#X connect 34 0 35 0;
 #X connect 35 0 36 0;
-#X connect 36 0 5 0;
-#X connect 36 1 34 0;
-#X connect 37 0 35 0;
-#X restore 941 175 pd \$0-file;
+#X connect 37 0 34 0;
+#X restore 931 132 pd \$0-file;
 #X obj 826 10 bng 15 250 50 0 empty empty file 17 7 0 10 -257985 -1
 -1;
-#X msg 908 126 vis 0 \, vis 1;
-#X obj 908 148 s pd-\$0-file;
+#X msg 946 63 vis 0 \, vis 1;
+#X obj 946 85 s pd-\$0-file;
 #X obj 111 37 nbx 5 14 0 1e+06 0 0 \$0-loop \$0-loop loop 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 64 635 mod 4;
@@ -194,19 +192,7 @@
 #X text 820 41 10;
 #X text 836 41 11;
 #X text 851 41 12;
-#X obj 944 4 loadbang;
-#X msg 972 90 0;
-#X obj 945 44 del 300;
-#X obj 944 67 t b b;
-#X floatatom 21 589 5 0 0 0 - - -, f 5;
-#X obj 841 597 loadbang;
-#X msg 856 697 1, f 1;
-#X obj 860 625 del 500;
-#X obj 864 663 t b b;
-#X msg 882 697 0, f 1;
-#X obj 783 744 s \$1-play;
 #X connect 0 0 1 0;
-#X connect 0 0 127 0;
 #X connect 1 0 72 0;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
@@ -289,13 +275,4 @@
 #X connect 97 1 64 0;
 #X connect 97 2 63 0;
 #X connect 97 3 98 0;
-#X connect 124 0 78 0;
-#X connect 125 0 126 0;
-#X connect 126 0 78 0;
-#X connect 126 1 124 0;
-#X connect 129 0 133 0;
-#X connect 130 0 131 0;
-#X connect 131 0 129 0;
-#X connect 131 1 132 0;
-#X connect 132 0 133 0;
 #X coords 0 -1 1 1 820 265 1 50 10;
