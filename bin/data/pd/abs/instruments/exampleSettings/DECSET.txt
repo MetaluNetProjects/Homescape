@@ -61,13 +61,6 @@ GRI fragseq4-posrnd 0.620253 16 0.518987 0.518987 0.518987 0.506329
 GRI fragseq4-speedrnd 1 16 0 0 0.265823 0.265823 1 1 1 1 0 0 0 0 0
 0 0 0;
 GRI fragseq4-speed 1 16 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0;
-pnip1-patternMAX 2 0;
-pnip1 pnip1Reset 1 16 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-pnip1 pnip1Oneway 0 16 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
-pnip1 pnip1Over 1 16 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
-pnip1 pnip1T 0.646465 16 0.646465 0.646465 0.646465 0 0 0 0 0 0 0 0
-0 0 0 0 0;
-pnip1 pnip1Fedd 1 16 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
 SEQ2-patternMAX 3 0;
 SEQ2 pha1 rate 0.717172 16 0.40404 0.717172 0.717172 0 0 0 0 0 0 0
 0 0 0 0 0 0;
@@ -94,8 +87,18 @@ SEQ2 disto1 vol 0.755657 16 1 0.808081 0.737374 0.464646 0 0 0 0 0
 0 0 0 0 0 0 0;
 SEQ2 disto1 disto 0.680707 16 0 0.373737 0.787879 0.838384 0 0 0 0
 0 0 0 0 0 0 0 0;
+decoupeur-setting2-Hmin 0.265823 0;
+decoupeur-setting2-Lmin 0.177215 0;
+decoupeur-setting2-Seuil 0.0506329 0;
+pnip1-patternMAX 2 0;
+pnip1 pnip1Reset 1 16 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+pnip1 pnip1Oneway 1 16 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
+pnip1 pnip1Over 1 16 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
+pnip1 pnip1T 0.242424 16 0.262626 0.262626 0.242424 0 0 0 0 0 0 0 0
+0 0 0 0 0;
+pnip1 pnip1Fedd 1 16 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
 SEQ1-patternMAX 15 0;
-SEQ1 fd1 vol 23.0769 16 23.0769 23.0769 23.0769 23.0769 23.0769 42.3077
+SEQ1 fd1 vol 29.4768 16 23.0769 23.0769 23.0769 23.0769 23.0769 42.3077
 46.1538 42.3077 26.9231 38.4615 26.9231 50 73.0769 38.4615 38.4615
 38.4615;
 SEQ1 fd1 time 0.711949 16 0.711949 0.711949 0.711949 0.711949 0.711949
@@ -153,38 +156,17 @@ SEQ1 fragseq1-denum 4 16 1 3 3 4 4 6 3 4 1 3 3 4 5 0 1 6;
 SEQ1 fragseq1-vol 0.745763 16 0.745763 0.745763 0.745763 0.745763 0.745763
 0.745763 0.627119 0.627119 0.694915 0.694915 0.694915 0.694915 0.694915
 0.694915 0.694915 0.694915;
-SEQ1 fragseq1-palinmesure 0 16 0 0 0 0 1 3 0 3 0 1 3 0 0 4 4 4;
+SEQ1 fragseq1-palinmesure 1.66558 16 0 0 0 0 1 3 0 3 0 1 3 0 0 4 4
+4;
 SEQ1 fragseq1-constance 50 16 50 50 50 50 50 50 50 50 0 50 0 0 0 0
 0 0;
 SEQ1 fragseq1-pitch 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 24;
-SEQ1 fragseq1-fragdenum 1.15044 16 0 0 2 1 2 2 0 1 1 1 3 1 3 0 3 3
-;
-SEQ1 fragseq1-timemode 2 16 2 2 2 2 3 2 3 3 3 3 3 3 3 3 3 3;
+SEQ1 fragseq1-fragdenum 2 16 0 0 2 1 2 2 0 1 1 1 3 1 3 0 3 3;
+SEQ1 fragseq1-timemode 2.66721 16 2 2 2 2 3 2 3 3 3 3 3 3 3 3 3 3;
 SEQ1 fragseq1-smooth 3.09677 16 3.09677 3.09677 3.09677 3.09677 3.09677
 3.09677 3.27073 3.27073 0 0 2.77613 0 0 0 5.06436 2.77613;
 SEQ1 fragseq1-mode 3 16 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2;
 SEQ1 fragseq1-amorti 0 16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-decoupeur-setting2-Hmin 0.265823 0;
-decoupeur-setting2-Lmin 0.177215 0;
-decoupeur-setting2-Seuil 0.0506329 0;
 decoupeur-setting1-Hmin 0.139241 0;
 decoupeur-setting1-Lmin 0.177215 0;
 decoupeur-setting1-Seuil 0.139241 0;
-decoupeur-setting8-Hmin 0.329114 0;
-decoupeur-setting8-Lmin 0.177215 0;
-decoupeur-setting8-Seuil 0.35443 0;
-decoupeur-setting7-Hmin 0.278481 0;
-decoupeur-setting7-Lmin 0.2 0;
-decoupeur-setting7-Seuil 0.405063 0;
-decoupeur-setting6-Hmin 0.21519 0;
-decoupeur-setting6-Lmin 0.189873 0;
-decoupeur-setting6-Seuil 0.493671 0;
-decoupeur-setting5-Hmin 0.0886076 0;
-decoupeur-setting5-Lmin 0.151899 0;
-decoupeur-setting5-Seuil 0.113924 0;
-decoupeur-setting4-Hmin 0.265823 0;
-decoupeur-setting4-Lmin 0.113924 0;
-decoupeur-setting4-Seuil 0.202532 0;
-decoupeur-setting3-Hmin 0.278481 0;
-decoupeur-setting3-Lmin 0.164557 0;
-decoupeur-setting3-Seuil 0.303797 0;
