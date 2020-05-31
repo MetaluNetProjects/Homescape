@@ -14,7 +14,7 @@
 #X floatatom 134 407 5 0 0 0 - - -, f 5;
 #X floatatom 70 337 5 0 0 0 - - -, f 5;
 #X floatatom 113 340 5 0 0 0 - - -, f 5;
-#X obj 269 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 269 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 218 488 route down;
 #X obj 218 507 b;
@@ -83,6 +83,12 @@
 #X obj 30 249 poftranslate 0 0;
 #X obj 46 304 touch/pof_Instru \$1 BID 90;
 #X obj 253 659 s BID-0-Note_adjust;
+#X floatatom 306 717 5 0 0 0 - - -, f 5;
+#X floatatom 415 525 5 0 0 0 - - -, f 5;
+#X msg 462 565 out \$1;
+#X msg 391 552 incr \$1;
+#X obj 461 522 loadbang;
+#X msg 463 544 1;
 #X connect 0 0 37 2;
 #X connect 1 0 3 2;
 #X connect 2 0 58 1;
@@ -161,3 +167,9 @@
 #X connect 72 0 59 0;
 #X connect 72 0 73 0;
 #X connect 73 0 70 0;
+#X connect 75 0 60 0;
+#X connect 76 0 78 0;
+#X connect 77 0 38 3;
+#X connect 78 0 38 3;
+#X connect 79 0 80 0;
+#X connect 80 0 77 0;

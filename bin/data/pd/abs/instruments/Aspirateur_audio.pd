@@ -1,6 +1,6 @@
 #N canvas 1 1371 426 316 10;
 #X obj 297 278 mknob 25 100 0 127 0 1 ASP-0-Note_adjust-snd ASP-0-Note_adjust-rcv
-ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 8658 1;
+ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 38 105 s all-note-off;
 #X obj 38 81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;

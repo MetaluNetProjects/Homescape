@@ -1,9 +1,9 @@
-#N canvas 822 688 811 392 10;
+#N canvas 822 1371 811 392 10;
 #X declare -path absGAMME;
 #X obj 95 264 credit;
-#X floatatom 199 261 5 0 0 0 - - -;
+#X floatatom 199 261 5 0 0 0 - - -, f 5;
 #X obj 408 13 r beat;
-#X floatatom 408 33 5 0 0 0 - - -;
+#X floatatom 408 33 5 0 0 0 - - -, f 5;
 #X obj 478 28 loadbang;
 #X obj 478 49 del 2000;
 #X obj 478 70 0;
@@ -19,35 +19,35 @@
 #X obj 153 248 s bpm;
 #X obj 162 143 r bpm-r;
 #X msg 162 164 tempo \$1;
-#X floatatom 68 251 5 0 0 0 - - -;
+#X floatatom 68 251 5 0 0 0 - - -, f 5;
 #X obj 88 133 loadbang;
 #X obj 101 251 s beat;
-#X floatatom 222 139 5 0 0 0 - - -;
-#X floatatom 201 264 5 0 0 0 - - -;
+#X floatatom 222 139 5 0 0 0 - - -, f 5;
+#X floatatom 201 264 5 0 0 0 - - -, f 5;
 #X obj 28 106 l declare -stdpath abl_link/external;
 #X obj 88 154 del 1000;
 #X msg 308 105 advance 0 \, offset 0;
-#X floatatom 205 59 5 0 0 0 - - -;
+#X floatatom 205 59 5 0 0 0 - - -, f 5;
 #X obj 205 37 r #abl_link_num_peers;
 #X msg 43 178 1;
 #X obj 105 315 r beat;
 #X obj 207 431 r bpm;
 #X msg 207 452 60000 \$1;
 #X obj 207 473 /;
-#X floatatom 46 339 5 0 0 0 - - -;
+#X floatatom 46 339 5 0 0 0 - - -, f 5;
 #X obj 105 336 t f f;
 #X obj 185 393 mod 64;
 #X obj 132 356 sel 0;
 #X obj 105 442 +;
 #X obj 132 419 * 4;
-#X floatatom 67 471 5 0 0 0 - - -;
+#X floatatom 67 471 5 0 0 0 - - -, f 5;
 #X obj 185 371 + 1;
 #X obj 132 376 f;
-#X floatatom 160 422 5 0 0 0 - - -;
+#X floatatom 160 422 5 0 0 0 - - -, f 5;
 #X msg 180 342 0;
 #X obj 180 320 r reset_measure;
 #X obj 105 495 s CLOCK;
-#X floatatom 207 494 5 0 0 0 - - -;
+#X floatatom 207 494 5 0 0 0 - - -, f 5;
 #X obj 105 474 pack f 500;
 #X connect 0 0 6 0;
 #X connect 0 0 8 0;
@@ -104,7 +104,7 @@
 #X obj 100 105 catch~ OUT;
 #X obj 94 163 dac~;
 #X obj 243 85 r CLOCK;
-#X floatatom 201 138 5 0 0 0 - - -;
+#X floatatom 201 138 5 0 0 0 - - -, f 5;
 #X obj 243 106 ndmetro 4 1;
 #X obj 100 126 *~;
 #X obj 127 126 r audioOn;
@@ -134,7 +134,7 @@
 #X obj 367 150 GAMMEKBV /GAMME;
 #X obj 476 151 GAMMEKBV /CHORD;
 #N canvas 169 130 1270 599 olds 0;
-#X floatatom 397 388 5 0 0 0 - - -;
+#X floatatom 397 388 5 0 0 0 - - -, f 5;
 #X obj 291 168 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 350 168 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -146,7 +146,7 @@
 -262144 -1 -1 275 256;
 #X obj 216 303 poftranslate, f 21;
 #X obj 216 331 pofscale 1 1;
-#X floatatom 285 410 5 0 0 0 - - -;
+#X floatatom 285 410 5 0 0 0 - - -, f 5;
 #X msg 329 405 /GAMME 0;
 #N canvas 1 125 370 464 touchGamme 0;
 #X obj 72 23 inlet touch;
@@ -309,7 +309,7 @@
 #X obj 23 235 netsend -u;
 #X msg 69 144 send /CHORD 145;
 #X msg 88 208 send /BASS \$1;
-#X floatatom 88 173 5 0 0 0 - - -;
+#X floatatom 88 173 5 0 0 0 - - -, f 5;
 #X msg 109 187 1;
 #X obj 222 94 s /CHORD;
 #X obj 222 21 netreceive -u 17010;
@@ -336,7 +336,7 @@
 #X obj 287 253 list trim;
 #X obj 442 165 r mainSeq-load;
 #X msg 442 189 /SONG \$1;
-#X symbolatom 447 112 10 0 0 0 - - -;
+#X symbolatom 447 112 10 0 0 0 - - -, f 10;
 #X obj 430 131 print /SONG;
 #X obj 538 87 f;
 #X obj 629 89 f;
@@ -347,9 +347,9 @@
 #X obj 538 133 t b f;
 #X obj 575 242 s mainSeq-load;
 #X obj 674 151 s PART_RECALL;
-#X floatatom 573 117 5 0 0 0 - - -;
+#X floatatom 573 117 5 0 0 0 - - -, f 5;
 #X obj 447 88 symbol;
-#X floatatom 662 91 5 0 0 0 - - -;
+#X floatatom 662 91 5 0 0 0 - - -, f 5;
 #X obj 629 110 t f f;
 #X obj 656 130 moses 0;
 #X obj 629 191 s mainSeq-play;
@@ -436,7 +436,7 @@
 #X msg 112 51 1;
 #X msg 157 52 0;
 #X obj 112 72 change;
-#X obj 121 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 121 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 22 9 inlet;
 #X obj 45 228 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -475,7 +475,7 @@
 #X obj 116 234 unpack f;
 #X obj 174 234 unpack f;
 #X obj 116 255 -;
-#X floatatom 160 259 5 0 0 0 - - -;
+#X floatatom 160 259 5 0 0 0 - - -, f 5;
 #X obj 249 250 +;
 #X obj 287 210 r bpm;
 #X obj 263 230 f;
@@ -551,7 +551,7 @@
 #X obj 153 270 unpack f;
 #X obj 211 270 unpack f;
 #X obj 153 291 -;
-#X floatatom 197 295 5 0 0 0 - - -;
+#X floatatom 197 295 5 0 0 0 - - -, f 5;
 #X obj 286 286 +;
 #X obj 300 266 f;
 #X obj 300 244 b;
@@ -566,7 +566,7 @@
 #X obj 415 154 poftranslate, f 21;
 #X obj 416 219 poftexts vera 35 -1;
 #X obj 429 174 r latency;
-#X floatatom 328 297 5 0 0 0 - - -;
+#X floatatom 328 297 5 0 0 0 - - -, f 5;
 #X msg 429 195 text lat.:\$1;
 #X obj 221 328 r latency;
 #X obj 221 349 - 0;
@@ -624,7 +624,7 @@
 #X obj 208 138 poftranslate, f 21;
 #X obj 234 215 gammegui;
 #X obj 234 173 pofscale 1 1;
-#X floatatom 328 191 5 0 0 0 - - -;
+#X floatatom 328 191 5 0 0 0 - - -, f 5;
 #N canvas 1 152 370 464 touchGamme 0;
 #X obj 72 23 inlet touch;
 #X obj 223 21 inlet gamme;
@@ -983,7 +983,7 @@
 #X msg 112 51 1;
 #X msg 157 52 0;
 #X obj 112 72 change;
-#X obj 121 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 121 93 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 22 17 inlet;
 #X obj 112 30 route play;
@@ -992,7 +992,7 @@
 #X obj 46 154 poftranslate, f 21;
 #X obj 46 219 gammegui;
 #X obj 46 193 pofscale 1 1;
-#X floatatom 127 194 5 0 0 0 - - -;
+#X floatatom 127 194 5 0 0 0 - - -, f 5;
 #X obj 145 135 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 99 256;
 #X obj 127 177 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -1011,7 +1011,7 @@
 #X obj 139 245 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -223 256;
 #X obj 40 303 pofscale 1 1;
-#X floatatom 121 304 5 0 0 0 - - -;
+#X floatatom 121 304 5 0 0 0 - - -, f 5;
 #X obj 121 287 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
 #X obj 45 369 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -1035,7 +1035,7 @@
 #X obj 92 167 unpack f;
 #X obj 150 167 unpack f;
 #X obj 92 188 -;
-#X floatatom 136 192 5 0 0 0 - - -;
+#X floatatom 136 192 5 0 0 0 - - -, f 5;
 #X obj 225 155 +;
 #X obj 266 112 r bpm;
 #X obj 239 135 f;
@@ -1117,7 +1117,7 @@
 #X obj 316 264 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -156 256;
 #X obj 217 322 pofscale 1 1;
-#X floatatom 298 323 5 0 0 0 - - -;
+#X floatatom 298 323 5 0 0 0 - - -, f 5;
 #X obj 298 306 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
 #X obj 217 343 partSelector;
@@ -1189,7 +1189,7 @@
 #X connect 26 0 24 0;
 #X restore 368 304 pd play;
 #X obj 22 422 pofscale 1 1;
-#X floatatom 103 423 5 0 0 0 - - -;
+#X floatatom 103 423 5 0 0 0 - - -, f 5;
 #X obj 103 406 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 1.38 256;
 #X obj 421 362 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -1297,7 +1297,7 @@
 #X obj 351 359 pofcolor 0 1 0 1;
 #X obj 364 262 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 28 256;
-#X floatatom 469 313 5 0 0 0 - - -;
+#X floatatom 469 313 5 0 0 0 - - -, f 5;
 #X obj 469 291 r #abl_link_num_peers;
 #X msg 368 387 text \$1;
 #X obj 351 410 poftexts asimov 37;
@@ -1627,10 +1627,10 @@
 #X obj 180 11 r \$1;
 #X obj 67 16 inlet;
 #X obj 67 38 pofrotate 0;
-#X floatatom 469 237 5 0 0 0 - - -;
-#X floatatom 519 237 5 0 0 0 - - -;
+#X floatatom 469 237 5 0 0 0 - - -, f 5;
+#X floatatom 519 237 5 0 0 0 - - -, f 5;
 #X obj 517 218 r /CHORD;
-#X floatatom 573 238 5 0 0 0 - - -;
+#X floatatom 573 238 5 0 0 0 - - -, f 5;
 #X obj 572 219 r /GAMME;
 #X obj 521 314 s /CHORD;
 #X obj 576 315 s /GAMME;
@@ -1657,7 +1657,6 @@
 #X connect 27 0 26 0;
 #X connect 29 0 27 0;
 #X connect 29 1 24 0;
-#X connect 29 2 23 0;
 #X connect 32 0 31 0;
 #X connect 33 0 31 0;
 #X connect 37 0 13 0;

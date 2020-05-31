@@ -1,6 +1,6 @@
-#N canvas 2096 1263 384 309 10;
+#N canvas 2096 92 384 309 10;
 #X obj 258 278 mknob 25 100 0 127 0 1 BAI-0-Note_adjust-snd BAI-0-Note_adjust-rcv
-BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9299 1;
+BAI-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 232 34 s all-note-off;
 #X obj 232 10 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
