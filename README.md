@@ -18,3 +18,10 @@ thanks to [libpd](http://libpd.cc) and [openFrameworks](http://www.openframework
 GNU GENERAL PUBLIC LICENSE  
 [Al1&Ant1](http://al1ant1.free.fr/)  
 [Lieu Multiple](https://lieumultiple.org) & [metalu.net](http://metalu.net/en/home/)
+
+------
+
+Wiki in french (sorry)
+[WikiHomescape](http://linuxmao.org/Homescape)
+
+------
