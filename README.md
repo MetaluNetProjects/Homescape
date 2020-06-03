@@ -20,8 +20,9 @@ GNU GENERAL PUBLIC LICENSE
 [Lieu Multiple](https://lieumultiple.org) & [metalu.net](http://metalu.net/en/home/)
 
 ------
-
-Wiki in french :
-[WikiHomescape](http://linuxmao.org/Homescape)
+wiki in english :
+[Homescape(en)](https://github.com/MetaluNetProjects/Homescape/wiki/Homescape(en))
+Wiki en français :
+[Homescape(fr)](http://linuxmao.org/Homescape)
 
 ------
