@@ -21,7 +21,7 @@ GNU GENERAL PUBLIC LICENSE
 
 ------
 
-Wiki in french (sorry)
+Wiki in french :
 [WikiHomescape](http://linuxmao.org/Homescape)
 
 ------
