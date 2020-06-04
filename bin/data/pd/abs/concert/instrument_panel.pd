@@ -1,14 +1,14 @@
-#N canvas 1040 602 879 453 10;
+#N canvas 1040 1371 879 453 10;
 #X obj 59 14 inlet;
-#X floatatom 686 387 5 0 0 0 - - -;
-#X floatatom 735 386 5 0 0 0 - - -;
+#X floatatom 686 387 5 0 0 0 - - -, f 5;
+#X floatatom 735 386 5 0 0 0 - - -, f 5;
 #X obj 59 42 poftranslate 0 232;
-#X floatatom 129 16 5 0 0 0 - - -;
+#X floatatom 129 16 5 0 0 0 - - -, f 5;
 #X obj 643 362 pofcolor 0.4 0.5 0.5 0.5;
 #X obj 643 410 cadreVec 735 444;
-#X floatatom 325 69 5 0 0 0 - - -;
-#X floatatom 369 65 5 0 0 0 - - -;
-#N canvas 757 199 822 702 PLAY/REC 0;
+#X floatatom 325 69 5 0 0 0 - - -, f 5;
+#X floatatom 369 65 5 0 0 0 - - -, f 5;
+#N canvas 822 1476 822 702 PLAY/REC 1;
 #X obj 48 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 199 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -25,14 +25,14 @@
 #X obj 109 322 sel 1 0;
 #X obj 109 437 *;
 #X obj 136 396 samplerate~;
-#X floatatom 274 396 5 0 0 0 - - -;
+#X floatatom 267 349 5 0 0 0 - - -, f 5;
 #X obj 136 417 / 1000;
 #X obj 109 372 t f b;
 #X obj 109 466 tabwrite set-table-length;
 #X obj 200 530 tabread set-table-length;
 #X obj 200 508 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
-#X floatatom 200 555 8 0 0 0 - - -;
+#X floatatom 200 555 8 0 0 0 - - -, f 8;
 #X obj 199 223 pack s f;
 #X obj 132 43 t f f;
 #X obj 244 180 tabread set-table-length;
@@ -46,16 +46,16 @@
 #X obj 469 136 t f f;
 #X msg 529 206 0;
 #X obj 469 212 t f b;
-#X obj 469 48 r rec-recording;
+#X obj 469 10 r rec-recording;
 #X obj 469 95 spigot;
 #X obj 567 297 f;
 #X obj 529 185 sel 1 0;
 #X obj 619 286 tabread \$0-fid;
-#X floatatom 619 306 5 0 0 0 - - -;
-#X floatatom 619 266 5 0 0 0 - - -;
+#X floatatom 619 306 5 0 0 0 - - -, f 5;
+#X floatatom 619 266 5 0 0 0 - - -, f 5;
 #X obj 469 118 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 489 276 5 0 0 0 - - -;
+#X floatatom 489 276 5 0 0 0 - - -, f 5;
 #X obj 553 156 pipe 1000;
 #N canvas 27 75 474 455 findPitch 0;
 #X obj 105 13 inlet;
@@ -117,7 +117,7 @@
 #X obj 192 394 unpack f f;
 #X obj 192 417 moses;
 #X obj 233 418 f;
-#X floatatom 329 450 5 0 0 0 - - -;
+#X floatatom 329 450 5 0 0 0 - - -, f 5;
 #X obj 219 443 pack f f;
 #X msg 332 214 0;
 #X obj 237 345 + 1;
@@ -230,7 +230,7 @@
 #X restore 105 180 pd filter-and-mean;
 #X obj 105 38 f;
 #X msg 68 12 14;
-#X floatatom 114 221 5 0 0 0 - - -;
+#X floatatom 114 221 5 0 0 0 - - -, f 5;
 #X obj 157 255 phasor~;
 #X obj 157 283 lop~ 300;
 #X obj 158 352 *~;
@@ -276,7 +276,7 @@
 #X obj 469 188 f;
 #X obj 593 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 707 434 5 0 0 0 - - -;
+#X floatatom 707 434 5 0 0 0 - - -, f 5;
 #X obj 521 382 tabwrite set-table-pitch;
 #X obj 362 42 r set-saving;
 #X msg 324 89 1;
@@ -285,7 +285,7 @@
 #X obj 362 64 sel 1;
 #X obj 317 18 r set-editing;
 #X obj 317 40 sel 0;
-#X obj 342 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 342 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 462 441 sel 0 1 2 3 4 5 6 7 8 9;
 #X obj 487 578 symbol;
@@ -299,7 +299,7 @@
 #X msg 366 235 0;
 #X msg 324 246 1;
 #X obj 49 114 mode/say 1;
-#X obj 356 469 mode/say 1;
+#X obj 368 535 mode/say 1;
 #X obj 157 587 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
 -1 -1 6;
 #X msg 192 38 0;
@@ -325,8 +325,8 @@
 #X msg 603 526 RecVerre;
 #X msg 616 543 RecMixeur;
 #X obj 132 4 r concert_instrument;
-#X obj 439 344 r concert_instrument;
-#X obj 242 434 r concert_instrument;
+#X obj 427 332 r concert_instrument;
+#X obj 237 399 r concert_instrument;
 #X obj 342 594 r concert_instrument;
 #X obj 662 358 r concert_instrument;
 #X obj 157 609 s concert_instrument;
@@ -350,8 +350,21 @@
 #X connect 7 0 1 0;
 #X connect 7 1 3 0;
 #X restore 199 116 pd play/stop;
+#X obj 483 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 289 50 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 14 306 print;
+#X obj 14 256 s SwitchRecording;
+#X msg 14 234 0, f 1;
+#X obj 315 482 s SwitchRecording;
+#X msg 315 460 1, f 1;
+#X obj 530 96 s SwitchRecording;
+#X msg 530 74 1, f 1;
+#X obj 530 50 sel 0;
 #X connect 0 0 62 0;
 #X connect 0 0 67 0;
+#X connect 0 0 104 0;
 #X connect 1 0 25 0;
 #X connect 2 0 7 0;
 #X connect 3 0 4 0;
@@ -390,6 +403,8 @@
 #X connect 33 0 28 0;
 #X connect 33 1 29 0;
 #X connect 34 0 35 0;
+#X connect 34 0 100 0;
+#X connect 34 0 109 0;
 #X connect 35 0 41 0;
 #X connect 36 0 44 0;
 #X connect 37 0 32 0;
@@ -410,6 +425,7 @@
 #X connect 53 1 51 0;
 #X connect 54 0 52 0;
 #X connect 55 0 56 0;
+#X connect 55 0 101 0;
 #X connect 56 0 52 0;
 #X connect 57 0 4 1;
 #X connect 57 0 35 1;
@@ -426,6 +442,7 @@
 #X connect 58 9 92 0;
 #X connect 59 0 68 1;
 #X connect 60 0 69 0;
+#X connect 60 0 106 0;
 #X connect 61 0 63 0;
 #X connect 62 0 68 0;
 #X connect 62 1 61 0;
@@ -468,6 +485,10 @@
 #X connect 97 0 49 1;
 #X connect 99 0 1 0;
 #X connect 99 1 8 0;
+#X connect 104 0 103 0;
+#X connect 106 0 105 0;
+#X connect 108 0 107 0;
+#X connect 109 0 108 0;
 #X restore 374 164 pd PLAY/REC;
 #N canvas 180 89 546 768 fiddle 0;
 #X obj 149 20 inlet;
@@ -480,10 +501,10 @@
 #X obj 150 546 pofcolor 0 0.5 0 0.7;
 #X obj 176 198 poftranslate -108;
 #X msg 385 123 60;
-#X floatatom 203 171 5 0 0 0 - - -;
+#X floatatom 203 171 5 0 0 0 - - -, f 5;
 #X obj 403 149 t b f;
-#X floatatom 416 120 5 0 0 0 - - -;
-#X floatatom 220 33 5 0 0 0 - - -;
+#X floatatom 416 120 5 0 0 0 - - -, f 5;
+#X floatatom 220 33 5 0 0 0 - - -, f 5;
 #X obj 384 180 - 66;
 #X msg 330 139 69;
 #X obj 176 248 poftranslate 36;
@@ -500,11 +521,11 @@
 #X obj 176 402 pofimage balance/kb36.png 36 10;
 #X obj 177 445 pofimage balance/kb36.png 36 10;
 #X obj 176 492 pofimage balance/kb36.png 36 10;
-#X floatatom 276 55 5 0 0 0 - - -;
-#X floatatom 313 54 5 0 0 0 - - -;
+#X floatatom 276 55 5 0 0 0 - - -, f 5;
+#X floatatom 313 54 5 0 0 0 - - -, f 5;
 #X obj 149 125 fixScale;
 #X obj 149 89 pofscale 0.97 1.5 1;
-#X floatatom 171 43 5 0 0 0 - - -;
+#X floatatom 171 43 5 0 0 0 - - -, f 5;
 #X obj 149 67 poftranslate 173 5;
 #X connect 0 0 35 0;
 #X connect 2 0 14 0;
@@ -551,8 +572,8 @@
 #X obj 302 92 poftranslate 117 -417;
 #X obj 59 134 fixScale;
 #X obj 59 157 s instruments_pof_head;
-#X floatatom 133 89 5 0 0 0 - - -;
-#X floatatom 580 188 5 0 0 0 - - -;
+#X floatatom 133 89 5 0 0 0 - - -, f 5;
+#X floatatom 580 188 5 0 0 0 - - -, f 5;
 #X obj 622 8 r concert-instruments-touched;
 #X msg 622 29 \$2 \$1;
 #X obj 622 50 route 1;
@@ -567,20 +588,20 @@
 #X obj 336 251 list trim;
 #X obj 336 205 r concert_instrument_title;
 #X obj 59 66 t a a a, f 41;
-#X floatatom 212 167 5 0 0 0 - - -;
-#X floatatom 258 169 5 0 0 0 - - -;
+#X floatatom 212 167 5 0 0 0 - - -, f 5;
+#X floatatom 258 169 5 0 0 0 - - -, f 5;
 #X obj 180 243 fixScale;
 #X obj 180 206 poftranslate -170 -455;
 #X obj 180 275 t a a, f 25;
 #X obj 327 300 pofcolor 0 0 0 0.3;
-#X floatatom 365 326 5 0 0 0 - - -;
-#X floatatom 403 327 5 0 0 0 - - -;
+#X floatatom 365 326 5 0 0 0 - - -, f 5;
+#X floatatom 403 327 5 0 0 0 - - -, f 5;
 #X obj 257 356 route size;
-#X floatatom 188 392 5 0 0 0 - - -;
+#X floatatom 188 392 5 0 0 0 - - -, f 5;
 #X obj 327 357 pofrect 10 52 10;
 #X obj 257 377 unpack f;
 #X obj 257 399 + 10;
-#X floatatom 81 86 5 0 0 0 - - -;
+#X floatatom 81 86 5 0 0 0 - - -, f 5;
 #X obj 59 111 poftranslate 35 -230;
 #X connect 0 0 3 0;
 #X connect 1 0 6 1;
