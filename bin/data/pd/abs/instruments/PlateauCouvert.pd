@@ -1,4 +1,4 @@
-#N canvas 2180 62 824 942 10;
+#N canvas 2167 668 824 942 10;
 #X floatatom 133 26 5 0 0 0 - - -, f 5;
 #X floatatom 531 84 5 0 0 0 - - -, f 5;
 #X floatatom 202 106 5 0 0 0 - - -, f 5;
@@ -253,7 +253,7 @@
 #X connect 49 1 36 0;
 #X connect 50 0 39 0;
 #X connect 50 1 42 0;
-#X restore 39 203 pd Couverts;
+#X restore 38 157 pd Couverts;
 #X obj 62 301 pofimage CadranMinuteurVert.png 110 110;
 #X obj 69 467 imageKnob380 instruments/AiguilleMinuteurVert.png 0.17
 ;
@@ -427,15 +427,15 @@
 #X connect 4 0 6 2;
 #X connect 5 0 0 0;
 #X connect 6 0 0 0;
-#X restore 110 340 pd text FX;
+#X restore 81 354 pd text FX;
 #X obj 39 538 poftranslate 0 120;
 #X floatatom 417 201 5 0 0 0 - - -, f 5;
 #X floatatom 463 199 5 0 0 0 - - -, f 5;
 #X floatatom 257 167 5 0 0 0 - - -, f 5;
 #X floatatom 305 174 5 0 0 0 - - -, f 5;
 #X obj 38 100 poftranslate -59 16;
-#X obj 265 222 pofimage instruments/Appuye.png 180 120;
-#X obj 210 193 poftranslate -315 -70;
+#X obj 265 222 pofimage instruments/Appuye.png 100 80;
+#X obj 210 193 poftranslate 20 -145;
 #X connect 0 0 3 2;
 #X connect 1 0 4 2;
 #X connect 2 0 26 1;
@@ -465,6 +465,7 @@
 #X connect 24 0 25 0;
 #X connect 25 0 56 0;
 #X connect 27 0 60 0;
+#X connect 27 0 70 0;
 #X connect 29 0 53 0;
 #X connect 29 1 19 0;
 #X connect 30 0 29 0;
@@ -506,5 +507,4 @@
 #X connect 67 0 70 2;
 #X connect 68 0 26 0;
 #X connect 68 0 27 0;
-#X connect 68 0 70 0;
 #X connect 70 0 69 0;
