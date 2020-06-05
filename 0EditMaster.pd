@@ -1,4 +1,4 @@
-#N canvas 66 1172 1101 371 10;
+#N canvas 43 1974 1101 371 10;
 #X declare -lib pof;
 #X declare -path bin/data/pd -path bin/data/pd/abs;
 #X declare -lib abl_link~ -path abl_link~;
