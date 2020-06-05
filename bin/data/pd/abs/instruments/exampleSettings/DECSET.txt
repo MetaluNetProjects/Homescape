@@ -93,7 +93,7 @@ decoupeur-setting2-Seuil 0.0506329 0;
 pnip1-patternMAX 2 0;
 pnip1 pnip1Reset 1 16 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 pnip1 pnip1Oneway 1 16 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
-pnip1 pnip1Over 1 16 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
+pnip1 pnip1Over 1 16 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
 pnip1 pnip1T 0.242424 16 0.262626 0.262626 0.242424 0 0 0 0 0 0 0 0
 0 0 0 0 0;
 pnip1 pnip1Fedd 1 16 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0;
