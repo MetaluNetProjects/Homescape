@@ -1,4 +1,4 @@
-#N canvas 643 82 594 684 10;
+#N canvas 411 1535 594 684 10;
 #X obj 155 135 seq;
 #X obj 155 29 openpanel;
 #X obj 155 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -86,7 +86,7 @@
 #X obj 148 615 *~ 1e-05;
 #X obj 149 644 s~ DENORM;
 #X obj 499 279 switch~;
-#X obj 499 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 499 259 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 499 232 loadbang;
 #X msg 492 475 69 100;
