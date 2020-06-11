@@ -1,8 +1,0 @@
-#alors ça c'est le début
-bonjour # là c'est pour dire bonjour
-  
-dis_ton_nom
-enregistre_instrument
-
-au_revoir # pour dire au revoir
- 
