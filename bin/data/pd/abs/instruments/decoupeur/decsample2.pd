@@ -3,7 +3,7 @@
 5 0 10 -4034 -1 -1;
 #X obj 164 34 tgl 10 0 \$1-\$2-play \$1-\$2-play-rcv play 11 5 0 10
 -257985 -1 -1 0 1;
-#X obj 11 33 cnv 10 100 10 empty \$0-time sec:4.6 5 5 0 10 -233017
+#X obj 11 33 cnv 10 100 10 empty \$0-time sec:10.5 5 5 0 10 -233017
 -66577 0;
 #N canvas 1161 528 738 507 SAMPLE 1;
 #X obj 220 283 bng 15 250 50 0 empty empty save 17 7 0 10 -258113 -1
@@ -67,7 +67,7 @@
 #X msg 351 312 set \$1;
 #X obj 303 212 r datadirInstruments;
 #X symbolatom 306 267 0 0 0 0 - - -;
-#X msg 454 344 /home/arsene/Documents/OF/of_v0.9.3_android_release/apps/myApps/Homescape/bin/data/pd/data/set/Antoine/0.wav
+#X msg 454 344 /home/arsene/Documents/OF/of_v0.9.3_android_release/apps/myApps/Homescape/bin/data/pd/data/set/Antoine/4.wav
 ;
 #X obj 303 235 makefilename %s/\$2.wav;
 #X msg 26 405 read \$1 \$2;
@@ -542,9 +542,9 @@
 #X connect 72 0 74 0;
 #X connect 74 0 73 0;
 #X restore 285 202 pd DECOUPEUR;
-#X obj 213 34 bng 10 250 50 0 \$1-\$2-calcenv \$1-\$2-calcenv-rcv pre:100%
+#X obj 213 34 bng 10 250 50 0 \$1-\$2-calcenv \$1-\$2-calcenv-rcv pre:95%
 11 5 0 10 -260097 -1 -1;
-#X obj 275 34 bng 10 250 50 0 \$1-\$2-refrag \$1-\$2-refrag-rcv cut:21
+#X obj 275 34 bng 10 250 50 0 \$1-\$2-refrag \$1-\$2-refrag-rcv cut:0
 11 5 0 10 -258113 -1 -1;
 #X obj 256 73 table \$1-\$2-peaks 1000;
 #X obj 256 92 table \$1-\$2-envtab 400;
@@ -552,7 +552,7 @@
 #X obj 256 130 table \$1-\$2-nbfragtab 1;
 #X obj 120 214 tabread set-table-length;
 #X obj 120 192 hradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 4;
 #X floatatom 133 247 8 0 0 0 - - -;
 #X obj 120 168 \$2;
 #X obj 83 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -568,8 +568,8 @@
 #X obj 16 107 del 200;
 #X obj 223 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 114 269 change;
-#X floatatom 181 286 0 0 0 0 - - -;
+#X obj 120 271 change;
+#X floatatom 180 285 0 0 0 0 - - -;
 #X msg 221 251 44100;
 #X obj 162 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
