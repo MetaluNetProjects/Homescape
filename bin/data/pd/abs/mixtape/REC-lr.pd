@@ -5,7 +5,7 @@
 #X obj 25 86 bng 20 250 50 0 load-REC16-snd load-REC16-rcv load 3 10
 0 10 -1 -203904 -257985;
 #X obj 24 25 tgl 30 0 REC16-snd REC16-rcv REC 6 15 0 10 -250685 -250685
--241291 1 1;
+-241291 0 1;
 #N canvas 1920 92 338 278 color_rec 0;
 #X obj 23 100 sel 0 1;
 #X obj 23 174 s REC16-rcv;
@@ -134,7 +134,7 @@
 #X obj 137 162 t b s;
 #X msg 108 143 1, f 2;
 #X msg 395 1 1;
-#N canvas 593 1371 450 499 getdir 0;
+#N canvas 593 1371 450 499 getdir 1;
 #X obj 172 401 pofutil;
 #X obj 175 16 inlet;
 #X obj 109 17 loadbang;
@@ -164,7 +164,7 @@
 #X connect 14 0 11 0;
 #X connect 15 0 0 0;
 #X restore 138 111 pd getdir;
-#N canvas 135 1803 450 300 getdir 1;
+#N canvas 135 1803 450 300 getdir 0;
 #X obj 136 197 pofutil;
 #X msg 136 171 setstring data .;
 #X obj 175 16 inlet;
@@ -217,6 +217,44 @@
 #X connect 14 0 11 0;
 #X connect 15 0 0 0;
 #X restore 454 79 pd getdir;
+#X obj 261 48 r mixtape;
+#X obj 291 212 print;
+#N canvas 593 1371 450 499 getdir 0;
+#X obj 172 401 pofutil;
+#X obj 175 16 inlet;
+#X obj 109 17 loadbang;
+#X obj 136 54 b;
+#X obj 134 110 pofutil;
+#X msg 134 86 getdir;
+#X obj 186 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 282 266 s datadir;
+#X obj 113 402 outlet;
+#X obj 24 357 print;
+#X msg 275 61 symbol;
+#X obj 128 171 split_path;
+#X obj 136 202 split_path;
+#X msg 136 231 symbol \$1/data/mixtape;
+#X msg 129 144 symbol \$1;
+#X msg 172 375 setstring data/mixtape .;
+#X connect 1 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 14 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 8 0;
+#X connect 13 0 15 0;
+#X connect 14 0 11 0;
+#X connect 15 0 0 0;
+#X restore 262 93 pd getdir;
+#X obj 261 136 pack s s;
+#X obj 262 70 t b s;
+#X msg 288 113 symbol /\$1/0.wav;
+#X obj 200 181 glue;
+#X obj 263 163 makesymbol %s%s;
+#X obj 262 186 t b s;
 #X connect 1 0 32 0;
 #X connect 2 0 8 0;
 #X connect 4 0 9 0;
@@ -253,4 +291,13 @@
 #X connect 31 0 8 0;
 #X connect 32 0 14 0;
 #X connect 35 0 7 0;
+#X connect 36 0 40 0;
+#X connect 38 0 39 0;
+#X connect 39 0 43 0;
+#X connect 40 0 38 0;
+#X connect 40 1 41 0;
+#X connect 41 0 39 1;
+#X connect 43 0 44 0;
+#X connect 44 0 20 0;
+#X connect 44 1 16 0;
 #X coords 0 -1 1 1 98 107 2 5 5;
