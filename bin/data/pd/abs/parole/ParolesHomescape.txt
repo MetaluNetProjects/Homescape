@@ -16,19 +16,21 @@ ChoixSong # “choisissez un morceau enregistré à écouter et confirmer”
 
 ChoixSongRappel # “je vous rappelle que vous devez choisir un morceau s’il vous plaît”
 
-## PopUpPlayMixTape :
+## PopUpchoixMixtape :
 
-OuverturePlayMixTape # “selectionner un enregistrement pour l’écouter- appuyez sur Mail pour l’envoyer par email
+ChoixMixtape # “selectionner un enregistrement pour l’écouter- appuyez sur Mail pour l’envoyer par email"
+
+ChoixMixtapeRappel # “je vous rappelle que vous devez choisir une mixtape s’il vous plaît"
 
 MailMixTape # “indiquez l'adresse email à laquelle vous voulez envoyer la MixTape selectionée”
 
-## PopUpRecMixTape :
+## PopUpRecMixtape :
 
-OuvertureRecMixTape # “si vous voulez sauver votre enregistrement appuyez sur Save - vous pouvez d'abord le réécouter en appuyant sur play"
+OuvertureRecMixtape # “si vous voulez sauver votre enregistrement appuyez sur Save - vous pouvez d'abord le réécouter en appuyant sur play"
 
-NomMixTape # “donnez un nom à votre enregistrement"
+NomMixtape # “donnez un nom à votre enregistrement"
 
-SaveMixTape # “Votre Mixtape est sauvée vous pourrez la réécouter plus tard et même l’envoyer par mail en appuyant sur MixTape”
+SaveMixtape # “Votre Mixtape est sauvée vous pourrez la réécouter plus tard et même l’envoyer par mail en appuyant sur MixTape”
 
 # PopUpAbout :
 
