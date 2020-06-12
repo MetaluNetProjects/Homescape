@@ -1,4 +1,4 @@
-#N canvas 2117 358 785 819 10;
+#N canvas 1135 1371 785 819 10;
 #X obj 150 9 inlet head;
 #X obj 232 244 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -29 256;
@@ -75,10 +75,13 @@
 #X obj 205 61 poftranslate 11 1 4;
 #X obj 407 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 340 368 s mixtape-choix-open;
+#X obj 341 342 sel 1;
 #X connect 0 0 58 0;
 #X connect 1 0 56 1;
 #X connect 2 0 56 2;
 #X connect 3 0 59 0;
+#X connect 3 0 61 0;
 #X connect 4 0 39 0;
 #X connect 5 0 4 1;
 #X connect 6 0 4 2;
@@ -131,3 +134,4 @@
 #X connect 58 0 48 0;
 #X connect 58 0 42 0;
 #X connect 59 0 57 2;
+#X connect 61 0 60 0;
