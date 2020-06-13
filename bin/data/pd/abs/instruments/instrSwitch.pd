@@ -1,14 +1,14 @@
-#N canvas 2318 536 450 345 10;
+#N canvas 2318 536 450 426 10;
 #X obj 29 10 r concert-mute-\$1;
 #X obj 29 219 del 2000;
 #X msg 48 194 stop;
 #X msg 29 240 0;
 #X msg 93 239 1;
-#X obj 29 261 change;
+#X obj 29 310 change;
 #X obj 29 125 change;
-#X obj 29 282 outlet;
-#X floatatom 352 12 5 0 0 0 - - -, f 5;
-#X obj 118 284 s concert-instrument-level-\$1;
+#X obj 29 350 outlet;
+#X floatatom 352 12 5 0 0 0 - - -;
+#X obj 93 376 s concert-instrument-level-\$1;
 #X obj 262 75 s concert-mute-\$1;
 #X obj 262 31 loadbang;
 #X msg 262 52 1;
@@ -20,26 +20,30 @@
 #X obj 29 166 sel 0 1;
 #X obj 199 122 s concert-instrument-isplaying-\$1;
 #X msg 199 101 0;
-#X obj 84 300 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X obj 75 37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 6 331 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 75 37 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 127 98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 119 142 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 119 142 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 186 230 r SwitchRecording;
-#X obj 188 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 188 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
+#X obj 93 335 sel 0;
+#X msg 93 356 0;
+#X obj 64 287 t b f;
+#X obj 29 287 && 1;
 #X connect 0 0 17 0;
 #X connect 0 0 22 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
-#X connect 3 0 5 0;
-#X connect 3 0 9 0;
-#X connect 4 0 5 0;
+#X connect 3 0 30 0;
+#X connect 4 0 30 0;
 #X connect 5 0 7 0;
 #X connect 5 0 21 0;
+#X connect 5 0 27 0;
 #X connect 6 0 16 0;
 #X connect 6 0 18 0;
 #X connect 6 0 24 0;
@@ -57,4 +61,9 @@
 #X connect 18 1 4 0;
 #X connect 20 0 19 0;
 #X connect 25 0 26 0;
-#X connect 25 0 7 0;
+#X connect 25 0 29 0;
+#X connect 27 0 28 0;
+#X connect 28 0 9 0;
+#X connect 29 0 30 0;
+#X connect 29 1 30 1;
+#X connect 30 0 5 0;
