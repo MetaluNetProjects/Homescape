@@ -1,4 +1,4 @@
-#N canvas 1144 469 540 586 10;
+#N canvas 1213 452 540 586 10;
 #X declare -path abs -path . -path img;
 #X declare -path abs -path . -path img;
 #X declare -path abs/extra/iemlib;
@@ -14,7 +14,7 @@
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X restore 18 98 pd bang_on_first_frame;
-#N canvas 580 1172 755 527 mainHead 0;
+#N canvas 580 528 755 527 mainHead 0;
 #X obj 100 16 pofhead;
 #X obj 156 20 pofwin;
 #X obj 156 44 route window;
@@ -187,7 +187,7 @@
 #X obj 382 137 loadbang;
 #X obj 301 422 balance/GUI;
 #X obj 138 465 concert/GUI;
-#X obj 204 350 s overHead;
+#X obj 165 391 s overHead;
 #X msg 382 191 \; page concert;
 #X obj 17 340 set/manager;
 #X obj 192 289 s pageHead;
@@ -297,7 +297,7 @@
 #X connect 32 0 5 0;
 #X restore 433 357 pd audioMaster;
 #X obj 16 363 song/manager;
-#X obj 165 392 song/listGui;
+#X obj 184 371 song/listGui;
 #X obj 343 51 loadbang;
 #X msg 343 73 \; pd dsp 1;
 #N canvas 248 440 757 435 INIT 0;
@@ -453,7 +453,7 @@
 #X connect 24 0 22 0;
 #X restore 138 413 pd cpu;
 #X msg 164 149 open;
-#X obj 333 480 loadbang;
+#X obj 333 452 loadbang;
 #X msg 333 501 the patch is running!;
 #X obj 333 529 print HOMESCAPE_DEBUG;
 #X obj 316 275 mixtape/REC-lr;
@@ -472,12 +472,14 @@
 #X obj 138 485 concert/instrument_panel;
 #X obj 17 386 mixtape/manager;
 #X obj 165 329 t a a a;
-#X obj 184 371 mixtape/listGui;
+#X obj 204 349 mixtape/listGui;
 #X obj 165 269 t a a;
 #X obj 138 223 t a a;
 #X obj 165 246 pofvisible 1;
 #X obj 189 227 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
+#X obj 14 508 confirmToQuit;
+#X obj 333 476 del 100;
 #X connect 1 0 0 0;
 #X connect 2 0 13 0;
 #X connect 4 0 3 0;
@@ -503,14 +505,15 @@
 #X connect 45 0 27 0;
 #X connect 48 0 62 0;
 #X connect 49 0 0 0;
-#X connect 50 0 51 0;
+#X connect 50 0 64 0;
 #X connect 51 0 52 0;
-#X connect 57 0 29 0;
-#X connect 57 1 58 0;
-#X connect 57 2 22 0;
+#X connect 57 0 22 0;
+#X connect 57 1 29 0;
+#X connect 57 2 58 0;
 #X connect 59 0 33 0;
 #X connect 59 1 25 0;
 #X connect 60 0 48 0;
 #X connect 60 1 61 0;
 #X connect 61 0 59 0;
 #X connect 62 0 61 0;
+#X connect 64 0 51 0;

@@ -30,12 +30,12 @@ class testApp : public ofxAndroidApp, public PdReceiver {
 		virtual void touchUp(int x, int y, int id);
 		virtual void touchDoubleTap(int x, int y, int id) {};
 		virtual void touchCancelled(int x, int y, int id) {};
-		virtual bool backPressed(){
+		virtual bool backPressed();/*{
 			ofLogNotice("testApp", "back pressed");
 			exit();
 			ofExit();
 			return true;
-		}
+		}*/
 
 		void windowResized(int w, int h);
 		

@@ -69,6 +69,7 @@ void testApp::setup() {
 		ofExit();
 	}
 	
+	puda.subscribe("toSYSTEM");
 	// add message receiver, required if you want to receive messages
 	puda.addReceiver(*this); // automatically receives from all subscribed sources
 
@@ -123,13 +124,22 @@ void testApp::draw() {
 //--------------------------------------------------------------
 void testApp::exit() {
 	ofLogNotice(Tag, "exit");
+	puda.stop();
 	if(os) opensl_close(os);
-	pofBase::release();
+	//pofBase::release();
 	ofExit();
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key) {}
+
+//--------------------------------------------------------------
+bool testApp::backPressed(){
+	ofLogNotice("testApp", "back pressed");
+	//ofNotifyExit();//exit();
+	pofBase::backPressed();
+	return true;
+}
 
 //--------------------------------------------------------------
 void testApp::touchDown(int x, int y, int id){
@@ -207,7 +217,8 @@ void testApp::receiveList(const std::string& dest, const List& list) {
 }
 
 void testApp::receiveMessage(const std::string& dest, const std::string& msg, const List& list) {
-	cout << "OF: message " << dest << ": " << msg << " " << list.toString() << list.types() << endl;
+	ofLogNotice(Tag) << "message: " << dest << ": " << msg << " " << list.toString() << list.types() << endl;
+	if(msg == "quit") std::exit(0); //testApp::exit(); //exit();
 }
 
 //--------------------------------------------------------------
