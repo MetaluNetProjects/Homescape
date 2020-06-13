@@ -8,7 +8,7 @@
 -1 -1;
 #X obj 526 379 tabplay~ \$0-t;
 #X obj 233 476 writesf~;
-#N canvas 783 81 635 768 autorec 0;
+#N canvas 1086 103 696 796 autorec 0;
 #X obj 110 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 133 105 > 60;
@@ -41,7 +41,7 @@
 #X obj 195 516 t b b;
 #X msg 178 543 1;
 #X msg 291 535 0;
-#X obj 179 713 outlet;
+#X obj 180 758 outlet;
 #X obj 487 114 route stop;
 #X obj 263 509 t b b;
 #X obj 414 573 s rec-light;
@@ -62,7 +62,7 @@
 #X msg 104 592 0;
 #X msg 110 660 1;
 #X msg 246 653 0;
-#X msg 312 597 stop;
+#X msg 319 597 stop;
 #X obj 246 632 del 100;
 #X obj 225 77 r rec-autorec-thres;
 #X obj 204 134 > 56;
@@ -73,6 +73,11 @@
 #X obj 204 237 del 950;
 #X obj 225 109 - 3;
 #X obj 470 435 sel 0;
+#X msg 283 669 stop;
+#X msg 607 547 stop;
+#X text 365 714 max rec time;
+#X obj 306 711 del 5000;
+#X obj 438 671 r rec-maxtimeMS;
 #X connect 1 0 0 0;
 #X connect 1 0 6 0;
 #X connect 1 0 13 0;
@@ -119,6 +124,7 @@
 #X connect 29 0 23 1;
 #X connect 31 0 32 0;
 #X connect 31 0 39 0;
+#X connect 31 0 58 0;
 #X connect 31 1 27 0;
 #X connect 31 1 40 0;
 #X connect 31 1 47 0;
@@ -141,7 +147,9 @@
 #X connect 46 0 30 0;
 #X connect 47 0 48 0;
 #X connect 47 0 54 0;
+#X connect 47 0 61 0;
 #X connect 48 0 46 0;
+#X connect 48 0 58 0;
 #X connect 49 0 1 1;
 #X connect 49 0 56 0;
 #X connect 50 0 6 0;
@@ -149,9 +157,14 @@
 #X connect 52 0 4 1;
 #X connect 53 0 5 1;
 #X connect 54 0 45 0;
+#X connect 54 0 61 0;
 #X connect 55 0 9 0;
 #X connect 55 0 25 0;
 #X connect 56 0 50 1;
+#X connect 58 0 61 0;
+#X connect 59 0 31 0;
+#X connect 61 0 59 0;
+#X connect 62 0 61 1;
 #X restore 230 133 pd autorec;
 #X obj 227 8 r rec-recfile;
 #X obj 310 106 t b s;
@@ -259,6 +272,9 @@
 #X obj 114 484 s rec-autorec-thres;
 #X obj 54 588 del 2000;
 #X obj 115 276 del 100;
+#X obj 412 603 s rec-maxtimeMS;
+#X msg 421 556 5000;
+#X msg 376 557 20000;
 #X connect 0 0 29 0;
 #X connect 1 0 2 0;
 #X connect 5 0 4 0;
@@ -388,3 +404,4 @@
 #X connect 105 0 107 0;
 #X connect 108 0 91 0;
 #X connect 109 0 98 0;
+#X connect 112 0 110 0;
