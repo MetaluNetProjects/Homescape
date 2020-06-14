@@ -1,4 +1,4 @@
-#N canvas 816 1371 620 541 10;
+#N canvas 2201 1214 706 541 10;
 #X msg 203 435 text Hello;
 #X obj 58 89 t a a;
 #X obj 85 114 pofcolor 0 0 0 0.9;
@@ -107,6 +107,8 @@
 #X obj 58 298 poftranslate -140 0;
 #X obj 236 164 * 0.95;
 #X obj 359 423 s mixtape;
+#X obj 425 424 s mixtape-load;
+#X obj 518 424 s mixtape-play-name;
 #X connect 0 0 53 0;
 #X connect 1 0 44 0;
 #X connect 1 1 2 0;
@@ -153,6 +155,8 @@
 #X connect 37 0 40 0;
 #X connect 38 0 37 1;
 #X connect 39 0 59 0;
+#X connect 39 0 60 0;
+#X connect 39 0 61 0;
 #X connect 40 0 39 0;
 #X connect 41 0 2 1;
 #X connect 41 1 2 2;

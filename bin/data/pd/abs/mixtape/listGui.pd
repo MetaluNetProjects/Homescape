@@ -1,7 +1,7 @@
-#N canvas 720 1371 685 705 10;
+#N canvas 890 1371 685 705 10;
 #X obj 31 9 inlet head;
-#X obj 362 178 hsl 128 15 0 20 0 0 list-sets-pos list-sets-pos list-pos
--2 -8 0 10 -262144 -1 -1 0 1;
+#X obj 362 178 hsl 128 15 0 20 0 0 list-mixtapes-pos list-mixtapes-pos
+list-pos -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 339 542 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #N canvas 570 1371 602 379 getprop 0;
@@ -144,7 +144,7 @@
 1;
 #X obj 507 229 max 0.5;
 #X obj 484 300 route up down move;
-#X obj 568 387 b;
+#X obj 569 386 b;
 #X obj 558 93 loadbang;
 #X msg 478 140 text OK;
 #X obj 378 206 poftexts typo 29;
@@ -229,6 +229,9 @@
 #X obj 246 26 r mixtape;
 #X obj 338 86 mode/say 1 ChoixMixtape 10000;
 #X obj 338 113 mode/say 1 ChoixMixtapeRappel 10000;
+#X obj 216 554 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 241 586 s PlaysSelMixtape;
 #X connect 0 0 33 0;
 #X connect 2 0 56 0;
 #X connect 4 0 56 0;
@@ -274,6 +277,8 @@
 #X connect 40 0 61 0;
 #X connect 40 0 62 0;
 #X connect 42 0 34 0;
+#X connect 42 0 63 0;
+#X connect 42 0 64 0;
 #X connect 43 0 41 0;
 #X connect 48 0 52 1;
 #X connect 49 0 48 0;
