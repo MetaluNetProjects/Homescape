@@ -108,6 +108,8 @@
 #X connect 12 0 0 0;
 #X connect 12 0 7 0;
 #X restore 415 258 pd MixtapePlay;
+#X obj 110 450 sel 1;
+#X obj 110 480 s InterfaceRecMixtape;
 #X connect 0 0 58 0;
 #X connect 1 0 56 1;
 #X connect 2 0 56 2;
@@ -130,6 +132,7 @@
 #X connect 16 0 52 0;
 #X connect 17 0 52 2;
 #X connect 18 0 19 0;
+#X connect 18 0 63 0;
 #X connect 19 0 54 2;
 #X connect 20 0 21 0;
 #X connect 22 0 57 1;
@@ -167,3 +170,4 @@
 #X connect 59 0 57 2;
 #X connect 61 0 60 0;
 #X connect 62 0 59 0;
+#X connect 63 0 64 0;
