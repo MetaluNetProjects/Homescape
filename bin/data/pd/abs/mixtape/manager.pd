@@ -1,4 +1,4 @@
-#N canvas 2162 1042 618 882 10;
+#N canvas 775 1425 618 882 10;
 #X symbolatom 338 246 0 0 0 0 - - -;
 #X obj 305 277 symbol;
 #X obj 309 225 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -6,7 +6,7 @@
 #X obj 307 257 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 413 143 print;
-#N canvas 2406 428 638 529 create 1;
+#N canvas 2298 689 642 529 create 1;
 #X obj 89 127 pofutil;
 #X msg 89 87 time %Y-%B-%d-%Hh-%Mmn-%Ss;
 #X obj 89 263 pofutil;
@@ -81,6 +81,7 @@
 #X obj 333 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 319 471 s mixtapeStopRec;
+#X obj 498 9 r MixtapeStopRecording;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 12 0;
@@ -157,6 +158,7 @@
 #X connect 61 2 53 0;
 #X connect 61 3 51 1;
 #X connect 63 0 64 0;
+#X connect 65 0 59 0;
 #X restore 413 203 pd create;
 #N canvas 1111 1371 666 631 setName 0;
 #X obj 120 49 r datadir;
@@ -297,7 +299,7 @@
 #X obj 413 166 pofxml mixtapes;
 #X msg 417 340 test;
 #X obj 415 305 s mixtapesChanged;
-#N canvas 498 1610 653 666 mixtapes-update-all 0;
+#N canvas 498 1371 653 666 mixtapes-update-all 0;
 #X obj 89 175 pofutil;
 #X obj 50 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -4034 -1 -1
 ;
@@ -340,6 +342,7 @@
 #X obj 191 127 pofxml mixtapes;
 #X msg 89 155 listdir \$1/mixtape/;
 #X msg 343 443 add / mixtape \, setattr / mixtape[\$2] file \$1;
+#X floatatom 55 383 5 0 0 0 - - -, f 5;
 #X connect 0 0 10 0;
 #X connect 1 0 27 0;
 #X connect 2 0 3 1;
@@ -381,6 +384,7 @@
 #X connect 27 2 4 0;
 #X connect 29 0 1 0;
 #X connect 30 0 31 0;
+#X connect 30 0 41 0;
 #X connect 33 0 25 0;
 #X connect 34 0 35 0;
 #X connect 36 0 1 0;
@@ -388,7 +392,7 @@
 #X connect 39 0 0 0;
 #X connect 40 0 32 0;
 #X restore 415 284 pd mixtapes-update-all;
-#N canvas 406 1539 779 459 loadmixtape 0;
+#N canvas 654 1589 779 459 loadmixtape 0;
 #X obj 122 54 symbol;
 #X obj 122 167 t f b;
 #X obj 122 189 until;
@@ -488,6 +492,7 @@
 #X connect 7 0 27 0;
 #X connect 7 1 8 1;
 #X connect 7 1 18 0;
+#X connect 7 1 21 0;
 #X connect 8 0 25 0;
 #X connect 9 0 17 0;
 #X connect 10 0 9 0;
@@ -529,7 +534,7 @@
 #X obj 372 501 r vol-readsf-snd;
 #X obj 324 418 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 326 448 tabplay~ mixtape-table-0;
+#X obj 327 445 tabplay~ mixtape-table-0;
 #X obj 424 615 mull~ 0 10;
 #X obj 308 652 throw~ OutMusic-0;
 #X obj 429 653 throw~ OutMusic-1;
@@ -546,10 +551,11 @@
 #X obj 171 843 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 234 760 / 44.1;
-#X msg 292 520 stop;
+#X msg 280 548 stop;
 #X obj 213 837 s MixtapeStopPlaying;
 #X obj 54 99 table mixtape-table-0 8e+06;
 #X obj 417 368 s setMixtapeName;
+#X obj 169 501 r MixtapeStopPlaying;
 #X connect 0 0 1 1;
 #X connect 1 0 18 0;
 #X connect 2 0 0 0;
@@ -578,7 +584,6 @@
 #X connect 35 0 32 0;
 #X connect 36 0 38 0;
 #X connect 39 0 36 0;
-#X connect 39 1 41 0;
 #X connect 42 0 44 0;
 #X connect 44 0 43 0;
 #X connect 44 0 49 0;
@@ -590,3 +595,4 @@
 #X connect 49 0 47 0;
 #X connect 50 0 35 0;
 #X connect 50 0 39 0;
+#X connect 54 0 50 0;

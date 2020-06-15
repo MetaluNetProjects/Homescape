@@ -1,10 +1,10 @@
-#N canvas 1135 1371 785 819 10;
+#N canvas 2048 62 785 819 10;
 #X obj 150 9 inlet head;
 #X obj 232 244 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -29 256;
 #X obj 291 244 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 237 351 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 303 339 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 89 272 poftranslate;
 #X obj 98 249 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -23,17 +23,17 @@
 1;
 #X obj 387 615 imageTouch song/StopSong.png 0.3;
 #X obj 363 590 poftranslate 49;
-#X obj 120 637 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 150 762 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 96 592 poftranslate 49;
-#X obj 319 596 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 126 717 poftranslate 49;
+#X obj 349 721 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 112 431 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 53 464 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 301 388 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 243 416 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 465 411 pofcolor 0 0 0 0.2;
-#X obj 477 446 pofrect 200 100;
+#X obj 580 402 pofcolor 0 0 0 0.2;
+#X obj 592 437 pofrect 200 100;
 #X floatatom 311 292 5 0 0 0 - - -, f 5;
 #X obj 397 170 poftranslate;
 #X obj 406 147 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -41,8 +41,8 @@
 #X obj 465 147 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 -10 256;
 #X floatatom 521 186 5 0 0 0 - - -, f 5;
-#X obj 186 643 sel 0;
-#X obj 186 665 s song-choix-open;
+#X obj 216 768 sel 0;
+#X obj 216 790 s song-choix-open;
 #X obj 569 564 sel 1;
 #X obj 600 616 s song-play;
 #X obj 481 638 sel 1;
@@ -52,7 +52,7 @@
 #X obj 631 305 r song-playing;
 #X obj 631 327 == 0;
 #X obj 616 348 f;
-#X floatatom 122 350 5 0 0 0 - - -, f 5;
+#X floatatom 64 378 5 0 0 0 - - -, f 5;
 #X obj 89 300 fixScaleX;
 #X obj 223 290 fixScaleX;
 #X obj 397 191 fixScaleX;
@@ -64,36 +64,36 @@
 #X floatatom 333 14 5 0 0 0 - - -, f 5;
 #X obj 208 86 pofimage song/FondSong.png 211 142;
 #X obj 397 217 pofimage SongLegend.png 65 65;
-#X floatatom 136 555 5 0 0 0 - - -, f 5;
-#X floatatom 172 552 5 0 0 0 - - -, f 5;
-#X obj 120 617 imageTouchOnOff song/ChoixSong 0.32;
-#X floatatom 167 347 5 0 0 0 - - -, f 5;
-#X obj 112 409 imageTouchOnOff song/RecSong 0.4;
-#X obj 89 381 poftranslate 32 -34;
+#X floatatom 166 680 5 0 0 0 - - -, f 5;
+#X floatatom 202 677 5 0 0 0 - - -, f 5;
+#X obj 150 742 imageTouchOnOff song/ChoixSong 0.32;
+#X floatatom 109 375 5 0 0 0 - - -, f 5;
+#X obj 54 437 imageTouchOnOff song/RecSong 0.4;
+#X obj 31 409 poftranslate 32 -34;
 #X obj 223 267 poftranslate -29 0;
 #X obj 224 312 imageTouchPlay song/MixTape 0.2;
 #X obj 205 61 poftranslate 11 1 4;
 #X obj 407 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 340 368 s mixtape-choix-open;
-#X obj 341 342 sel 1;
-#N canvas 2031 1321 450 300 MixtapePlay 0;
-#X obj 99 223 outlet;
-#X obj 230 43 r MixtapeStopPlaying;
-#X obj 97 41 r PlaysSelMixtape;
-#X obj 97 120 metro 250;
-#X obj 105 153 i;
-#X obj 136 153 + 1;
-#X obj 105 178 mod 2;
-#X floatatom 182 213 5 0 0 0 - - -, f 5;
-#X obj 95 95 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
-;
-#X msg 95 66 1;
-#X msg 255 94 0;
-#X obj 227 67 t b b;
-#X msg 214 118 0;
+#X obj 354 410 s mixtape-choix-open;
+#N canvas 1470 1401 380 335 MixtapePlay 0;
+#X obj 76 262 outlet;
+#X obj 207 82 r MixtapeStopPlaying;
+#X obj 79 31 r PlaysSelMixtape;
+#X obj 74 159 metro 250;
+#X obj 82 192 i;
+#X obj 113 192 + 1;
+#X obj 82 217 mod 2;
+#X floatatom 159 252 5 0 0 0 - - -, f 5;
+#X obj 72 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 72 105 1;
+#X msg 232 133 0;
+#X obj 204 106 t b b;
+#X msg 191 157 0;
+#X obj 73 71 t b;
 #X connect 1 0 11 0;
-#X connect 2 0 9 0;
+#X connect 2 0 13 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 4 0 6 0;
@@ -107,14 +107,93 @@
 #X connect 11 1 10 0;
 #X connect 12 0 0 0;
 #X connect 12 0 7 0;
+#X connect 13 0 9 0;
 #X restore 415 258 pd MixtapePlay;
-#X obj 110 450 sel 1;
-#X obj 110 480 s InterfaceRecMixtape;
+#X obj 155 593 s InterfaceRecMixtape;
+#X obj 303 386 demux 0 1;
+#X obj 302 410 t b b;
+#X msg 302 434 1;
+#X obj 330 438 s MixtapeStopPlaying;
+#X obj 581 16 r MixtapeStopRec;
+#X msg 579 44 1, f 2;
+#N canvas 1470 1371 450 300 MixtapeStopPlay 0;
+#X obj 48 37 r PlaysSelMixtape;
+#X obj 207 82 r MixtapeStopPlaying;
+#X msg 47 63 0;
+#X msg 207 107 1, f 2;
+#X obj 176 210 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X restore 486 302 pd MixtapeStopPlay;
+#N canvas 1470 1401 380 335 MixtapeRec 0;
+#X obj 76 262 outlet;
+#X obj 74 159 metro 250;
+#X obj 82 192 i;
+#X obj 113 192 + 1;
+#X obj 82 217 mod 2;
+#X floatatom 159 252 5 0 0 0 - - -, f 5;
+#X obj 72 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 72 105 1;
+#X msg 232 133 0;
+#X obj 204 106 t b b;
+#X msg 191 157 0;
+#X obj 73 71 t b;
+#X obj 79 31 r mixtapeStartRec;
+#X obj 207 82 r mixtapeStopRec;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 0 0;
+#X connect 4 0 5 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 9 1 8 0;
+#X connect 10 0 0 0;
+#X connect 10 0 5 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 0;
+#X connect 13 0 9 0;
+#X restore 173 374 pd MixtapeRec;
+#N canvas 556 1371 450 300 MixtapeStopRec 1;
+#X msg 47 63 0;
+#X msg 207 107 1, f 2;
+#X obj 176 210 outlet;
+#X obj 48 37 r mixtapeStartRec;
+#X obj 208 82 r mixtapeStopRec;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X restore 179 477 pd MixtapeStopRec;
+#X obj 104 507 demux 0 1;
+#X obj 131 625 s MixtapeStopRecording;
+#X obj 104 534 t b b;
+#X msg 104 558 1;
+#X obj 205 557 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 48 523 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 147 472 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 304 360 t b;
+#X obj 74 546 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 181 525 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 57 497 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 92 483 t b;
 #X connect 0 0 58 0;
 #X connect 1 0 56 1;
 #X connect 2 0 56 2;
 #X connect 3 0 59 0;
-#X connect 3 0 61 0;
+#X connect 3 0 79 0;
 #X connect 4 0 39 0;
 #X connect 5 0 4 1;
 #X connect 6 0 4 2;
@@ -132,7 +211,7 @@
 #X connect 16 0 52 0;
 #X connect 17 0 52 2;
 #X connect 18 0 19 0;
-#X connect 18 0 63 0;
+#X connect 18 0 83 0;
 #X connect 19 0 54 2;
 #X connect 20 0 21 0;
 #X connect 22 0 57 1;
@@ -168,6 +247,25 @@
 #X connect 58 0 48 0;
 #X connect 58 0 42 0;
 #X connect 59 0 57 2;
-#X connect 61 0 60 0;
-#X connect 62 0 59 0;
+#X connect 61 0 59 0;
 #X connect 63 0 64 0;
+#X connect 63 1 60 0;
+#X connect 64 0 65 0;
+#X connect 64 1 66 0;
+#X connect 65 0 63 1;
+#X connect 67 0 68 0;
+#X connect 69 0 63 1;
+#X connect 70 0 19 0;
+#X connect 71 0 78 0;
+#X connect 72 0 74 0;
+#X connect 72 0 80 0;
+#X connect 72 1 62 0;
+#X connect 72 1 81 0;
+#X connect 74 0 75 0;
+#X connect 74 1 73 0;
+#X connect 75 0 78 0;
+#X connect 76 0 62 0;
+#X connect 77 0 74 0;
+#X connect 78 0 72 1;
+#X connect 79 0 63 0;
+#X connect 83 0 72 0;
