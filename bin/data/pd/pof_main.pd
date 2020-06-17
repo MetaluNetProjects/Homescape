@@ -471,7 +471,7 @@
 #X restore 135 549 pd instruments_pof;
 #X obj 135 530 concert/instrument_panel;
 #X obj 17 386 mixtape/manager;
-#X obj 204 373 mixtape/listGui;
+#X obj 199 351 mixtape/listGui;
 #X obj 165 269 t a a;
 #X obj 138 223 t a a;
 #X obj 165 246 pofvisible 1;
@@ -480,7 +480,7 @@
 #X obj 14 508 confirmToQuit;
 #X obj 333 476 del 100;
 #X obj 165 329 t a a a a;
-#X obj 216 351 mixtape/RecGui;
+#X obj 199 372 mixtape/RecGui;
 #X connect 1 0 0 0;
 #X connect 2 0 13 0;
 #X connect 4 0 3 0;
@@ -518,4 +518,3 @@
 #X connect 64 0 22 0;
 #X connect 64 1 29 0;
 #X connect 64 2 57 0;
-#X connect 64 3 65 0;
