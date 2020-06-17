@@ -1,6 +1,6 @@
-#N canvas 482 136 618 739 10;
+#N canvas 482 1371 618 849 10;
 #X obj 123 43 r \$1-say;
-#X obj 168 703 Out~;
+#X obj 168 753 Out~;
 #X obj 327 607 line~;
 #X obj 176 631 *~;
 #X obj 327 583 t a;
@@ -62,7 +62,7 @@
 #X obj 280 694 s \$1-saying;
 #X obj 217 423 list append;
 #X obj 217 454 list split 4;
-#X obj 177 658 hip~ 200;
+#X obj 177 708 hip~ 200;
 #X obj 220 331 f;
 #X msg 322 264 -1;
 #X obj 220 214 t b a b;
@@ -116,9 +116,10 @@
 #X obj 473 493 list append;
 #X obj 440 305 t a a;
 #X obj 177 585 readsf~ 1 100000;
+#X obj 184 679 *~ 0.5;
 #X connect 0 0 6 0;
 #X connect 2 0 3 1;
-#X connect 3 0 34 0;
+#X connect 3 0 59 0;
 #X connect 4 0 2 0;
 #X connect 5 0 4 0;
 #X connect 6 0 27 0;
@@ -196,3 +197,4 @@
 #X connect 57 1 56 1;
 #X connect 58 0 3 0;
 #X connect 58 1 30 0;
+#X connect 59 0 34 0;
