@@ -160,7 +160,7 @@ list-pos -2 -8 0 10 -262144 -1 -1 0 1;
 #X floatatom 483 402 5 0 0 0 - - -, f 5;
 #X floatatom 567 466 5 0 0 0 - - -, f 5;
 #X floatatom 610 462 5 0 0 0 - - -, f 5;
-#X msg 388 456 text +;
+#X msg 303 459 text +;
 #X msg 521 463 draw 1;
 #X obj 548 513 poftouch 35 32;
 #X obj 434 512 poftexts typo 27;

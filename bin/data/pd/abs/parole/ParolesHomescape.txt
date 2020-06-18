@@ -1,6 +1,6 @@
 ## Nom du mode
 
-Nom # "ce mode s'appelle Véronique québecoise !"
+Nom # "ce mode s'appelle Véronique québecoise ! (par exemple)"
 
 ## Ouverture de l’application :
 
@@ -8,37 +8,45 @@ Allumage #  “bienvenue sur Homescape”
 
 ## Console :
 
-HelpConsole # “voici la console de mixage grâce à laquelle vous allez pouvoir réaliser votre propre Piece musicale- Selectionner un instrument pour jouer, regler le volume de chaques instruments, un appui bref sur les curseurs ouvre ou ferme l'instrument correspodant. etc”
+HelpConsole # “voici la console de mixage grâce à laquelle vous allez pouvoir réaliser votre propre Piece musicale- Selectionner un instrument pour jouer- regler le volume de chaques instruments- un appui bref sur les curseurs ouvre ou ferme l'instrument correspondant---”
 
 ## PopUpchoixSong :
 
-ChoixSong # “choisissez un morceau enregistré à écouter et confirmer”
+#ChoixSong # “choisissez un morceau enregistré à écouter et confirmer”
 
-ChoixSongRappel # “je vous rappelle que vous devez choisir un morceau s’il vous plaît”
+#ChoixSongRappel # “je vous rappelle que vous devez choisir un morceau s’il vous plaît”
 
 ## PopUpchoixMixtape :
 
-ChoixMixtape # “selectionner un enregistrement pour l’écouter- appuyez sur Mail pour l’envoyer par email"
+ChoixMixtape # “selectionner une mixtape à écouter et confirmer - ou appuyez sur + pour en créer une nouvelle"
 
 ChoixMixtapeRappel # “je vous rappelle que vous devez choisir une mixtape s’il vous plaît"
 
-MailMixTape # “indiquez l'adresse email à laquelle vous voulez envoyer la MixTape selectionée”
+OuvertureSaveMixtape # “écrivez le nom de votre mixtape et décrivez la oralement - puis confirmez”
+
+RelanceNomMixtape # “je vous rappelle que vous devez écrire le nom de votre mixtape”
+
+RelanceRecNomMixtape # “vous devez dire le nom de votre mixtape s’il vous plaît”
+
+ConfirmMixtape # “Merci d’avoir enregistré votre mixtape”
+
+#MailMixTape # “indiquez l'adresse email à laquelle vous voulez envoyer la MixTape selectionée”
 
 ## PopUpRecMixtape :
 
-OuvertureRecMixtape # “si vous voulez sauver votre enregistrement appuyez sur Save - vous pouvez d'abord le réécouter en appuyant sur play"
+#OuvertureRecMixtape # “si vous voulez sauver votre enregistrement appuyez sur Save - vous pouvez d'abord le réécouter en appuyant sur play"
 
-NomMixtape # “donnez un nom à votre enregistrement"
+NomMixtape # “donnez un nom à votre mixtape"
 
 SaveMixtape # “Votre Mixtape est sauvée vous pourrez la réécouter plus tard et même l’envoyer par mail en appuyant sur MixTape”
 
 # PopUpAbout :
 
-OuvertureAbout # “Cette application a été réalisée par le Lieu multiple, Al1 & Ant1 et Métalu.net - en collaboration avec l'espace mendes france
+OuvertureAbout # “Cette application a été réalisée par le Lieu multiple - Al1 & Ant1 et Métalunet - en collaboration avec l'espace mendes france"
 
 ## PopUpBalance :
 
-HelpBalance # “c'est ici que l'on peut enregistrer et regler ses propres sets de son- il suffit de sélectionner un instrument d'appuyer sur rec- et se laisser guider. “ 
+HelpBalance # “c'est ici que l'on peut choisir le perso qui vous suivra tout au long du jeu - charger ou enregistrer un set de son - et on peu aussi choisir une song - changer le tempo et les harmonies“ 
 
 RecLaveLinge # “allez-y- Tapez sur votre machine à laver”
 
@@ -72,7 +80,7 @@ OuvertureSaveSet # “écrivez le nom de votre set et décrivez le oralement - p
 
 RelanceNomSet # “je vous rappelle que vous devez écrire le nom de votre set”
 
-ConfirmNomSet # “Merci- et maintenant- dites le nom de votre set avec votre nom et une description- vous pouvez le réécouter et confirmer”
+#ConfirmNomSet # “Merci- et maintenant- dites le nom de votre set avec votre nom et une description- vous pouvez le réécouter et confirmer”
 
 RelanceRecNom # “vous devez dire le nom de votre set s’il vous plaît”
 
