@@ -69,4 +69,6 @@ res/raw/ofdataresources.zip
 #bin/data/pd/data/*/*
 
 .gradle/*/taskArtifacts/*
+bin/data/pd/abs/LATENCY.xml
+bin/data/pd/abs/rec/REC.xml
 
