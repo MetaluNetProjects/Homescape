@@ -1,4 +1,9 @@
 <root>
 	<set file="Antoine" name="test"/>
 <set file="Barnabe" name="Barnabe"/>
+<set file="2020-June-19-11h-26mn-08s" name="NouveauSet"/>
+	<set file="2020-June-19-16h-57mn-28s" name="NouveauSet"/>
+<set file="2020-June-26-11h-33mn-00s" name="NouveauSet"/>
+<set file="2020-June-30-12h-06mn-34s" name="NouveauSet"/>
+<set file="2020-July-03-11h-29mn-07s" name="NouveauSet"/>
 </root>
