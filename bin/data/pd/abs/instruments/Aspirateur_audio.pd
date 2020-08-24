@@ -1,4 +1,4 @@
-#N canvas 1 1371 426 316 10;
+#N canvas 132 932 542 316 10;
 #X obj 297 278 mknob 25 100 0 127 0 1 ASP-0-Note_adjust-snd ASP-0-Note_adjust-rcv
 ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 38 105 s all-note-off;
@@ -20,6 +20,13 @@ ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X obj 276 138 t b b f;
 #X msg 285 164 stop;
 #X obj 276 113 r ASP-0-Note_adjust;
+#X obj 425 274 mknob 25 100 0 127 0 1 ASP-0-Pitch-snd ASP-0-Pitch-rcv
+ASP-0-Pitch -2 -6 0 8 -257985 -1 -1 3716 1;
+#X obj 423 220 f;
+#X obj 393 184 del 100;
+#X obj 404 134 t b b f;
+#X msg 413 160 stop;
+#X obj 404 109 r ASP-0-Pitch;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
 #X connect 5 0 9 0;
@@ -36,3 +43,10 @@ ASP-0-Note_adjust -2 -6 0 8 -257985 -1 -1 9900 1;
 #X connect 16 2 14 1;
 #X connect 17 0 15 0;
 #X connect 18 0 16 0;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 0;
+#X connect 22 1 23 0;
+#X connect 22 2 20 1;
+#X connect 23 0 21 0;
+#X connect 24 0 22 0;
