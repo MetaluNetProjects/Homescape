@@ -1,9 +1,9 @@
 # Homescape
 ## House music app
 
-### There is now a pre-release ready!! 
+### Version 1.0-test3 is now ready!! 
 ### Download the APK for manual install:
-https://github.com/MetaluNetProjects/Homescape/releases/download/1.0-test1/Homescape-release.apk
+https://github.com/MetaluNetProjects/Homescape/releases/download/v1.0-test3/Homescape-release.apk
 
 ------
 **Homescape** is an Android (for now) app, which offers to play 
