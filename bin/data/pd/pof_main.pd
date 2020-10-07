@@ -192,7 +192,7 @@
 #X obj 17 340 set/manager;
 #X obj 192 289 s pageHead;
 #X obj 16 445 song/player;
-#N canvas 2758 62 564 621 audioMaster 0;
+#N canvas 2758 62 564 621 audioMaster 1;
 #X obj 211 163 catch~ Out-1;
 #X obj 80 278 *~;
 #X obj 96 255 z~ 64;
@@ -253,7 +253,7 @@
 #X obj 282 416 throw~ REC-r;
 #X obj 14 359 s~ REC-l;
 #X obj 258 340 s~ REC-r;
-#N canvas 2749 108 450 300 mono-stereo 0;
+#N canvas 1470 582 450 300 mono-stereo 0;
 #X obj 43 32 inlet~;
 #X obj 316 24 inlet~;
 #X obj 71 237 outlet~;
@@ -267,14 +267,14 @@
 #X msg 134 71 0, f 1;
 #X msg 161 71 1, f 1;
 #X msg 186 71 0, f 1;
-#X msg 213 71 1, f 1;
 #X text 193 3 0=stereo 1=mono;
 #X obj 71 185 mull~ 1 10;
 #X obj 228 179 mull~ 1 10;
+#X msg 213 70 0.7, f 4;
 #X connect 0 0 6 0;
-#X connect 0 0 15 0;
+#X connect 0 0 14 0;
 #X connect 1 0 6 1;
-#X connect 1 0 16 0;
+#X connect 1 0 15 0;
 #X connect 4 0 2 0;
 #X connect 4 0 3 0;
 #X connect 5 0 7 0;
@@ -284,15 +284,15 @@
 #X connect 8 0 10 0;
 #X connect 8 1 11 0;
 #X connect 9 0 12 0;
-#X connect 9 1 13 0;
+#X connect 9 1 16 0;
 #X connect 10 0 4 1;
+#X connect 11 0 14 1;
 #X connect 11 0 15 1;
-#X connect 11 0 16 1;
+#X connect 12 0 14 1;
 #X connect 12 0 15 1;
-#X connect 12 0 16 1;
-#X connect 13 0 4 1;
-#X connect 15 0 2 0;
-#X connect 16 0 3 0;
+#X connect 14 0 2 0;
+#X connect 15 0 3 0;
+#X connect 16 0 4 1;
 #X restore 103 409 pd mono-stereo;
 #X obj 106 355 tgl 20 0 MonoStereo-snd MonoStereo-rcv MonoStereo 17
 7 0 10 -262144 -1 -1 0 1;
